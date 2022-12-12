@@ -35,7 +35,6 @@ def convert_inputs(image_name: str, percent_str: str) -> (cv.Mat, float):
         if not pattern.match(image_name):
             raise Exception('The filename must be jpg, jpeg, png or gif!')
         if not os.path.exists(f'../images/{image_name}'):
-            print(os.path.join(__file__, '..', '..','images', image_name))
             raise Exception('The file does not exist!')
         __input_image = cv.imread(f'../images/{image_name}')
         __input_image = cv.cvtColor(__input_image, cv.COLOR_BGR2GRAY)
