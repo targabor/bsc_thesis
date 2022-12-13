@@ -3,7 +3,7 @@ import os
 import cv2 as cv
 import numpy as np
 import re
-from math_helpers import mse_for_images
+from src.math_helpers import mse_for_images
 
 
 def signal_to_noise_ratio(noisy_image: cv.Mat, filtered_image: cv.Mat) -> float:

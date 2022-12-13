@@ -67,6 +67,7 @@ if __name__ == '__main__':
 
     cv.imshow('input', input_image)
     noised_image = add_impulse_noise_to_img(input_image, img_percent)
+    cv.imwrite(f'../images/noisy_{sys.argv[1]}', noised_image)
     cv.imshow('output', noised_image)
     cv.waitKey(0)
     cv.destroyAllWindows()

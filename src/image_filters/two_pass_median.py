@@ -4,8 +4,7 @@ import re
 import os
 
 import numpy as np
-
-from math_helpers import signal_to_noise_ratio
+from src.math_helpers import signal_to_noise_ratio
 
 
 def generate_noise_map(_apx_of_noise: cv.Mat) -> cv.Mat:
@@ -22,7 +21,6 @@ def generate_noise_map(_apx_of_noise: cv.Mat) -> cv.Mat:
     noise_map = np.zeros(_apx_of_noise.shape)
     noise_map[_apx_of_noise >= std_dev + avg_grey_level] = 1
     noise_map = cv.Mat(noise_map)
-    cv.imshow('noise_map', noise_map)
     return noise_map
 
 
@@ -84,10 +82,10 @@ if __name__ == '__main__':
         exit(1)
     try:
         image = convert_inputs_for_two_pass(sys.argv[1])
+        cv.imshow('image', image)
         if image is not None:
             filtered_image = two_pass_median(image)
             cv.imshow('filtered_image', filtered_image)
-            print('signal_to_noise_noisy', signal_to_noise_ratio(image, cv.imread(f'../../images/{sys.argv[1]}', cv.IMREAD_GRAYSCALE)))
             print('signal_to_noise_filtered', signal_to_noise_ratio(image, filtered_image))
             cv.waitKey()
             cv.destroyAllWindows()
