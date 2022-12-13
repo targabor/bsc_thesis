@@ -3,7 +3,7 @@ import os
 import cv2 as cv
 import numpy as np
 import re
-import mse_for_images
+from math_helpers import mse_for_images
 
 
 def signal_to_noise_ratio(noisy_image: cv.Mat, filtered_image: cv.Mat) -> float:
@@ -15,7 +15,7 @@ def signal_to_noise_ratio(noisy_image: cv.Mat, filtered_image: cv.Mat) -> float:
         :return: The signal-to-noise ratio of the two images.
     """
     variance = (np.var(noisy_image))**2
-    mse = mse_for_images.mse_for_images(noisy_image, filtered_image)
+    mse = mse_for_images(noisy_image, filtered_image)
     snr = 10 * np.log10(variance/mse)
     return snr
 

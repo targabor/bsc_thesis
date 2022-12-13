@@ -3,6 +3,28 @@ import sys
 import re
 import os
 
+import numpy as np
+
+from math_helpers import signal_to_noise_ratio
+
+
+def generate_noise_map(_apx_of_noise: cv.Mat) -> cv.Mat:
+    """
+    Creates noise map from a grayscale image.
+    Pixels can have 1 and 0, as following:
+    1, if the _apx_of_noise >= std_dev + avg_gray_level
+    0, if the _apx_of_noise < std_dev + avg_gray_level
+        :param _apx_of_noise: grayscale image, in cv.Mat format
+        :return: the approximated noise map of the input image
+    """
+    avg_grey_level = np.average(_apx_of_noise)
+    mean, std_dev = cv.meanStdDev(_apx_of_noise)
+    noise_map = np.zeros(_apx_of_noise.shape)
+    noise_map[_apx_of_noise >= std_dev + avg_grey_level] = 1
+    noise_map = cv.Mat(noise_map)
+    cv.imshow('noise_map', noise_map)
+    return noise_map
+
 
 def two_pass_median(image_to_filter: cv.Mat) -> cv.Mat:
     """
@@ -21,7 +43,14 @@ def two_pass_median(image_to_filter: cv.Mat) -> cv.Mat:
     N = L - S
     N' = L - S'
     """
-    pass
+    noisy_image = image_to_filter.copy()
+    # Median filtration, to approximate the signal-only image
+    apx_of_signal_only = cv.medianBlur(image_to_filter, 3)
+    apx_of_noise = abs(np.subtract(noisy_image, apx_of_signal_only))
+    noise_map = generate_noise_map(apx_of_noise)
+    _filtered_image = noisy_image.copy()
+    _filtered_image[noise_map == 0] = apx_of_signal_only[noise_map == 0]
+    return _filtered_image
 
 
 def convert_inputs_for_two_pass(image_name: str) -> cv.Mat:
@@ -58,6 +87,8 @@ if __name__ == '__main__':
         if image is not None:
             filtered_image = two_pass_median(image)
             cv.imshow('filtered_image', filtered_image)
+            print('signal_to_noise_noisy', signal_to_noise_ratio(image, cv.imread(f'../../images/{sys.argv[1]}', cv.IMREAD_GRAYSCALE)))
+            print('signal_to_noise_filtered', signal_to_noise_ratio(image, filtered_image))
             cv.waitKey()
             cv.destroyAllWindows()
             exit(0)
