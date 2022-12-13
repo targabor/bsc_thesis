@@ -1,5 +1,5 @@
 import unittest
-
+import mock
 import math_helpers.mse_for_images
 import src
 import cv2 as cv
@@ -20,3 +20,4 @@ class TestAddImpulseNoiseToImg(unittest.TestCase):
         test_img, percent = src.convert_inputs('baboon.jpg', '0.5')
         assert math_helpers.mse_for_images(img, test_img) == 0.0
         assert percent == 0.5
+

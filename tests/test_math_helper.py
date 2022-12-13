@@ -5,7 +5,7 @@ import math_helpers
 import numpy as np
 
 
-class TestAddImpulseNoiseToImg(unittest.TestCase):
+class TestMSEForImages(unittest.TestCase):
     def test_mse_for_images_pass(self):
         first = np.ones((200, 200))
         second = np.zeros((200, 200))

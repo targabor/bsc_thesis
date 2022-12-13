@@ -3,7 +3,7 @@ import os
 import cv2 as cv
 import numpy as np
 import re
-from math_helpers import mse_for_images
+import mse_for_images
 
 
 def signal_to_noise_ratio(noisy_image: cv.Mat, filtered_image: cv.Mat) -> float:
@@ -15,7 +15,7 @@ def signal_to_noise_ratio(noisy_image: cv.Mat, filtered_image: cv.Mat) -> float:
         :return: The signal-to-noise ratio of the two images.
     """
     variance = (np.var(noisy_image))**2
-    mse = mse_for_images(noisy_image, filtered_image)
+    mse = mse_for_images.mse_for_images(noisy_image, filtered_image)
     snr = 10 * np.log10(variance/mse)
     return snr
 
@@ -40,8 +40,8 @@ def check_inputs_for_snr(f_name: str, s_name: str) -> (cv.Mat, cv.Mat):
         :return: Two cv2.Mat object, which are the two input images.
     """
     if check_filename(f_name) and check_filename(s_name):
-        f_image = cv.imread(f'../../images/{f_name}')
-        s_image = cv.imread(f'../../images/{s_name}')
+        f_image = cv.imread(f'../../images/{f_name}', cv.IMREAD_GRAYSCALE)
+        s_image = cv.imread(f'../../images/{s_name}', cv.IMREAD_GRAYSCALE)
         assert len(f_image.shape) == 2, 'The first image is not grayscale'
         assert len(s_image.shape) == 2, 'The second image is not grayscale'
         assert f_image.shape == s_image.shape, 'The images must have the same shape'
@@ -51,6 +51,7 @@ def check_inputs_for_snr(f_name: str, s_name: str) -> (cv.Mat, cv.Mat):
 
 
 # If the program called from commandline
+# First is the noisy, second is the filtered
 if __name__ == '__main__':
     first_image = None
     second_image = None
