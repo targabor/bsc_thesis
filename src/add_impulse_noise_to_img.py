@@ -1,4 +1,4 @@
-from random import randint
+import random
 
 import cv2 as cv
 import sys
@@ -16,9 +16,9 @@ def add_impulse_noise_to_img(par_img: cv.Mat, noise_percent: float) -> cv.Mat:
     ret_img = par_img.copy()
     mask_size = round(ret_img.size * noise_percent)
     for i in range(mask_size):
-        x = randint(0, ret_img.shape[1] - 1)
-        y = randint(0, ret_img.shape[0] - 1)
-        ret_img[y, x] = randint(0, 255)
+        x = random.randint(0, ret_img.shape[1] - 1)
+        y = random.randint(0, ret_img.shape[0] - 1)
+        ret_img[y, x] = random.randint(0, 255)
 
     return ret_img
 
@@ -35,7 +35,6 @@ def convert_inputs(image_name: str, percent_str: str) -> (cv.Mat, float):
         if not pattern.match(image_name):
             raise Exception('The filename must be jpg, jpeg, png or gif!')
         if not os.path.exists(f'../images/{image_name}'):
-            print(os.path.join(__file__, '..', '..','images', image_name))
             raise Exception('The file does not exist!')
         __input_image = cv.imread(f'../images/{image_name}')
         __input_image = cv.cvtColor(__input_image, cv.COLOR_BGR2GRAY)
