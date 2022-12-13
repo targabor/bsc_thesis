@@ -10,7 +10,17 @@ def two_pass_median(image_to_filter: cv.Mat) -> cv.Mat:
         :param image_to_filter: Takes a grayscale image in cv2.Mat type
         :return: Filtered image in cv2.Mat format
     """
-
+    assert len(image_to_filter.shape) == 2, 'The input image must be grayscale'
+    """
+    L - noisy image
+    S - signal component
+    N - noise component
+    N'- apr. of noise
+    S'- apr. of signal only
+    L = S + N
+    N = L - S
+    N' = L - S'
+    """
     pass
 
 
