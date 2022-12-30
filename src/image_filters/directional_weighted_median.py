@@ -73,6 +73,7 @@ def directional_weighted_median(n_image: cv.Mat, threshold: int) -> cv.Mat:
         for x in range(n_image.shape[1]):
             values_for_pixel = []
             if r_ij[y, x] <= threshold:
+                u_ij[y, x] = n_image[y, x]
                 continue
             for direction in range(4):
                 for s, t in o_3[direction]:
@@ -85,7 +86,6 @@ def directional_weighted_median(n_image: cv.Mat, threshold: int) -> cv.Mat:
             alpha_ij = 0 if r_ij[y, x] > threshold else 1
             u_ij[y, x] = alpha_ij * n_image[y, x] + (1 - alpha_ij) * m_ij[y, x]
 
-    u_ij[r_ij > threshold] = n_image[r_ij>threshold]
     return cv.Mat(u_ij.astype(np.uint8))
 
 
@@ -123,9 +123,12 @@ if __name__ == '__main__':
         image = convert_inputs_for_weighted(sys.argv[1])
         cv.imshow('input_image', image)
         if image is not None:
-            filtered_image = directional_weighted_median(image, int(sys.argv[2]))
-            cv.imshow('filtered_image', filtered_image)
-            print('signal_to_noise_filtered', signal_to_noise_ratio(image, filtered_image))
+            t = int(sys.argv[2])
+            for i in range(5):
+                filtered_image = directional_weighted_median(image, t)
+                cv.imshow(f'filtered_image with {t} threshold', filtered_image)
+                print('signal_to_noise_filtered', signal_to_noise_ratio(image, filtered_image))
+                t *= 0.8
             cv.waitKey()
             cv.destroyAllWindows()
             exit(0)
