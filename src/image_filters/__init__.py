@@ -1,1 +1,2 @@
 from .two_pass_median import two_pass_median
+from .directional_weighted_median import directional_weighted_median

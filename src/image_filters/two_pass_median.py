@@ -1,9 +1,10 @@
-import cv2 as cv
 import sys
 import re
 import os
 
+import cv2 as cv
 import numpy as np
+
 from src.math_helpers import signal_to_noise_ratio
 
 
@@ -66,7 +67,6 @@ def convert_inputs_for_two_pass(image_name: str) -> cv.Mat:
             raise Exception('The file does not exist!')
         __input_image = cv.imread(f'../../images/{image_name}')
         # To make sure, the input will be grayscale
-        # TODO: make available for RBG pictures
         __input_image = cv.cvtColor(__input_image, cv.COLOR_BGR2GRAY)
     except Exception as i_e_f:
         raise Exception(i_e_f)
