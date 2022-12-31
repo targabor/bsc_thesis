@@ -124,11 +124,13 @@ if __name__ == '__main__':
         cv.imshow('input_image', image)
         if image is not None:
             t = int(sys.argv[2])
-            for i in range(5):
-                filtered_image = directional_weighted_median(image, t)
-                cv.imshow(f'filtered_image with {t} threshold', filtered_image)
-                print('signal_to_noise_filtered', signal_to_noise_ratio(image, filtered_image))
-                t *= 0.8
+            # for i in range(5):
+            #     filtered_image = directional_weighted_median(image, t)
+            #     cv.imshow(f'filtered_image with {t} threshold', filtered_image)
+            #     print('signal_to_noise_filtered', signal_to_noise_ratio(image, filtered_image))
+            #     t *= 0.8
+            filtered_image = directional_weighted_median(image, t)
+            cv.imshow(f'filtered_image with {t} threshold', filtered_image)
             cv.waitKey()
             cv.destroyAllWindows()
             exit(0)
