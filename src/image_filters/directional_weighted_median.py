@@ -52,6 +52,7 @@ def directional_weighted_median(n_image: cv.Mat, threshold: int) -> cv.Mat:
 
     for y in range(n_image.shape[0]):
         for x in range(n_image.shape[1]):
+            print(f'{x=} {y=}')
             d_k = []
             std_k = []
             for direction in range(4):
@@ -69,8 +70,6 @@ def directional_weighted_median(n_image: cv.Mat, threshold: int) -> cv.Mat:
             r_ij[y, x] = int(np.min(d_k))
             l_ij[y, x] = np.argmin(std_k)
 
-    for y in range(n_image.shape[0]):
-        for x in range(n_image.shape[1]):
             values_for_pixel = []
             if r_ij[y, x] <= threshold:
                 u_ij[y, x] = n_image[y, x]
