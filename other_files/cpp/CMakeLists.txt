@@ -1,0 +1,5 @@
+set(CMAKE_CXX_FLAGS "-O2")
+cmake_minimum_required(VERSION 3.4...3.18)
+project(cpp_calculate)
+add_subdirectory(pybind11)
+pybind11_add_module(cpp_calculate cpp_calculate.cpp)
