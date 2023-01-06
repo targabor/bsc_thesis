@@ -89,7 +89,6 @@ if __name__ == '__main__':
             print('signal_to_noise_filtered', signal_to_noise_ratio(image, filtered_image))
             cv.waitKey()
             cv.destroyAllWindows()
-            cv.imwrite('median_luna.jpg', filtered_image)
             exit(0)
     except Exception as e:
         print(str(e), file=sys.stderr)
