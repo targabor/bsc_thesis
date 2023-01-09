@@ -7,13 +7,7 @@ import cv2 as cv
 import numpy as np
 
 from src.math_helpers.signal_to_noise_ratio import signal_to_noise_ratio
-from src.dlls import cpp_calculate
-
-
-def directional_weighted_median(n_image: cv.Mat, threshold: int) -> cv.Mat:
-    return cv.Mat(np.array(
-        cpp_calculate.directional_weighted_median(n_image, threshold, n_image.shape[0], n_image.shape[1]))
-                  .astype(np.uint8))
+from src.dlls import cpp_caller
 
 
 def convert_inputs_for_weighted(image_name: str) -> cv.Mat:
@@ -52,7 +46,7 @@ if __name__ == '__main__':
         if image is not None:
             t = int(sys.argv[2])
             start = time.time()
-            filtered_image = cpp_calculate.directional_weighted_median(image, t, image.shape[0], image.shape[1])
+            filtered_image = cpp_caller.call_directional_weighted_median(image, t, image.shape[0], image.shape[1])
             filtered_image = cv.Mat(np.array(filtered_image).astype(np.uint8))
             end = time.time()
             elapsed_time = end - start

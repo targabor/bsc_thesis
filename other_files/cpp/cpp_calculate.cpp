@@ -14,13 +14,9 @@
 
 namespace py = pybind11;
 
-void add_noise_to_video(const cv::Mat &img){
-    if (img.empty()) {
-        std::cout << "Failed to load image!" << std::endl;
-    }
-    cv::imshow("test", img);
+void add_noise_to_video(const cv::Mat &image){
+    cv::imshow("Image", image);
     cv::waitKey(0);
-    cv::destroyAllWindows();
 }
 
 float own_median(std::vector<int> numbers) {
@@ -177,13 +173,6 @@ std::vector<std::vector<int>>  directional_weighted_median(std::vector<std::vect
 
 PYBIND11_MODULE(cpp_calculate, module_handle) {
     module_handle.doc() = "I'm a docstring hehe";
-    module_handle.def("own_median", &own_median);
-    module_handle.def("own_std", &own_std);
-    module_handle.def("own_mean", &own_mean);
-    module_handle.def("own_argmin", &own_argmin);
-    module_handle.def("calculate_x_plus_t", &calculate_x_plus_t);
-    module_handle.def("calculate_y_plus_s", &calculate_y_plus_s);
-    module_handle.def("get_w_st", &get_w_st);
     module_handle.def("directional_weighted_median", &directional_weighted_median);
     module_handle.def("add_noise_to_video", &add_noise_to_video);
 }
