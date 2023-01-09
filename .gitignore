@@ -136,3 +136,6 @@ images/*.jpg
 
 #opencv buildfiles
 other_files/cpp/opencv/sources/*
+
+#vidoes
+*.mp4
