@@ -6,10 +6,22 @@
 #include <pybind11/stl.h>
 #include <pybind11/numpy.h>
 #include <iostream>
-
+#include <opencv2/opencv.hpp>
+#include <opencv2/core/core.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/highgui/highgui.hpp>
 
 
 namespace py = pybind11;
+
+void add_noise_to_video(const cv::Mat &img){
+    if (img.empty()) {
+        std::cout << "Failed to load image!" << std::endl;
+    }
+    cv::imshow("test", img);
+    cv::waitKey(0);
+    cv::destroyAllWindows();
+}
 
 float own_median(std::vector<int> numbers) {
     std::sort(numbers.begin(), numbers.end());
@@ -98,13 +110,13 @@ int is_s_t_in_coordinates(int s, int t, int l_ij, std::vector<std::vector<std::p
 }
 
 std::vector<std::vector<int>>  directional_weighted_median(std::vector<std::vector<int>> n_image, int threshold, int height, int width) {
-  const std::vector<std::vector<std::pair<int, int>>> coordinates = {
+  std::vector<std::vector<std::pair<int, int>>> coordinates = {
     {{-2, -2}, {-1, -1}, {1, 1}, {2, 2}},  // S_1
     {{0, -2}, {0, -1}, {0, 1}, {0, 2}},  // S_2
     {{2, -2}, {1, -1}, {-1, 1}, {-2, 2}},  // S_3
     {{-2, 0}, {-1, 0}, {1, 0}, {2, 0}},  // S_4
   };
-  const std::vector<std::vector<std::pair<int, int>>> o_3 = {
+  std::vector<std::vector<std::pair<int, int>>> o_3 = {
     {{-1, 1}, {1, 1}},
     {{0, -1}, {0, 1}},
     {{1, -1}, {-1, 1}},
@@ -173,4 +185,5 @@ PYBIND11_MODULE(cpp_calculate, module_handle) {
     module_handle.def("calculate_y_plus_s", &calculate_y_plus_s);
     module_handle.def("get_w_st", &get_w_st);
     module_handle.def("directional_weighted_median", &directional_weighted_median);
+    module_handle.def("add_noise_to_video", &add_noise_to_video);
 }

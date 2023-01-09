@@ -7,7 +7,7 @@ import cv2 as cv
 import numpy as np
 
 from src.math_helpers.signal_to_noise_ratio import signal_to_noise_ratio
-import cpp_calculate
+from src.dlls import cpp_calculate
 
 
 def directional_weighted_median(n_image: cv.Mat, threshold: int) -> cv.Mat:
