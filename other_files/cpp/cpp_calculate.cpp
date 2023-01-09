@@ -10,13 +10,26 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/highgui/highgui.hpp>
+#include <string>
+#include <iostream>
+#include <filesystem>
 
 
 namespace py = pybind11;
 
-void add_noise_to_video(const cv::Mat &image){
-    cv::imshow("Image", image);
-    cv::waitKey(0);
+void add_noise_to_video(const std::string &video_path, float noise_percent){
+  std::cout << video_path << noise_percent << std::endl;
+  cv::VideoCapture capture(video_path);
+  if (!capture.isOpened()) {
+    std::cerr << "Unable to open video file: " << video_path << std::endl;
+  }
+  cv::Mat frame;
+  while (capture.read(frame)) {
+    cv::imshow("Video", frame);
+    if (cv::waitKey(33) >= 0) {
+      break;
+    }
+  }
 }
 
 float own_median(std::vector<int> numbers) {

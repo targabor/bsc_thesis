@@ -10,7 +10,7 @@ def convert_inputs(video_name: str, percent_str: str) -> (cv.VideoCapture, float
     From the filename, gets the video, and convert the input number to float type.
         :param video_name: Name of the image in the 'images' folder
         :param percent_str: String typed floating number, must be between 0 and 1.
-        :return: (Grayscale image (cv2.Mat), floating number between 0 and 1)
+        :return: (name of the video (cv2.Mat), floating number between 0 and 1)
     """
     __input_video = None
     try:
@@ -19,7 +19,6 @@ def convert_inputs(video_name: str, percent_str: str) -> (cv.VideoCapture, float
             raise Exception('The filename must be mp4!')
         if not os.path.exists(f'../videos/{video_name}'):
             raise Exception('The file does not exist!')
-        __input_video = cv.VideoCapture(f'../videos/{sys.argv[1]}')
     except Exception as i_e_f:
         raise Exception(i_e_f)
 
@@ -29,7 +28,7 @@ def convert_inputs(video_name: str, percent_str: str) -> (cv.VideoCapture, float
         if __video_percent > 1 or __video_percent <= 0:
             raise Exception('The noise_percent must between 1 and 0!')
 
-        return __input_video, __video_percent
+        return video_name, __video_percent
     except Exception as i_e:
         raise i_e
 
@@ -37,7 +36,6 @@ def convert_inputs(video_name: str, percent_str: str) -> (cv.VideoCapture, float
 if __name__ == '__main__':
     input_video = None
     video_percent = None
-
     if len(sys.argv) != 3:
         print('You must pass exactly two argument!', file=sys.stderr)
         exit(1)
@@ -47,7 +45,6 @@ if __name__ == '__main__':
         print(f'There is an error, while processing the arguments!\n{str(e)}', file=sys.stderr)
         exit(1)
 
-    # cpp_caller.call_add_noise_to_video(input_video, sys.argv[1], video_percent)
-    cpp_caller.call_add_noise_to_video(input_video)
+    cpp_caller.call_add_noise_to_video(input_video, video_percent)
     cv.waitKey(0)
     cv.destroyAllWindows()

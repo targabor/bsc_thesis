@@ -11,5 +11,6 @@ def call_directional_weighted_median(n_image: cv.Mat, threshold: int, height: in
     return filtered_image
 
 
-def call_add_noise_to_video(img: cv.Mat):
-    cpp_calculate.add_noise_to_video(img)
+def call_add_noise_to_video(video_name: str, noise_percent: float):
+    path_to_video = os.path.dirname(__file__) + '\\..\\..\\videos\\' + video_name
+    cpp_calculate.add_noise_to_video(path_to_video, noise_percent)
