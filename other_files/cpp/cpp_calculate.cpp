@@ -13,23 +13,45 @@
 #include <string>
 #include <iostream>
 #include <filesystem>
-
+#include <cstdlib>
 
 namespace py = pybind11;
 
-void add_noise_to_video(const std::string &video_path, float noise_percent){
-  std::cout << video_path << noise_percent << std::endl;
-  cv::VideoCapture capture(video_path);
+
+const cv::Mat& add_noise_to_frame(cv::Mat &frame, float noise_percent){
+  int pixels_to_be_noised = std::round(frame.total() * noise_percent);
+  for(int count = 0; count < pixels_to_be_noised; count++){
+    int randomWidth = rand() % (frame.cols - 1); 
+    int randomHeight = rand() % (frame.rows - 1 );
+    frame.at<uchar>(randomHeight, randomWidth) = rand() % 255; 
+  }
+  return frame;
+}
+
+void add_noise_to_video(const std::string &video_path, const std::string &video_name, float noise_percent){
+  std::cout << video_path + video_name << noise_percent << std::endl;
+  cv::VideoCapture capture(video_path + video_name);
+  int width = capture.get(cv::CAP_PROP_FRAME_WIDTH);
+  int height = capture.get(cv::CAP_PROP_FRAME_HEIGHT);
+  int fps = capture.get(cv::CAP_PROP_FPS);
+  int fourcc = capture.get(cv::CAP_PROP_FOURCC); 
+  cv::VideoWriter writer((video_path + "noisy_" + video_name), fourcc, fps, cv::Size(width, height),0);
+
   if (!capture.isOpened()) {
     std::cerr << "Unable to open video file: " << video_path << std::endl;
   }
   cv::Mat frame;
   while (capture.read(frame)) {
-    cv::imshow("Video", frame);
+    cv::cvtColor(frame, frame, cv::COLOR_BGR2GRAY);
+    frame = add_noise_to_frame(frame, noise_percent);
+    writer.write(frame);
     if (cv::waitKey(33) >= 0) {
       break;
     }
   }
+  capture.release();
+  writer.release();
+  std::cout << "done" << std::endl;
 }
 
 float own_median(std::vector<int> numbers) {
