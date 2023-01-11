@@ -5,6 +5,8 @@ import sys
 import os
 import re
 
+from src.dlls import cpp_caller
+
 
 def convert_args_to_parameter(video_name: str, kernel_str: str) -> (cv.VideoCapture, int):
     """
@@ -18,20 +20,17 @@ def convert_args_to_parameter(video_name: str, kernel_str: str) -> (cv.VideoCapt
     try:
         pattern = re.compile(r"([\w\s]+)\.(mp4)$")
         if not pattern.match(video_name):
-            raise Exception('The filename must be jpg, jpeg, png!')
+            raise Exception('The filename must be mp4')
         if not os.path.exists(f'../../videos/{video_name}'):
             raise Exception('The file does not exist!')
         assert kernel_str.isdigit(), 'the second parameter must be a digit!'
         kernel_size = int(kernel_str)
         assert kernel_size % 2 == 1, 'the second parameter must be odd'
         assert kernel_size > 1, 'the second parameter must be greater than 1'
-        __input_video = cv.VideoCapture(f'../../images/{video_name}')
-        _, frame = __input_video.read()
-        assert frame.ndim == 2, 'the video is not grayscale, please convert it'
     except Exception as i_e_f:
         raise Exception(i_e_f)
 
-    return __input_video, kernel_size
+    return video_name, kernel_size
 
 
 # if the program called from the command line
@@ -42,6 +41,7 @@ if __name__ == '__main__':
         exit(1)
     try:
         noisy_video, kernel = convert_args_to_parameter(sys.argv[1], sys.argv[2])
+        cpp_caller.call_simple_median_for_video(noisy_video, kernel)
     except Exception as e:
         print(str(e), file=sys.stderr)
         exit(1)

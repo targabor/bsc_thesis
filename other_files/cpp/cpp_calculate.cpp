@@ -18,6 +18,31 @@
 namespace py = pybind11;
 
 
+void simple_median_for_video(const std::string &video_path, const std::string &video_name, int kernel_size){
+  cv::VideoCapture capture(video_path + video_name);
+  int width = capture.get(cv::CAP_PROP_FRAME_WIDTH);
+  int height = capture.get(cv::CAP_PROP_FRAME_HEIGHT);
+  int fps = capture.get(cv::CAP_PROP_FPS);
+  int fourcc = capture.get(cv::CAP_PROP_FOURCC); 
+  cv::VideoWriter writer((video_path + "simple_median_" + video_name), fourcc, fps, cv::Size(width, height),0);
+
+  if (!capture.isOpened()) {
+    std::cerr << "Unable to open video file: " << video_path << std::endl;
+  }
+  cv::Mat frame;
+  while (capture.read(frame)) {
+    cv::cvtColor(frame, frame, cv::COLOR_BGR2GRAY);
+    cv::medianBlur(frame, frame, kernel_size);
+    writer.write(frame);
+    if (cv::waitKey(33) >= 0) {
+      break;
+    }
+  }
+  capture.release();
+  writer.release();
+  std::cout << "done" << std::endl;
+}
+
 const cv::Mat& add_noise_to_frame(cv::Mat &frame, float noise_percent){
   int pixels_to_be_noised = std::round(frame.total() * noise_percent);
   for(int count = 0; count < pixels_to_be_noised; count++){
@@ -29,7 +54,6 @@ const cv::Mat& add_noise_to_frame(cv::Mat &frame, float noise_percent){
 }
 
 void add_noise_to_video(const std::string &video_path, const std::string &video_name, float noise_percent){
-  std::cout << video_path + video_name << noise_percent << std::endl;
   cv::VideoCapture capture(video_path + video_name);
   int width = capture.get(cv::CAP_PROP_FRAME_WIDTH);
   int height = capture.get(cv::CAP_PROP_FRAME_HEIGHT);
@@ -210,4 +234,5 @@ PYBIND11_MODULE(cpp_calculate, module_handle) {
     module_handle.doc() = "I'm a docstring hehe";
     module_handle.def("directional_weighted_median", &directional_weighted_median);
     module_handle.def("add_noise_to_video", &add_noise_to_video);
+    module_handle.def("simple_median_for_video", &simple_median_for_video);
 }
