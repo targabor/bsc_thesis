@@ -1,5 +1,11 @@
 set(CMAKE_CXX_FLAGS "-O2")
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /VERBOSE")
+set(OpenCV_DIR "C:\\tar_gabor\\Egyetem\\szakdolgozat\\bsc_thesis\\other_files\\cpp\\opencv\\sources\\build\\bin\\Release")
 cmake_minimum_required(VERSION 3.4...3.18)
 project(cpp_calculate)
+
 add_subdirectory(pybind11)
 pybind11_add_module(cpp_calculate cpp_calculate.cpp)
+find_package(OpenCV REQUIRED)
+include_directories(${OpenCV_DIR})
+target_link_libraries(cpp_calculate PUBLIC ${OpenCV_LIBS})

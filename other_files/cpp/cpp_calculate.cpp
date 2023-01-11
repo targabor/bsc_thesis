@@ -6,10 +6,77 @@
 #include <pybind11/stl.h>
 #include <pybind11/numpy.h>
 #include <iostream>
-
-
+#include <opencv2/opencv.hpp>
+#include <opencv2/core/core.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <string>
+#include <iostream>
+#include <filesystem>
+#include <cstdlib>
 
 namespace py = pybind11;
+
+
+void simple_median_for_video(const std::string &video_path, const std::string &video_name, int kernel_size){
+  cv::VideoCapture capture(video_path + video_name);
+  int width = capture.get(cv::CAP_PROP_FRAME_WIDTH);
+  int height = capture.get(cv::CAP_PROP_FRAME_HEIGHT);
+  int fps = capture.get(cv::CAP_PROP_FPS);
+  int fourcc = capture.get(cv::CAP_PROP_FOURCC); 
+  cv::VideoWriter writer((video_path + "simple_median_" + video_name), fourcc, fps, cv::Size(width, height),0);
+
+  if (!capture.isOpened()) {
+    std::cerr << "Unable to open video file: " << video_path << std::endl;
+  }
+  cv::Mat frame;
+  while (capture.read(frame)) {
+    cv::cvtColor(frame, frame, cv::COLOR_BGR2GRAY);
+    cv::medianBlur(frame, frame, kernel_size);
+    writer.write(frame);
+    if (cv::waitKey(33) >= 0) {
+      break;
+    }
+  }
+  capture.release();
+  writer.release();
+  std::cout << "done" << std::endl;
+}
+
+const cv::Mat& add_noise_to_frame(cv::Mat &frame, float noise_percent){
+  int pixels_to_be_noised = std::round(frame.total() * noise_percent);
+  for(int count = 0; count < pixels_to_be_noised; count++){
+    int randomWidth = rand() % (frame.cols - 1); 
+    int randomHeight = rand() % (frame.rows - 1 );
+    frame.at<uchar>(randomHeight, randomWidth) = rand() % 255; 
+  }
+  return frame;
+}
+
+void add_noise_to_video(const std::string &video_path, const std::string &video_name, float noise_percent){
+  cv::VideoCapture capture(video_path + video_name);
+  int width = capture.get(cv::CAP_PROP_FRAME_WIDTH);
+  int height = capture.get(cv::CAP_PROP_FRAME_HEIGHT);
+  int fps = capture.get(cv::CAP_PROP_FPS);
+  int fourcc = capture.get(cv::CAP_PROP_FOURCC); 
+  cv::VideoWriter writer((video_path + "noisy_" + video_name), fourcc, fps, cv::Size(width, height),0);
+
+  if (!capture.isOpened()) {
+    std::cerr << "Unable to open video file: " << video_path << std::endl;
+  }
+  cv::Mat frame;
+  while (capture.read(frame)) {
+    cv::cvtColor(frame, frame, cv::COLOR_BGR2GRAY);
+    frame = add_noise_to_frame(frame, noise_percent);
+    writer.write(frame);
+    if (cv::waitKey(33) >= 0) {
+      break;
+    }
+  }
+  capture.release();
+  writer.release();
+  std::cout << "done" << std::endl;
+}
 
 float own_median(std::vector<int> numbers) {
     std::sort(numbers.begin(), numbers.end());
@@ -98,13 +165,13 @@ int is_s_t_in_coordinates(int s, int t, int l_ij, std::vector<std::vector<std::p
 }
 
 std::vector<std::vector<int>>  directional_weighted_median(std::vector<std::vector<int>> n_image, int threshold, int height, int width) {
-  const std::vector<std::vector<std::pair<int, int>>> coordinates = {
+  std::vector<std::vector<std::pair<int, int>>> coordinates = {
     {{-2, -2}, {-1, -1}, {1, 1}, {2, 2}},  // S_1
     {{0, -2}, {0, -1}, {0, 1}, {0, 2}},  // S_2
     {{2, -2}, {1, -1}, {-1, 1}, {-2, 2}},  // S_3
     {{-2, 0}, {-1, 0}, {1, 0}, {2, 0}},  // S_4
   };
-  const std::vector<std::vector<std::pair<int, int>>> o_3 = {
+  std::vector<std::vector<std::pair<int, int>>> o_3 = {
     {{-1, 1}, {1, 1}},
     {{0, -1}, {0, 1}},
     {{1, -1}, {-1, 1}},
@@ -165,12 +232,7 @@ std::vector<std::vector<int>>  directional_weighted_median(std::vector<std::vect
 
 PYBIND11_MODULE(cpp_calculate, module_handle) {
     module_handle.doc() = "I'm a docstring hehe";
-    module_handle.def("own_median", &own_median);
-    module_handle.def("own_std", &own_std);
-    module_handle.def("own_mean", &own_mean);
-    module_handle.def("own_argmin", &own_argmin);
-    module_handle.def("calculate_x_plus_t", &calculate_x_plus_t);
-    module_handle.def("calculate_y_plus_s", &calculate_y_plus_s);
-    module_handle.def("get_w_st", &get_w_st);
     module_handle.def("directional_weighted_median", &directional_weighted_median);
+    module_handle.def("add_noise_to_video", &add_noise_to_video);
+    module_handle.def("simple_median_for_video", &simple_median_for_video);
 }
