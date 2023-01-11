@@ -10,6 +10,10 @@ from src.math_helpers.signal_to_noise_ratio import signal_to_noise_ratio
 from src.dlls import cpp_caller
 
 
+def directional_weighted_median(n_image: cv.Mat, threshold: int):
+    return cpp_caller.call_directional_weighted_median(n_image, threshold, n_image.shape[0], n_image.shape[1])
+
+
 def convert_inputs_for_weighted(image_name: str) -> cv.Mat:
     """
     From the filename, gets the image and checks, and converts it to grayscale
@@ -46,8 +50,7 @@ if __name__ == '__main__':
         if image is not None:
             t = int(sys.argv[2])
             start = time.time()
-            filtered_image = cpp_caller.call_directional_weighted_median(image, t, image.shape[0], image.shape[1])
-            filtered_image = cv.Mat(np.array(filtered_image).astype(np.uint8))
+            filtered_image = directional_weighted_median(image, t)
             end = time.time()
             elapsed_time = end - start
             print(f'Elapsed time: {elapsed_time:.2f} seconds')

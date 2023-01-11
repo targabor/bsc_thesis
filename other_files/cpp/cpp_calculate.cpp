@@ -17,6 +17,103 @@
 
 namespace py = pybind11;
 
+cv::Mat convert_vector_to_mat(std::vector<std::vector<int>> n_image){
+  int rows = n_image.size();
+  int cols = n_image[0].size();
+  cv::Mat myMat(rows, cols, CV_8UC1);
+  for (int i = 0; i < rows; i++) {
+    for (int j = 0; j < cols; j++) {
+        myMat.at<uchar>(i, j) = (uchar)n_image[i][j];
+    }
+  }
+  return myMat;
+}
+
+std::vector<std::vector<int>> convert_mat_to_vector(cv::Mat myMat){
+  std::vector<std::vector<int>> data(myMat.rows, std::vector<int>(myMat.cols));
+  for (int i = 0; i < myMat.rows; i++) {  
+    for (int j = 0; j < myMat.cols; j++) {
+      data[i][j] = myMat.at<uchar>(i, j);
+    }
+  }
+  return data;
+}
+
+cv::Mat weighted_median_filter_mat(cv::Mat image, int kernel_size, std::string weight_type = "uniform") {
+    int padding = kernel_size / 2;
+    cv::Mat padded_image;
+    cv::copyMakeBorder(image, padded_image, padding, padding, padding, padding, cv::BORDER_REPLICATE);
+    cv::Mat output_image = cv::Mat::zeros(image.rows, image.cols, image.type());
+    cv::Mat weights;
+    if (weight_type == "uniform") {
+        weights = cv::Mat::ones(kernel_size, kernel_size, CV_32FC1);
+    } else if (weight_type == "distance") {
+        int center = (kernel_size - 1) / 2;
+        weights = cv::Mat::zeros(kernel_size, kernel_size, CV_32FC1);
+        for (int x = 0; x < kernel_size; x++) {
+            for (int y = 0; y < kernel_size; y++) {
+                float distance = sqrt(pow(x - center, 2) + pow(y - center, 2));
+                weights.at<float>(y, x) = exp(-distance / kernel_size);
+            }
+        }
+    } else {
+        throw std::invalid_argument("Invalid weight type. Use 'uniform' or 'distance'.");
+    }
+    for (int y = 0; y < image.rows; y++) {
+        for (int x = 0; x < image.cols; x++) {
+            cv::Rect roi(x, y, kernel_size, kernel_size);
+            cv::Mat neighborhood = padded_image(roi);
+            std::vector<int> values;
+            for (int i = 0; i < neighborhood.rows; i++) {
+                for (int j = 0; j < neighborhood.cols; j++) {
+                    float weight = weights.at<float>(i, j);
+                    for (int k = 0; k < weight; k++) {
+                        values.push_back(neighborhood.at<uchar>(i, j));
+                    }
+                }
+            }
+            std::nth_element(values.begin(), values.begin() + values.size() / 2, values.end());
+            output_image.at<uchar>(y, x) = values[values.size() / 2];
+        }
+    }
+    return output_image;
+}
+
+std::vector<std::vector<int>> weighted_median_filter_vector(std::vector<std::vector<int>> n_image, int kernel_size, std::string weight_type = "uniform"){
+  cv::Mat myMat = convert_vector_to_mat(n_image);
+  myMat = weighted_median_filter_mat(myMat, kernel_size, weight_type);
+  return convert_mat_to_vector(myMat);
+}
+
+cv::Mat generate_noise_map(cv::Mat _apx_of_noise) {
+  cv::Scalar mean, std_dev;
+  cv::meanStdDev(_apx_of_noise, mean, std_dev);
+  double sum = cv::sum(_apx_of_noise)[0];
+  double num_pixels = _apx_of_noise.rows * _apx_of_noise.cols;
+  double avg_grey_level = sum / num_pixels;
+  double std_deviation = std_dev[0];
+  cv::Mat noise_map;
+  cv::compare(_apx_of_noise, std_deviation + avg_grey_level, noise_map, cv::CMP_GE);
+  return noise_map;
+}
+
+cv::Mat two_pass_median_for_image_mat(const cv::Mat image_to_filter){
+  cv::Mat apx_of_signal_only;
+  cv::medianBlur(image_to_filter, apx_of_signal_only, 3);
+  cv::Mat apx_of_noise;
+  cv::absdiff(image_to_filter, apx_of_signal_only, apx_of_noise);
+  cv::Mat noise_map = generate_noise_map(apx_of_noise);
+  cv::Mat _filtered_image = image_to_filter.clone();
+  apx_of_signal_only.copyTo(_filtered_image, noise_map);
+  cv::waitKey();
+  return _filtered_image;
+}
+
+std::vector<std::vector<int>> two_pass_median_for_image_vector(std::vector<std::vector<int>> n_image){
+  cv::Mat myMat = convert_vector_to_mat(n_image);
+  myMat = two_pass_median_for_image_mat(myMat);
+  return convert_mat_to_vector(myMat);
+}
 
 void simple_median_for_video(const std::string &video_path, const std::string &video_name, int kernel_size){
   cv::VideoCapture capture(video_path + video_name);
@@ -235,4 +332,6 @@ PYBIND11_MODULE(cpp_calculate, module_handle) {
     module_handle.def("directional_weighted_median", &directional_weighted_median);
     module_handle.def("add_noise_to_video", &add_noise_to_video);
     module_handle.def("simple_median_for_video", &simple_median_for_video);
+    module_handle.def("two_pass_median_for_image_vector", &two_pass_median_for_image_vector);
+    module_handle.def("weighted_median_filter_vector", &weighted_median_filter_vector);
 }
