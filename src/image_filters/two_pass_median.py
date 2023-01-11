@@ -1,55 +1,17 @@
 import sys
 import re
 import os
+import time
 
 import cv2 as cv
 import numpy as np
 
 from src.math_helpers import signal_to_noise_ratio
+from src.dlls import cpp_caller
 
 
-def generate_noise_map(_apx_of_noise: cv.Mat) -> cv.Mat:
-    """
-    Creates noise map from a grayscale image.
-    Pixels can have 1 and 0, as following:
-    1, if the _apx_of_noise >= std_dev + avg_gray_level
-    0, if the _apx_of_noise < std_dev + avg_gray_level
-        :param _apx_of_noise: grayscale image, in cv.Mat format
-        :return: the approximated noise map of the input image
-    """
-    avg_grey_level = np.average(_apx_of_noise)
-    mean, std_dev = cv.meanStdDev(_apx_of_noise)
-    noise_map = np.zeros(_apx_of_noise.shape)
-    noise_map[_apx_of_noise >= std_dev + avg_grey_level] = 1
-    noise_map = cv.Mat(noise_map)
-    return noise_map
-
-
-def two_pass_median(image_to_filter: cv.Mat) -> cv.Mat:
-    """
-    Two pass median filter, based on 'papers/Two_Pass_Median_Filter.pdf'.
-        :param image_to_filter: Takes a grayscale image in cv2.Mat type
-        :return: Filtered image in cv2.Mat format
-    """
-    assert len(image_to_filter.shape) == 2, 'The input image must be grayscale'
-    """
-    L - noisy image
-    S - signal component
-    N - noise component
-    N'- apr. of noise
-    S'- apr. of signal only
-    L = S + N
-    N = L - S
-    N' = L - S'
-    """
-    noisy_image = image_to_filter.copy()
-    # Median filtration, to approximate the signal-only image
-    apx_of_signal_only = cv.medianBlur(image_to_filter, 3)
-    apx_of_noise = abs(np.subtract(noisy_image, apx_of_signal_only))
-    noise_map = generate_noise_map(apx_of_noise)
-    _filtered_image = noisy_image.copy()
-    _filtered_image[noise_map == 0] = apx_of_signal_only[noise_map == 0]
-    return _filtered_image
+def two_pass_median(n_image: cv.Mat) -> cv.Mat:
+    return cpp_caller.call_two_pass_median_for_image_vector(n_image)
 
 
 def convert_inputs_for_two_pass(image_name: str) -> cv.Mat:
@@ -82,9 +44,13 @@ if __name__ == '__main__':
         exit(1)
     try:
         image = convert_inputs_for_two_pass(sys.argv[1])
-        cv.imshow('image', image)
         if image is not None:
+            start = time.time()
             filtered_image = two_pass_median(image)
+            end = time.time()
+            elapsed_time = end - start
+            print(f'Elapsed time: {elapsed_time:.2f} seconds')
+            cv.imshow('noisy', image)
             cv.imshow('filtered_image', filtered_image)
             print('signal_to_noise_filtered', signal_to_noise_ratio(image, filtered_image))
             cv.waitKey()
