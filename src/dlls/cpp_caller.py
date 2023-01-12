@@ -16,9 +16,14 @@ def call_add_noise_to_video(video_name: str, noise_percent: float):
     cpp_calculate.add_noise_to_video(path_to_video, video_name, noise_percent)
 
 
-def call_simple_median_for_video(video_name: str, kernel_size: int):
+def call_simple_median_for_video_frame(video_name: str, kernel_size: int):
     path_to_video = os.path.dirname(__file__) + '\\..\\..\\videos\\'
-    cpp_calculate.simple_median_for_video(path_to_video, video_name, kernel_size)
+    cpp_calculate.simple_median_for_video_frame(path_to_video, video_name, kernel_size)
+
+
+def call_weighted_median_for_video_frame(video_name: str, kernel_size: int, weight_type: str):
+    path_to_video = os.path.dirname(__file__) + '\\..\\..\\videos\\'
+    cpp_calculate.weighted_median_for_video_frame(path_to_video, video_name, kernel_size, weight_type)
 
 
 def call_two_pass_median_for_image_vector(n_image: cv.Mat) -> cv.Mat:
