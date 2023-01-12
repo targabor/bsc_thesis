@@ -6,8 +6,8 @@ from . import cpp_calculate
 
 
 # Image filters
-def call_directional_weighted_median(n_image: cv.Mat, threshold: int, height: int, width: int) -> cv.Mat:
-    filtered_image = cpp_calculate.directional_weighted_median(n_image, threshold, height, width)
+def call_directional_weighted_median_vector(n_image: cv.Mat, threshold: int, height: int, width: int) -> cv.Mat:
+    filtered_image = cpp_calculate.directional_weighted_median_vector(n_image, threshold, height, width)
     filtered_image = cv.Mat(np.array(filtered_image).astype(np.uint8))
     return filtered_image
 

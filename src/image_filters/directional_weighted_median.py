@@ -11,7 +11,7 @@ from src.dlls import cpp_caller
 
 
 def directional_weighted_median(n_image: cv.Mat, threshold: int):
-    return cpp_caller.call_directional_weighted_median(n_image, threshold, n_image.shape[0], n_image.shape[1])
+    return cpp_caller.call_directional_weighted_median_vector(n_image, threshold, n_image.shape[0], n_image.shape[1])
 
 
 def convert_inputs_for_weighted(image_name: str) -> cv.Mat:
@@ -56,7 +56,6 @@ if __name__ == '__main__':
             print(f'Elapsed time: {elapsed_time:.2f} seconds')
             cv.imshow('input_image', image)
             cv.imshow(f'filtered_image with {t} threshold', filtered_image)
-            print('signal_to_noise_filtered', signal_to_noise_ratio(image, filtered_image))
             cv.waitKey()
             cv.destroyAllWindows()
             exit(0)
