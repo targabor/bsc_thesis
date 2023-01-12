@@ -149,65 +149,134 @@ cv::Mat generate_noise_map(cv::Mat _apx_of_noise) {
 }
 
 //Image filters--------------------------------------------------------------------------------------
-  cv::Mat weighted_median_filter_mat(cv::Mat image, int kernel_size, std::string weight_type = "uniform") {
-      int padding = kernel_size / 2;
-      cv::Mat padded_image;
-      cv::copyMakeBorder(image, padded_image, padding, padding, padding, padding, cv::BORDER_REPLICATE);
-      cv::Mat weights;
-      if (weight_type == "uniform") {
-          weights = cv::Mat::ones(kernel_size, kernel_size, CV_32FC1);
-      } else if (weight_type == "distance") {
-          int center = (kernel_size - 1) / 2;
-          weights = cv::Mat::zeros(kernel_size, kernel_size, CV_32FC1);
-          for (int x = 0; x < kernel_size; x++) {
-              for (int y = 0; y < kernel_size; y++) {
-                  float distance = sqrt(pow(x - center, 2) + pow(y - center, 2));
-                  weights.at<float>(y, x) = exp(-distance / kernel_size);
-              }
-          }
-      } else {
-          throw std::invalid_argument("Invalid weight type. Use 'uniform' or 'distance'.");
+cv::Mat directional_weighted_median_mat(cv::Mat n_image, int threshold, int height, int width) {
+  std::vector<std::vector<std::pair<int, int>>> coordinates = {
+    {{-2, -2}, {-1, -1}, {1, 1}, {2, 2}},  // S_1
+    {{0, -2}, {0, -1}, {0, 1}, {0, 2}},  // S_2
+    {{2, -2}, {1, -1}, {-1, 1}, {-2, 2}},  // S_3
+    {{-2, 0}, {-1, 0}, {1, 0}, {2, 0}},  // S_4
+  };
+  std::vector<std::vector<std::pair<int, int>>> o_3 = {
+    {{-1, 1}, {1, 1}},
+    {{0, -1}, {0, 1}},
+    {{1, -1}, {-1, 1}},
+    {{-1, 0}, {1, 0}}
+  };
+  std::vector<int> d_k(4, 0);
+  std::vector<int> std_k(4, 0);
+  std::vector<int> dir_std(4, 0);
+  std::vector<int> values_for_pixel;
+  cv::Mat u_ij = cv::Mat::zeros(height, width, CV_8UC1);
+  for(int y = 0; y < height; y++){
+    for(int x = 0; x < width; x++){
+      std::fill(d_k.begin(), d_k.end(), 0);
+      std::fill(std_k.begin(), std_k.end(), 0);
+      for(int direction = 0; direction < 4; direction++){
+        int d_sum = 0;
+        std::fill(dir_std.begin(), dir_std.end(), 0);
+        int counter = 0;
+        for (const auto& point : coordinates[direction]) {
+          int s = point.first;
+          int t = point.second;
+          int w_st = get_w_st(s,t);
+          int y_plus_s = calculate_y_plus_s(y,s,height);
+          int x_plus_t = calculate_x_plus_t(x,t,width);
+          int w_st_times_abs_y_with_st_minus_y = w_st * std::abs(n_image.at<uchar>(y_plus_s, x_plus_t) - n_image.at<uchar>(y, x));
+          d_sum += w_st_times_abs_y_with_st_minus_y;
+          dir_std[counter] = n_image.at<uchar>(y_plus_s, x_plus_t);
+          counter++;
+        }
+        d_k[direction] = d_sum;
+        std_k[direction] = own_std(dir_std);
       }
-      cv::Mat output_image(image.rows, image.cols, image.type());
-      std::mutex output_image_mutex;
-      
-      auto process_neighborhood = [&](const cv::Range& range) {
-          cv::Mat hist = cv::Mat::zeros(256, 1, CV_32FC1);
-          cv::Mat hist_weights = cv::Mat::zeros(256, 1, CV_32FC1);
-          for (int y = range.start; y < range.end; y++) {
-              for (int x = 0; x < image.cols; x++) {
-                  cv::Rect roi(x, y, kernel_size, kernel_size);
-                  cv::Mat neighborhood = padded_image(roi);
-                  hist *= 0;
-                  hist_weights *= 0;
-                  for (int i = 0; i < neighborhood.rows; i++) {
-                      for (int j = 0; j < neighborhood.cols; j++) {
-                          float weight = weights.at<float>(i, j);
-                          int value = neighborhood.at<uchar>(i, j);
-                          hist.at<float>(value, 0) += weight;
-                          hist_weights.at<float>(value, 0) += weight;
-                      }
-                  }
-                  float median = 0;
-                  float sum = 0;
-                  float middle = kernel_size * kernel_size * 0.5;
-                  for (int i = 0; i < 256; i++) {
-                      sum += hist_weights.at<float>(i, 0);
-                      if (sum >= middle) {
-                           median = i;
-                           break;
-                      }
-                  }
-                  std::lock_guard<std::mutex> lock(output_image_mutex);
-                  output_image.at<uchar>(y, x) = median;
-              }
-          }
-      };
 
-      int num_threads = cv::getNumberOfCPUs();
-      cv::parallel_for_(cv::Range(0, image.rows), process_neighborhood, num_threads);
-      return output_image;
+      int r_ij = *std::min_element(d_k.begin(), d_k.end());
+      int l_ij = own_argmin(std_k);
+
+      int alpha_ij = 0;
+      if(r_ij <= threshold){
+        u_ij.at<uchar>(y, x) = n_image.at<uchar>(y, x);
+        continue;
+      }
+
+      values_for_pixel.clear();
+      for(int direction = 0; direction < 4; direction++){
+        for (const auto& point : o_3[direction]) {
+          int s = point.first;
+          int t = point.second;
+          int w_st = is_s_t_in_coordinates(s,t, l_ij, coordinates);
+          int y_plus_s = calculate_y_plus_s(y,s,height);
+          int x_plus_t = calculate_x_plus_t(x,t,width);
+          for(int rep = 0; rep < w_st; rep++){
+            values_for_pixel.push_back(n_image.at<uchar>(y_plus_s, x_plus_t));
+          }
+        }
+      }
+      u_ij.at<uchar>(y, x) = own_median(values_for_pixel);
+    }
   }
+  return u_ij;
+}
+
+cv::Mat weighted_median_filter_mat(cv::Mat image, int kernel_size, std::string weight_type = "uniform") {
+    int padding = kernel_size / 2;
+    cv::Mat padded_image;
+    cv::copyMakeBorder(image, padded_image, padding, padding, padding, padding, cv::BORDER_REPLICATE);
+    cv::Mat weights;
+    if (weight_type == "uniform") {
+        weights = cv::Mat::ones(kernel_size, kernel_size, CV_32FC1);
+    } else if (weight_type == "distance") {
+        int center = (kernel_size - 1) / 2;
+        weights = cv::Mat::zeros(kernel_size, kernel_size, CV_32FC1);
+        for (int x = 0; x < kernel_size; x++) {
+            for (int y = 0; y < kernel_size; y++) {
+                float distance = sqrt(pow(x - center, 2) + pow(y - center, 2));
+                weights.at<float>(y, x) = exp(-distance / kernel_size);
+            }
+        }
+    } else {
+        throw std::invalid_argument("Invalid weight type. Use 'uniform' or 'distance'.");
+    }
+    cv::Mat output_image(image.rows, image.cols, image.type());
+    std::mutex output_image_mutex;
+    
+    auto process_neighborhood = [&](const cv::Range& range) {
+        cv::Mat hist = cv::Mat::zeros(256, 1, CV_32FC1);
+        cv::Mat hist_weights = cv::Mat::zeros(256, 1, CV_32FC1);
+        for (int y = range.start; y < range.end; y++) {
+            for (int x = 0; x < image.cols; x++) {
+                cv::Rect roi(x, y, kernel_size, kernel_size);
+                cv::Mat neighborhood = padded_image(roi);
+                hist *= 0;
+                hist_weights *= 0;
+                for (int i = 0; i < neighborhood.rows; i++) {
+                    for (int j = 0; j < neighborhood.cols; j++) {
+                        float weight = weights.at<float>(i, j);
+                        int value = neighborhood.at<uchar>(i, j);
+                        hist.at<float>(value, 0) += weight;
+                        hist_weights.at<float>(value, 0) += weight;
+                    }
+                }
+                float median = 0;
+                float sum = 0;
+                float middle = kernel_size * kernel_size * 0.5;
+                for (int i = 0; i < 256; i++) {
+                    sum += hist_weights.at<float>(i, 0);
+                    if (sum >= middle) {
+                          median = i;
+                          break;
+                    }
+                }
+                std::lock_guard<std::mutex> lock(output_image_mutex);
+                output_image.at<uchar>(y, x) = median;
+            }
+        }
+    };
+
+    int num_threads = cv::getNumberOfCPUs();
+    cv::parallel_for_(cv::Range(0, image.rows), process_neighborhood, num_threads);
+    return output_image;
+}
 
 cv::Mat two_pass_median_for_image_mat(const cv::Mat image_to_filter){
   cv::Mat apx_of_signal_only;
@@ -217,7 +286,6 @@ cv::Mat two_pass_median_for_image_mat(const cv::Mat image_to_filter){
   cv::Mat noise_map = generate_noise_map(apx_of_noise);
   cv::Mat _filtered_image = image_to_filter.clone();
   apx_of_signal_only.copyTo(_filtered_image, noise_map);
-  cv::waitKey();
   return _filtered_image;
 }
 //Video filters-----------------------------------------------------------------------------------------------------------
@@ -303,70 +371,10 @@ std::vector<std::vector<int>> weighted_median_filter_vector(std::vector<std::vec
   return convert_mat_to_vector(myMat);
 }
 
-std::vector<std::vector<int>>  directional_weighted_median(std::vector<std::vector<int>> n_image, int threshold, int height, int width) {
-  std::vector<std::vector<std::pair<int, int>>> coordinates = {
-    {{-2, -2}, {-1, -1}, {1, 1}, {2, 2}},  // S_1
-    {{0, -2}, {0, -1}, {0, 1}, {0, 2}},  // S_2
-    {{2, -2}, {1, -1}, {-1, 1}, {-2, 2}},  // S_3
-    {{-2, 0}, {-1, 0}, {1, 0}, {2, 0}},  // S_4
-  };
-  std::vector<std::vector<std::pair<int, int>>> o_3 = {
-    {{-1, 1}, {1, 1}},
-    {{0, -1}, {0, 1}},
-    {{1, -1}, {-1, 1}},
-    {{-1, 0}, {1, 0}}
-  };
-
-  std::vector<std::vector<int>> u_ij(height, std::vector<int>(width));
-  for(int y = 0; y < height; y++){
-    for(int x = 0; x < width; x++){
-      std::vector<int> d_k(4, 0);
-      std::vector<int> std_k(4, 0);
-      for(int direction = 0; direction < 4; direction++){
-        int d_sum = 0;
-        std::vector<int> dir_std(4, 0);
-        int counter = 0;
-        for (const auto& point : coordinates[direction]) {
-          int s = point.first;
-          int t = point.second;
-          int w_st = get_w_st(s,t);
-          int y_plus_s = calculate_y_plus_s(y,s,height);
-          int x_plus_t = calculate_x_plus_t(x,t,width);
-          int w_st_times_abs_y_with_st_minus_y = w_st * std::abs(n_image[y_plus_s][x_plus_t] - n_image[y][x]);
-          d_sum += w_st_times_abs_y_with_st_minus_y;
-          dir_std[counter] = n_image[y_plus_s][x_plus_t];
-          counter++;
-        }
-        d_k[direction] = d_sum;
-        std_k[direction] = own_std(dir_std);
-      }
-
-      int r_ij = *std::min_element(d_k.begin(), d_k.end());
-      int l_ij = own_argmin(std_k);
-
-      int alpha_ij = 0;
-      if(r_ij <= threshold){
-        u_ij[y][x] = n_image[y][x];
-        continue;
-      }
-
-      std::vector<int> values_for_pixel;
-      for(int direction = 0; direction < 4; direction++){
-        for (const auto& point : o_3[direction]) {
-          int s = point.first;
-          int t = point.second;
-          int w_st = is_s_t_in_coordinates(s,t, l_ij, coordinates);
-          int y_plus_s = calculate_y_plus_s(y,s,height);
-          int x_plus_t = calculate_x_plus_t(x,t,width);
-          for(int rep = 0; rep < w_st; rep++){
-            values_for_pixel.push_back(n_image[y_plus_s][x_plus_t]);
-          }
-        }
-      }
-      u_ij[y][x] = own_median(values_for_pixel);
-    }
-  }
-  return u_ij;
+std::vector<std::vector<int>> directional_weighted_median_vector(std::vector<std::vector<int>> n_image, int threshold, int height, int width) {
+  cv::Mat myMat = convert_vector_to_mat(n_image);
+  myMat = directional_weighted_median_mat(myMat, threshold, height, width);
+  return convert_mat_to_vector(myMat);
 }
 
 std::vector<std::vector<int>> two_pass_median_for_image_vector(std::vector<std::vector<int>> n_image){
@@ -378,9 +386,11 @@ std::vector<std::vector<int>> two_pass_median_for_image_vector(std::vector<std::
 PYBIND11_MODULE(cpp_calculate, module_handle) {
     module_handle.doc() = "I'm a docstring hehe";
     module_handle.def("add_noise_to_video", &add_noise_to_video);
-    module_handle.def("directional_weighted_median", &directional_weighted_median);
+
+    module_handle.def("directional_weighted_median_vector", &directional_weighted_median_vector);
     module_handle.def("two_pass_median_for_image_vector", &two_pass_median_for_image_vector);
     module_handle.def("weighted_median_filter_vector", &weighted_median_filter_vector);
+
     module_handle.def("simple_median_for_video_frame", &simple_median_for_video_frame);
     module_handle.def("weighted_median_for_video_frame", &weighted_median_for_video_frame);
 }

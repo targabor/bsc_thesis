@@ -1,4 +1,5 @@
-set(CMAKE_CXX_FLAGS "-O2")
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_FLAGS "/O2")
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /VERBOSE")
 set(OpenCV_DIR "C:\\tar_gabor\\Egyetem\\szakdolgozat\\bsc_thesis\\other_files\\cpp\\opencv\\sources\\build\\bin\\Release")
 cmake_minimum_required(VERSION 3.4...3.18)
