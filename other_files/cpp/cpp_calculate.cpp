@@ -377,10 +377,10 @@ std::vector<std::vector<int>> two_pass_median_for_image_vector(std::vector<std::
 
 PYBIND11_MODULE(cpp_calculate, module_handle) {
     module_handle.doc() = "I'm a docstring hehe";
-    module_handle.def("directional_weighted_median", &directional_weighted_median);
     module_handle.def("add_noise_to_video", &add_noise_to_video);
-    module_handle.def("simple_median_for_video_frame", &simple_median_for_video_frame);
+    module_handle.def("directional_weighted_median", &directional_weighted_median);
     module_handle.def("two_pass_median_for_image_vector", &two_pass_median_for_image_vector);
     module_handle.def("weighted_median_filter_vector", &weighted_median_filter_vector);
+    module_handle.def("simple_median_for_video_frame", &simple_median_for_video_frame);
     module_handle.def("weighted_median_for_video_frame", &weighted_median_for_video_frame);
 }
