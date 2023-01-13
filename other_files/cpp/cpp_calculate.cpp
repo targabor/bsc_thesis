@@ -339,6 +339,31 @@ void weighted_median_for_video_frame(const std::string &video_path, const std::s
   std::cout << "done" << std::endl;
 }
 
+void directional_weighted_median_for_video_frame(const std::string &video_path, const std::string &video_name, int threshold){
+  cv::VideoCapture capture(video_path + video_name);
+  int width = capture.get(cv::CAP_PROP_FRAME_WIDTH);
+  int height = capture.get(cv::CAP_PROP_FRAME_HEIGHT);
+  int fps = capture.get(cv::CAP_PROP_FPS);
+  int fourcc = capture.get(cv::CAP_PROP_FOURCC); 
+  cv::VideoWriter writer((video_path + "directional_weighted_median_ever_frame_" + std::to_string(threshold) + "_" + video_name), fourcc, fps, cv::Size(width, height),0);
+
+  if (!capture.isOpened()) {
+    std::cerr << "Unable to open video file: " << video_path << std::endl;
+  }
+  cv::Mat frame;
+  while (capture.read(frame)) {
+    cv::cvtColor(frame, frame, cv::COLOR_BGR2GRAY);
+    frame = directional_weighted_median_mat(frame,threshold,height, width);
+    cv::imshow("video", frame);
+    writer.write(frame);
+    if (cv::waitKey(33) >= 0) {
+      break;
+    }
+  }
+  capture.release();
+  writer.release();
+  std::cout << "done" << std::endl;
+}
 //Callers to python---------------------------------------------------------------------------------------------------
 void add_noise_to_video(const std::string &video_path, const std::string &video_name, float noise_percent){
   cv::VideoCapture capture(video_path + video_name);
@@ -393,4 +418,5 @@ PYBIND11_MODULE(cpp_calculate, module_handle) {
 
     module_handle.def("simple_median_for_video_frame", &simple_median_for_video_frame);
     module_handle.def("weighted_median_for_video_frame", &weighted_median_for_video_frame);
+    module_handle.def("directional_weighted_median_for_video_frame", &directional_weighted_median_for_video_frame);
 }

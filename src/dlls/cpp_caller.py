@@ -40,3 +40,8 @@ def call_weighted_median_for_video_frame(video_name: str, kernel_size: int, weig
     path_to_video = os.path.dirname(__file__) + '\\..\\..\\videos\\'
     cpp_calculate.weighted_median_for_video_frame(path_to_video, video_name, kernel_size, weight_type)
 
+
+def call_directional_weighted_median_for_video_frame(video_name: str, threshold: int):
+    path_to_video = os.path.dirname(__file__) + '\\..\\..\\videos\\'
+    cpp_calculate.directional_weighted_median_for_video_frame(path_to_video, video_name, threshold)
+
