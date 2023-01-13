@@ -18,6 +18,16 @@
 namespace py = pybind11;
 //Helpres----------------------------------------------------------------------------------------------
 
+double PSNR(cv::Mat original, cv::Mat compressed) {
+  cv::Scalar mse = cv::mean((original - compressed).mul(original - compressed));
+  if (mse[0] == 0) {
+    return 100;
+  }
+  double max_pixel = 255.0;
+  double psnr = 20 * log10(max_pixel / sqrt(mse[0]));
+  return psnr;
+}
+
 cv::Mat convert_vector_to_mat(std::vector<std::vector<int>> n_image){
   int rows = n_image.size();
   int cols = n_image[0].size();
