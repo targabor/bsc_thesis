@@ -149,7 +149,7 @@ cv::Mat generate_noise_map(cv::Mat _apx_of_noise) {
 }
 
 //Image filters--------------------------------------------------------------------------------------
-cv::Mat directional_weighted_median_mat(cv::Mat n_image, int threshold, int height, int width) {
+cv::Mat directional_weighted_median_mat(cv::Mat &n_image, int threshold, int height, int width) {
   std::vector<std::vector<std::pair<int, int>>> coordinates = {
     {{-2, -2}, {-1, -1}, {1, 1}, {2, 2}},  // S_1
     {{0, -2}, {0, -1}, {0, 1}, {0, 2}},  // S_2
@@ -218,7 +218,7 @@ cv::Mat directional_weighted_median_mat(cv::Mat n_image, int threshold, int heig
   return u_ij;
 }
 
-cv::Mat weighted_median_filter_mat(cv::Mat image, int kernel_size, std::string weight_type = "uniform") {
+cv::Mat weighted_median_filter_mat(cv::Mat &image, int kernel_size, std::string weight_type = "uniform") {
     int padding = kernel_size / 2;
     cv::Mat padded_image;
     cv::copyMakeBorder(image, padded_image, padding, padding, padding, padding, cv::BORDER_REPLICATE);
@@ -278,7 +278,7 @@ cv::Mat weighted_median_filter_mat(cv::Mat image, int kernel_size, std::string w
     return output_image;
 }
 
-cv::Mat two_pass_median_for_image_mat(const cv::Mat image_to_filter){
+cv::Mat two_pass_median_for_image_mat(const cv::Mat &image_to_filter){
   cv::Mat apx_of_signal_only;
   cv::medianBlur(image_to_filter, apx_of_signal_only, 3);
   cv::Mat apx_of_noise;
@@ -311,7 +311,6 @@ void simple_median_for_video_frame(const std::string &video_path, const std::str
   }
   capture.release();
   writer.release();
-  std::cout << "done" << std::endl;
 }
 
 void weighted_median_for_video_frame(const std::string &video_path, const std::string &video_name, int kernel_size, std::string weight_type){
@@ -336,7 +335,6 @@ void weighted_median_for_video_frame(const std::string &video_path, const std::s
   }
   capture.release();
   writer.release();
-  std::cout << "done" << std::endl;
 }
 
 void directional_weighted_median_for_video_frame(const std::string &video_path, const std::string &video_name, int threshold){
@@ -354,7 +352,6 @@ void directional_weighted_median_for_video_frame(const std::string &video_path, 
   while (capture.read(frame)) {
     cv::cvtColor(frame, frame, cv::COLOR_BGR2GRAY);
     frame = directional_weighted_median_mat(frame,threshold,height, width);
-    cv::imshow("video", frame);
     writer.write(frame);
     if (cv::waitKey(33) >= 0) {
       break;
@@ -362,8 +359,8 @@ void directional_weighted_median_for_video_frame(const std::string &video_path, 
   }
   capture.release();
   writer.release();
-  std::cout << "done" << std::endl;
 }
+
 //Callers to python---------------------------------------------------------------------------------------------------
 void add_noise_to_video(const std::string &video_path, const std::string &video_name, float noise_percent){
   cv::VideoCapture capture(video_path + video_name);
@@ -387,7 +384,6 @@ void add_noise_to_video(const std::string &video_path, const std::string &video_
   }
   capture.release();
   writer.release();
-  std::cout << "done" << std::endl;
 }
 
 std::vector<std::vector<int>> weighted_median_filter_vector(std::vector<std::vector<int>> n_image, int kernel_size, std::string weight_type = "uniform"){

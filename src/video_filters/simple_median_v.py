@@ -1,3 +1,5 @@
+import time
+
 import cv2 as cv
 import numpy as np
 
@@ -40,7 +42,11 @@ if __name__ == '__main__':
         exit(1)
     try:
         noisy_video, kernel = convert_args_to_parameter(sys.argv[1], sys.argv[2])
+        start = time.time()
         cpp_caller.call_simple_median_for_video_frame(noisy_video, kernel)
+        end = time.time()
+        elapsed_time = end - start
+        print(f'Elapsed time: {elapsed_time:.2f} seconds')
     except Exception as e:
         print(str(e), file=sys.stderr)
         exit(1)
