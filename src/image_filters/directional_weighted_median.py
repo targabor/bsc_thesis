@@ -10,7 +10,7 @@ from src.math_helpers.signal_to_noise_ratio import signal_to_noise_ratio
 from src.dlls import cpp_caller
 
 
-def directional_weighted_median(n_image: cv.Mat, threshold: int):
+def directional_weighted_median(n_image: cv.Mat, threshold: int) -> (cv.Mat, float):
     return cpp_caller.call_directional_weighted_median_vector(n_image, threshold, n_image.shape[0], n_image.shape[1])
 
 
@@ -50,10 +50,11 @@ if __name__ == '__main__':
         if image is not None:
             t = int(sys.argv[2])
             start = time.time()
-            filtered_image = directional_weighted_median(image, t)
+            filtered_image, psnr = directional_weighted_median(image, t)
             end = time.time()
             elapsed_time = end - start
             print(f'Elapsed time: {elapsed_time:.2f} seconds')
+            print('PSNR', psnr, 'db')
             cv.imshow('input_image', image)
             cv.imshow(f'filtered_image with {t} threshold', filtered_image)
             cv.waitKey()

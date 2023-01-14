@@ -10,8 +10,8 @@ import re
 from src.dlls import cpp_caller
 
 
-def weighted_median_for_every_frame(video_name: str, kernel_size: int, weight_type:str):
-    cpp_caller.call_weighted_median_for_video_frame(video_name, kernel_size, weight_type)
+def weighted_median_for_every_frame(video_name: str, kernel_size: int, weight_type:str) -> float:
+    return cpp_caller.call_weighted_median_for_video_frame(video_name, kernel_size, weight_type)
 
 
 def convert_args_to_parameter(video_name: str, kernel_str: str, weight_type: str) -> (str, int, str):
@@ -48,9 +48,10 @@ if __name__ == '__main__':
     try:
         noisy_video, kernel, weight_type = convert_args_to_parameter(sys.argv[1], sys.argv[2], sys.argv[3])
         start = time.time()
-        weighted_median_for_every_frame(noisy_video, kernel, weight_type)
+        psnr = weighted_median_for_every_frame(noisy_video, kernel, weight_type)
         end = time.time()
         elapsed_time = end - start
+        print('PSNR', psnr, 'db')
         print(f'Elapsed time: {elapsed_time:.2f} seconds')
     except Exception as e:
         print(str(e), file=sys.stderr)

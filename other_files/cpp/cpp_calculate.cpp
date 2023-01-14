@@ -18,7 +18,7 @@
 namespace py = pybind11;
 //Helpres----------------------------------------------------------------------------------------------
 
-double PSNR(cv::Mat original, cv::Mat compressed) {
+double PSNR(cv::Mat &original, cv::Mat &compressed) {
   cv::Scalar mse = cv::mean((original - compressed).mul(original - compressed));
   if (mse[0] == 0) {
     return 100;
@@ -304,21 +304,24 @@ cv::Mat two_pass_median_for_image_mat(const cv::Mat &image_to_filter){
   return _filtered_image;
 }
 //Video filters-----------------------------------------------------------------------------------------------------------
-void simple_median_for_video_frame(const std::string &video_path, const std::string &video_name, int kernel_size){
+double simple_median_for_video_frame(const std::string &video_path, const std::string &video_name, int kernel_size){
   cv::VideoCapture capture(video_path + video_name);
   int width = capture.get(cv::CAP_PROP_FRAME_WIDTH);
   int height = capture.get(cv::CAP_PROP_FRAME_HEIGHT);
   int fps = capture.get(cv::CAP_PROP_FPS);
-  int fourcc = capture.get(cv::CAP_PROP_FOURCC); 
+  int fourcc = capture.get(cv::CAP_PROP_FOURCC);
+  int frame_count = capture.get(cv::CAP_PROP_FRAME_COUNT); 
   cv::VideoWriter writer((video_path + "simple_median_" + video_name), fourcc, fps, cv::Size(width, height),0);
-
+  double psnr_sum = 0.0;
   if (!capture.isOpened()) {
     std::cerr << "Unable to open video file: " << video_path << std::endl;
   }
   cv::Mat frame;
   while (capture.read(frame)) {
     cv::cvtColor(frame, frame, cv::COLOR_BGR2GRAY);
-    cv::medianBlur(frame, frame, kernel_size);
+    cv::Mat blurred;
+    cv::medianBlur(frame, blurred, kernel_size);
+    psnr_sum += PSNR(frame, blurred);
     writer.write(frame);
     if (cv::waitKey(33) >= 0) {
       break;
@@ -326,23 +329,27 @@ void simple_median_for_video_frame(const std::string &video_path, const std::str
   }
   capture.release();
   writer.release();
+  return psnr_sum / frame_count;
 }
 
-void weighted_median_for_video_frame(const std::string &video_path, const std::string &video_name, int kernel_size, std::string weight_type){
+double weighted_median_for_video_frame(const std::string &video_path, const std::string &video_name, int kernel_size, std::string weight_type){
   cv::VideoCapture capture(video_path + video_name);
   int width = capture.get(cv::CAP_PROP_FRAME_WIDTH);
   int height = capture.get(cv::CAP_PROP_FRAME_HEIGHT);
   int fps = capture.get(cv::CAP_PROP_FPS);
-  int fourcc = capture.get(cv::CAP_PROP_FOURCC); 
+  int fourcc = capture.get(cv::CAP_PROP_FOURCC);
+  int frame_count = capture.get(cv::CAP_PROP_FRAME_COUNT);  
   cv::VideoWriter writer((video_path + "weighted_median_ever_frame_" + std::to_string(kernel_size) + "_" + weight_type + "_" +video_name), fourcc, fps, cv::Size(width, height),0);
-
+  double psnr_sum = 0.0;
   if (!capture.isOpened()) {
     std::cerr << "Unable to open video file: " << video_path << std::endl;
   }
   cv::Mat frame;
   while (capture.read(frame)) {
     cv::cvtColor(frame, frame, cv::COLOR_BGR2GRAY);
-    frame = weighted_median_filter_mat(frame,kernel_size,weight_type);
+    cv::Mat blurred;
+    blurred = weighted_median_filter_mat(frame,kernel_size,weight_type);
+    psnr_sum += PSNR(frame, blurred);
     writer.write(frame);
     if (cv::waitKey(33) >= 0) {
       break;
@@ -350,15 +357,18 @@ void weighted_median_for_video_frame(const std::string &video_path, const std::s
   }
   capture.release();
   writer.release();
+  return psnr_sum / frame_count;
 }
 
-void directional_weighted_median_for_video_frame(const std::string &video_path, const std::string &video_name, int threshold){
+double directional_weighted_median_for_video_frame(const std::string &video_path, const std::string &video_name, int threshold){
   cv::VideoCapture capture(video_path + video_name);
   int width = capture.get(cv::CAP_PROP_FRAME_WIDTH);
   int height = capture.get(cv::CAP_PROP_FRAME_HEIGHT);
   int fps = capture.get(cv::CAP_PROP_FPS);
-  int fourcc = capture.get(cv::CAP_PROP_FOURCC); 
+  int fourcc = capture.get(cv::CAP_PROP_FOURCC);
+  int frame_count = capture.get(cv::CAP_PROP_FRAME_COUNT);  
   cv::VideoWriter writer((video_path + "directional_weighted_median_ever_frame_" + std::to_string(threshold) + "_" + video_name), fourcc, fps, cv::Size(width, height),0);
+  double psnr_sum = 0.0;
 
   if (!capture.isOpened()) {
     std::cerr << "Unable to open video file: " << video_path << std::endl;
@@ -366,7 +376,9 @@ void directional_weighted_median_for_video_frame(const std::string &video_path, 
   cv::Mat frame;
   while (capture.read(frame)) {
     cv::cvtColor(frame, frame, cv::COLOR_BGR2GRAY);
-    frame = directional_weighted_median_mat(frame,threshold,height, width);
+    cv::Mat blurred;
+    blurred = directional_weighted_median_mat(frame,threshold,height, width);
+    psnr_sum += PSNR(frame, blurred);
     writer.write(frame);
     if (cv::waitKey(33) >= 0) {
       break;
@@ -374,15 +386,18 @@ void directional_weighted_median_for_video_frame(const std::string &video_path, 
   }
   capture.release();
   writer.release();
+  return psnr_sum / frame_count;
 }
 
-void two_pass_median_median_for_video_frame(const std::string &video_path, const std::string &video_name){
+double two_pass_median_median_for_video_frame(const std::string &video_path, const std::string &video_name){
   cv::VideoCapture capture(video_path + video_name);
   int width = capture.get(cv::CAP_PROP_FRAME_WIDTH);
   int height = capture.get(cv::CAP_PROP_FRAME_HEIGHT);
   int fps = capture.get(cv::CAP_PROP_FPS);
-  int fourcc = capture.get(cv::CAP_PROP_FOURCC); 
+  int fourcc = capture.get(cv::CAP_PROP_FOURCC);
+  int frame_count = capture.get(cv::CAP_PROP_FRAME_COUNT);  
   cv::VideoWriter writer((video_path + "two_pass_median" + video_name), fourcc, fps, cv::Size(width, height),0);
+  double psnr_sum = 0.0;
 
   if (!capture.isOpened()) {
     std::cerr << "Unable to open video file: " << video_path << std::endl;
@@ -390,7 +405,8 @@ void two_pass_median_median_for_video_frame(const std::string &video_path, const
   cv::Mat frame;
   while (capture.read(frame)) {
     cv::cvtColor(frame, frame, cv::COLOR_BGR2GRAY);
-    frame = two_pass_median_for_image_mat(frame);
+    cv::Mat blurred;
+    blurred = two_pass_median_for_image_mat(frame);
     writer.write(frame);
     if (cv::waitKey(33) >= 0) {
       break;
@@ -398,6 +414,7 @@ void two_pass_median_median_for_video_frame(const std::string &video_path, const
   }
   capture.release();
   writer.release();
+  return psnr_sum / frame_count;
 }
 //Callers to python---------------------------------------------------------------------------------------------------
 void add_noise_to_video(const std::string &video_path, const std::string &video_name, float noise_percent){
@@ -424,28 +441,28 @@ void add_noise_to_video(const std::string &video_path, const std::string &video_
   writer.release();
 }
 
-std::vector<std::vector<int>> weighted_median_filter_vector(std::vector<std::vector<int>> n_image, int kernel_size, std::string weight_type = "uniform"){
+std::tuple<std::vector<std::vector<int>>, double> weighted_median_filter_vector(std::vector<std::vector<int>> n_image, int kernel_size, std::string weight_type = "uniform"){
   cv::Mat myMat = convert_vector_to_mat(n_image);
-  myMat = weighted_median_filter_mat(myMat, kernel_size, weight_type);
-  return convert_mat_to_vector(myMat);
+  cv::Mat myMat_f = weighted_median_filter_mat(myMat, kernel_size, weight_type);
+  return std::make_tuple(convert_mat_to_vector(myMat_f), PSNR(myMat, myMat_f));
 }
 
-std::vector<std::vector<int>> directional_weighted_median_vector(std::vector<std::vector<int>> n_image, int threshold, int height, int width) {
+std::tuple<std::vector<std::vector<int>>, double> directional_weighted_median_vector(std::vector<std::vector<int>> n_image, int threshold, int height, int width) {
   cv::Mat myMat = convert_vector_to_mat(n_image);
-  myMat = directional_weighted_median_mat(myMat, threshold, height, width);
-  return convert_mat_to_vector(myMat);
+  cv::Mat myMat_f = directional_weighted_median_mat(myMat, threshold, height, width);
+  return std::make_tuple(convert_mat_to_vector(myMat_f), PSNR(myMat, myMat_f));
 }
 
-std::vector<std::vector<int>> two_pass_median_for_image_vector(std::vector<std::vector<int>> n_image){
+std::tuple<std::vector<std::vector<int>>, double> two_pass_median_for_image_vector(std::vector<std::vector<int>> n_image){
   cv::Mat myMat = convert_vector_to_mat(n_image);
-  myMat = two_pass_median_for_image_mat(myMat);
-  return convert_mat_to_vector(myMat);
+  cv::Mat myMat_f = two_pass_median_for_image_mat(myMat);
+  return std::make_tuple(convert_mat_to_vector(myMat_f), PSNR(myMat, myMat_f));
 }
 
-std::vector<std::vector<int>> basic_median_for_image_vector(std::vector<std::vector<int>> n_image, int kernel_size){
+std::tuple<std::vector<std::vector<int>>, double> basic_median_for_image_vector(std::vector<std::vector<int>> n_image, int kernel_size){
   cv::Mat myMat = convert_vector_to_mat(n_image);
-  myMat = basic_median_mat(myMat, kernel_size);
-  return convert_mat_to_vector(myMat);
+  cv::Mat myMat_f = basic_median_mat(myMat, kernel_size);
+  return std::make_tuple(convert_mat_to_vector(myMat_f), PSNR(myMat, myMat_f));
 }
 
 PYBIND11_MODULE(cpp_calculate, module_handle) {

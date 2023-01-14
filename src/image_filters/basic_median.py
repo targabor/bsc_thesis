@@ -1,13 +1,14 @@
 import sys
 import os
 import re
+import time
 
 import cv2 as cv
 from src.math_helpers.signal_to_noise_ratio import signal_to_noise_ratio
 from src.dlls import cpp_caller
 
 
-def basic_median(n_image: cv.Mat, ksize: int) -> cv.Mat:
+def basic_median(n_image: cv.Mat, ksize: int) -> (cv.Mat, float):
     """
     Basic median filter, it'll blur the image.
         :param n_image: Grayscale image
@@ -53,7 +54,12 @@ if __name__ == '__main__':
         image, kernel = convert_inputs_for_basic_median(sys.argv[1], sys.argv[2])
         cv.imshow('input_image', image)
         if image is not None:
-            filtered_image = basic_median(image, kernel)
+            start = time.time()
+            filtered_image, psnr = basic_median(image, kernel)
+            end = time.time()
+            elapsed_time = end - start
+            print(f'Elapsed time: {elapsed_time:.2f} seconds')
+            print('PSNR', psnr, 'db')
             # print('signal_to_noise_filtered', signal_to_noise_ratio(image, filtered_image))
             cv.imshow(f'filtered_image with {kernel} kernel size', filtered_image)
             cv.waitKey()

@@ -10,9 +10,8 @@ import re
 from src.dlls import cpp_caller
 
 
-def two_pass_median_for_video_frame(noisy_videoname: str):
-    print(dir(cpp_caller))
-    cpp_caller.call_two_pass_median_for_video_frame(noisy_videoname)
+def two_pass_median_for_video_frame(noisy_videoname: str) -> float:
+    return cpp_caller.call_two_pass_median_for_video_frame(noisy_videoname)
 
 
 def convert_args_to_parameter(video_name: str) -> str:
@@ -42,9 +41,10 @@ if __name__ == '__main__':
     try:
         noisy_video = convert_args_to_parameter(sys.argv[1])
         start = time.time()
-        two_pass_median_for_video_frame(noisy_video)
+        psnr = two_pass_median_for_video_frame(noisy_video)
         end = time.time()
         elapsed_time = end - start
+        print('PSNR', psnr, 'db')
         print(f'Elapsed time: {elapsed_time:.2f} seconds')
     except Exception as e:
         print(str(e), file=sys.stderr)

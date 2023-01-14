@@ -8,7 +8,7 @@ from src.math_helpers.signal_to_noise_ratio import signal_to_noise_ratio
 from src.dlls import cpp_caller
 
 
-def weighted_median_filter(image: cv.Mat, kernel_size: int, weight_type: str = 'uniform') -> cv.Mat:
+def weighted_median_filter(image: cv.Mat, kernel_size: int, weight_type: str = 'uniform') -> (cv.Mat, float):
     return cpp_caller.call_weighted_median_filter_vector(image, kernel_size, weight_type)
 
 
@@ -55,10 +55,11 @@ if __name__ == '__main__':
         image, weight_type, kernel_s = convert_inputs_for_weighted_median(sys.argv[1], sys.argv[2], sys.argv[3])
         if image is not None:
             start = time.time()
-            filtered_image = weighted_median_filter(image, kernel_s, weight_type)
+            filtered_image, psnr = weighted_median_filter(image, kernel_s, weight_type)
             end = time.time()
             elapsed_time = end - start
             print(f'Elapsed time: {elapsed_time:.2f} seconds')
+            print('PSNR', psnr, 'db')
             cv.imshow('input_image', image)
             cv.imshow(f'filtered_image with {kernel_s} kernel size and {weight_type} weight type', filtered_image)
             cv.waitKey()
