@@ -52,7 +52,7 @@ if __name__ == '__main__':
             print(f'Elapsed time: {elapsed_time:.2f} seconds')
             cv.imshow('noisy', image)
             cv.imshow('filtered_image', filtered_image)
-            print('signal_to_noise_filtered', signal_to_noise_ratio(image, filtered_image))
+            # print('signal_to_noise_filtered', signal_to_noise_ratio(image, filtered_image))
             cv.waitKey()
             cv.destroyAllWindows()
             exit(0)

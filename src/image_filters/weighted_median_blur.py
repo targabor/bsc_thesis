@@ -63,7 +63,7 @@ if __name__ == '__main__':
             cv.imshow(f'filtered_image with {kernel_s} kernel size and {weight_type} weight type', filtered_image)
             cv.waitKey()
             cv.destroyAllWindows()
-            print('signal_to_noise_filtered', signal_to_noise_ratio(image, filtered_image))
+            # print('signal_to_noise_filtered', signal_to_noise_ratio(image, filtered_image))
             exit(0)
     except Exception as e:
         print(str(e), file=sys.stderr)

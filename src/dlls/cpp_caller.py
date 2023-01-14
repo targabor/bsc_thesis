@@ -24,6 +24,12 @@ def call_two_pass_median_for_image_vector(n_image: cv.Mat) -> cv.Mat:
     return filtered_image
 
 
+def call_basic_median_for_image_vector(n_image: cv.Mat, kernel_size: int) -> cv.Mat:
+    filtered_image = cpp_calculate.basic_median_for_image_vector(n_image, kernel_size)
+    filtered_image = cv.Mat(np.array(filtered_image).astype(np.uint8))
+    return filtered_image
+
+
 # Video noising
 def call_add_noise_to_video(video_name: str, noise_percent: float):
     path_to_video = os.path.dirname(__file__) + '\\..\\..\\videos\\'

@@ -102,7 +102,6 @@ int own_argmin(std::vector<int>& arr) {
   return std::distance(arr.begin(), min_it);
 }
 
-
 double own_mean(std::vector<int>& arr) {
   if (arr.empty()) {
     return 0;
@@ -159,6 +158,12 @@ cv::Mat generate_noise_map(cv::Mat _apx_of_noise) {
 }
 
 //Image filters--------------------------------------------------------------------------------------
+cv::Mat basic_median_mat(cv::Mat &n_image, int kernel_size){
+  cv::Mat filtered;
+  cv::medianBlur(n_image, filtered, kernel_size);
+  return filtered;
+}
+
 cv::Mat directional_weighted_median_mat(cv::Mat &n_image, int threshold, int height, int width) {
   std::vector<std::vector<std::pair<int, int>>> coordinates = {
     {{-2, -2}, {-1, -1}, {1, 1}, {2, 2}},  // S_1
@@ -437,6 +442,12 @@ std::vector<std::vector<int>> two_pass_median_for_image_vector(std::vector<std::
   return convert_mat_to_vector(myMat);
 }
 
+std::vector<std::vector<int>> basic_median_for_image_vector(std::vector<std::vector<int>> n_image, int kernel_size){
+  cv::Mat myMat = convert_vector_to_mat(n_image);
+  myMat = basic_median_mat(myMat, kernel_size);
+  return convert_mat_to_vector(myMat);
+}
+
 PYBIND11_MODULE(cpp_calculate, module_handle) {
     module_handle.doc() = "I'm a docstring hehe";
     module_handle.def("add_noise_to_video", &add_noise_to_video);
@@ -444,6 +455,7 @@ PYBIND11_MODULE(cpp_calculate, module_handle) {
     module_handle.def("directional_weighted_median_vector", &directional_weighted_median_vector);
     module_handle.def("two_pass_median_for_image_vector", &two_pass_median_for_image_vector);
     module_handle.def("weighted_median_filter_vector", &weighted_median_filter_vector);
+    module_handle.def("basic_median_for_image_vector", &basic_median_for_image_vector);
 
     module_handle.def("simple_median_for_video_frame", &simple_median_for_video_frame);
     module_handle.def("weighted_median_for_video_frame", &weighted_median_for_video_frame);

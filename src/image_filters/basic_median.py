@@ -4,6 +4,7 @@ import re
 
 import cv2 as cv
 from src.math_helpers.signal_to_noise_ratio import signal_to_noise_ratio
+from src.dlls import cpp_caller
 
 
 def basic_median(n_image: cv.Mat, ksize: int) -> cv.Mat:
@@ -13,7 +14,7 @@ def basic_median(n_image: cv.Mat, ksize: int) -> cv.Mat:
         :param ksize: Odd number, that is greater than 1, that will be the kernel size
         :return: Median filtered image
     """
-    return cv.medianBlur(n_image, ksize)
+    return cpp_caller.call_basic_median_for_image_vector(n_image, ksize)
 
 
 def convert_inputs_for_basic_median(image_name: str, kernel_str: str) -> (cv.Mat, int):
@@ -53,7 +54,7 @@ if __name__ == '__main__':
         cv.imshow('input_image', image)
         if image is not None:
             filtered_image = basic_median(image, kernel)
-            print('signal_to_noise_filtered', signal_to_noise_ratio(image, filtered_image))
+            # print('signal_to_noise_filtered', signal_to_noise_ratio(image, filtered_image))
             cv.imshow(f'filtered_image with {kernel} kernel size', filtered_image)
             cv.waitKey()
             cv.destroyAllWindows()
