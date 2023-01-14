@@ -10,7 +10,7 @@ from src.math_helpers import signal_to_noise_ratio
 from src.dlls import cpp_caller
 
 
-def two_pass_median(n_image: cv.Mat) -> cv.Mat:
+def two_pass_median(n_image: cv.Mat) -> (cv.Mat, float):
     return cpp_caller.call_two_pass_median_for_image_vector(n_image)
 
 
@@ -46,10 +46,11 @@ if __name__ == '__main__':
         image = convert_inputs_for_two_pass(sys.argv[1])
         if image is not None:
             start = time.time()
-            filtered_image = two_pass_median(image)
+            filtered_image, psnr = two_pass_median(image)
             end = time.time()
             elapsed_time = end - start
             print(f'Elapsed time: {elapsed_time:.2f} seconds')
+            print('PSNR', psnr, 'db')
             cv.imshow('noisy', image)
             cv.imshow('filtered_image', filtered_image)
             # print('signal_to_noise_filtered', signal_to_noise_ratio(image, filtered_image))
