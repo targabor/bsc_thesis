@@ -36,6 +36,12 @@ def call_add_noise_to_video(video_name: str, noise_percent: float):
     cpp_calculate.add_noise_to_video(path_to_video, video_name, noise_percent)
 
 
+# Video downscale
+def call_downscale_video_res(video_name: str, target_height: int):
+    path_to_video = os.path.dirname(__file__) + '\\..\\..\\videos\\'
+    cpp_calculate.downscale_video_res(path_to_video, video_name, target_height)
+
+
 # Filter for every frames
 def call_simple_median_for_video_frame(video_name: str, kernel_size: int) -> float:
     path_to_video = os.path.dirname(__file__) + '\\..\\..\\videos\\'

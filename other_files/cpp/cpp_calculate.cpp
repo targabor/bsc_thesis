@@ -18,6 +18,32 @@
 namespace py = pybind11;
 //Helpres----------------------------------------------------------------------------------------------
 
+void downscale_video_res(std::string &video_path, std::string& video_name, int height){
+  cv::VideoCapture capture(video_path + video_name);
+  int o_width = capture.get(cv::CAP_PROP_FRAME_WIDTH);
+  int o_height = capture.get(cv::CAP_PROP_FRAME_HEIGHT);
+  int fps = capture.get(cv::CAP_PROP_FPS);
+  int fourcc = capture.get(cv::CAP_PROP_FOURCC);
+  int target_width = std::round(height * ((float)o_width / o_height));
+  cv::Size frame_size(target_width, height);
+  cv::VideoWriter writer((video_path + "decreased_to_" + std::to_string(height) + "_" + video_name), fourcc, fps, frame_size,0);
+
+  if (!capture.isOpened()) {
+    std::cerr << "Unable to open video file: " << video_path << std::endl;
+  }
+  cv::Mat frame;
+  while (capture.read(frame)) {
+    cv::cvtColor(frame, frame, cv::COLOR_BGR2GRAY);
+    cv::resize(frame, frame, frame_size, 0, 0, cv::INTER_LINEAR);
+    writer.write(frame);
+    if (cv::waitKey(33) >= 0) {
+      break;
+    }
+  }
+  capture.release();
+  writer.release();
+}
+
 double PSNR(cv::Mat &original, cv::Mat &compressed) {
   cv::Scalar mse = cv::mean((original - compressed).mul(original - compressed));
   if (mse[0] == 0) {
@@ -468,6 +494,7 @@ std::tuple<std::vector<std::vector<int>>, double> basic_median_for_image_vector(
 PYBIND11_MODULE(cpp_calculate, module_handle) {
     module_handle.doc() = "I'm a docstring hehe";
     module_handle.def("add_noise_to_video", &add_noise_to_video);
+    module_handle.def("downscale_video_res", &downscale_video_res);
 
     module_handle.def("directional_weighted_median_vector", &directional_weighted_median_vector);
     module_handle.def("two_pass_median_for_image_vector", &two_pass_median_for_image_vector);
