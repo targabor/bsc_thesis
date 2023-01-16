@@ -183,6 +183,42 @@ cv::Mat generate_noise_map(cv::Mat _apx_of_noise) {
   return noise_map;
 }
 
+const cv::Rect create_rect(int x, int y, int kernel, const cv::Mat &frame){
+  int kernel_f = std::floor(kernel/2);
+  x = std::max(0, x - kernel_f);
+  y = std::max(0, y - kernel_f);
+  int max_x = std::min(frame.cols - x, kernel);
+  int max_y = std::min(frame.rows - y, kernel);
+  return cv::Rect(x,y, max_x, max_y); 
+}
+
+cv::Mat calculate_median_cube(std::vector<cv::Mat> &images, int actual_frame, int kernel){
+  auto non_empty_mat = [](const cv::Mat& m) { return !m.empty(); };
+  int count = std::count_if(images.begin(), images.end(), non_empty_mat);
+  cv::Mat result = images[actual_frame].clone();
+  std::vector<int> values(kernel*kernel*count, 0);
+  cv::Rect roi;
+  cv::Mat submat;
+  for(int y = 0; y < images[0].rows; y++){
+    for(int x = 0; x < images[0].cols; x++){
+      int idx = 0;
+      std::for_each(images.begin(), images.end(), [&](const cv::Mat& frame) {
+        if (!frame.empty()) {
+          roi = create_rect(x, y, kernel, frame);
+          submat = frame(roi);
+          for (int i = 0; i < submat.rows; i++) {
+            for (int j = 0; j < submat.cols; j++) {
+              values[idx++] = submat.at<uchar>(i,j);
+            }
+          }
+        }
+      });
+      result.at<uchar>(y, x) = own_median(values);
+      std::fill(values.begin(), values.end(), 0);
+    }
+  }
+  return result;
+}
 //Image filters--------------------------------------------------------------------------------------
 cv::Mat basic_median_mat(cv::Mat &n_image, int kernel_size){
   cv::Mat filtered;
@@ -491,6 +527,61 @@ std::tuple<std::vector<std::vector<int>>, double> basic_median_for_image_vector(
   return std::make_tuple(convert_mat_to_vector(myMat_f), PSNR(myMat, myMat_f));
 }
 
+//Video methods with neighbors-----------------------------------------------------------------------------------------
+double simple_median_cube(std::string &video_path, std::string &video_name, int kernel_size, int neighbors){
+  cv::VideoCapture capture(video_path + video_name);
+  int width = capture.get(cv::CAP_PROP_FRAME_WIDTH);
+  int height = capture.get(cv::CAP_PROP_FRAME_HEIGHT);
+  int fps = capture.get(cv::CAP_PROP_FPS);
+  int fourcc = capture.get(cv::CAP_PROP_FOURCC);
+  int frame_count = capture.get(cv::CAP_PROP_FRAME_COUNT);  
+  cv::VideoWriter writer((video_path + "simple_median_cube_" + std::to_string(kernel_size) + "_n_" + std::to_string(neighbors) + "_" + video_name), fourcc, fps, cv::Size(width, height),0);
+  double psnr_sum = 0.0;
+  if (!capture.isOpened()) {
+    return 0.0;
+  }
+  cv::Mat frame;
+  int counter = -neighbors;
+  std::vector<cv::Mat> neighbors_vec(1 + 2 * neighbors, cv::Mat());
+  cv::Mat blurred;
+  while (capture.read(frame)) {
+    cv::cvtColor(frame, frame, cv::COLOR_BGR2GRAY);
+    if(counter < 0){
+      neighbors_vec[counter + neighbors] = frame.clone();
+      counter++;
+    }else if(counter < neighbors){
+      neighbors_vec[counter + neighbors] = frame.clone();
+      blurred = calculate_median_cube(neighbors_vec, counter, kernel_size);
+      psnr_sum += PSNR(frame, blurred);
+      writer.write(blurred);
+      counter++;
+    }else if(counter == neighbors){
+      neighbors_vec[counter + neighbors] = frame.clone();
+      blurred = calculate_median_cube(neighbors_vec, counter, kernel_size);
+      psnr_sum += PSNR(frame, blurred);
+      writer.write(blurred);
+      counter++;
+    }else{
+      counter = neighbors;
+      std::rotate(neighbors_vec.begin(), neighbors_vec.begin()+1, neighbors_vec.end());
+      neighbors_vec[counter + neighbors] = frame.clone();
+      blurred = calculate_median_cube(neighbors_vec, counter, kernel_size);
+      psnr_sum += PSNR(frame, blurred);
+      writer.write(blurred);
+      counter++;
+    }
+  }
+  while(counter < neighbors){
+    neighbors_vec[counter - neighbors] = cv::Mat();
+    blurred = calculate_median_cube(neighbors_vec, counter, kernel_size);
+    psnr_sum += PSNR(neighbors_vec[counter], blurred);
+    writer.write(blurred);
+    counter++;
+  }
+  capture.release();
+  writer.release();
+  return psnr_sum / frame_count;
+}
 PYBIND11_MODULE(cpp_calculate, module_handle) {
     module_handle.doc() = "I'm a docstring hehe";
     module_handle.def("add_noise_to_video", &add_noise_to_video);
@@ -505,4 +596,6 @@ PYBIND11_MODULE(cpp_calculate, module_handle) {
     module_handle.def("weighted_median_for_video_frame", &weighted_median_for_video_frame);
     module_handle.def("directional_weighted_median_for_video_frame", &directional_weighted_median_for_video_frame);
     module_handle.def("two_pass_median_for_video_frame", &two_pass_median_median_for_video_frame);
+
+    module_handle.def("simple_median_cube", &simple_median_cube);
 }
