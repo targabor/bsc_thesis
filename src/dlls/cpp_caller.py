@@ -1,7 +1,6 @@
 import cv2 as cv
 import numpy as np
 import os
-import ctypes
 from . import cpp_calculate
 
 
@@ -64,4 +63,11 @@ def call_weighted_median_for_video_frame(video_name: str, kernel_size: int, weig
 def call_directional_weighted_median_for_video_frame(video_name: str, threshold: int) -> float:
     path_to_video = os.path.dirname(__file__) + '\\..\\..\\videos\\'
     psnr = cpp_calculate.directional_weighted_median_for_video_frame(path_to_video, video_name, threshold)
+    return psnr
+
+
+# Filter with respect of other frames
+def call_simple_median_cube(video_name: str, kernel: int, neighbors: int) -> float:
+    path_to_video = os.path.dirname(__file__) + '\\..\\..\\videos\\'
+    psnr = cpp_calculate.simple_median_cube(path_to_video, video_name, kernel, neighbors)
     return psnr
