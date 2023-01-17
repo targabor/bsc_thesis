@@ -183,13 +183,13 @@ cv::Mat generate_noise_map(cv::Mat _apx_of_noise) {
   return noise_map;
 }
 
-const cv::Rect create_rect(int x, int y, int kernel, const cv::Mat &frame){
+std::tuple<cv::Rect, int, int> create_rect(int x, int y, int kernel, const cv::Mat &frame){
   int kernel_f = std::floor(kernel/2);
   x = std::max(0, x - kernel_f);
   y = std::max(0, y - kernel_f);
   int max_x = std::min(frame.cols - x, kernel);
   int max_y = std::min(frame.rows - y, kernel);
-  return cv::Rect(x,y, max_x, max_y); 
+  return std::make_tuple(cv::Rect(x,y, max_x, max_y), y, x); 
 }
 
 double calc_weight(int middle_x, int middle_y, int rect_current_y, int rect_current_x, int current_frame, int rect_frame, int kernel_size){
@@ -201,27 +201,30 @@ cv::Mat calculate_median_cube(std::vector<cv::Mat> &images, int actual_frame, in
   auto non_empty_mat = [](const cv::Mat& m) { return !m.empty(); };
   int count = std::count_if(images.begin(), images.end(), non_empty_mat);
   cv::Mat result = images[actual_frame].clone();
-  std::vector<int> values(kernel*kernel*count, 0);
-  cv::Rect roi;
-  cv::Mat submat;
-  for(int y = 0; y < images[0].rows; y++){
-    for(int x = 0; x < images[0].cols; x++){
-      int idx = 0;
-      std::for_each(images.begin(), images.end(), [&](const cv::Mat& frame) {
-        if (!frame.empty()) {
-          roi = create_rect(x, y, kernel, frame);
-          submat = frame(roi);
-          for (int i = 0; i < submat.rows; i++) {
-            for (int j = 0; j < submat.cols; j++) {
-              values[idx++] = submat.at<uchar>(i,j);
+    cv::parallel_for_(cv::Range(0, images[0].rows), [&](const cv::Range& range) {
+      std::vector<int> values(kernel*kernel*count, 0);
+      cv::Rect roi;
+      cv::Mat submat;
+      for (int y = range.start; y < range.end; y++) {
+        for(int x = 0; x < images[0].cols; x++){
+          int idx = 0;
+          std::for_each(images.begin(), images.end(), [&](const cv::Mat& frame) {
+            if (!frame.empty()) {
+              roi = std::get<0>(create_rect(x, y, kernel, frame));
+              submat = frame(roi);
+              for (int i = 0; i < submat.rows; i++) {
+                for (int j = 0; j < submat.cols; j++) {
+                  values[idx++] = submat.at<uchar>(i,j);
+                }
+              }
             }
-          }
+          });
+          result.at<uchar>(y, x) = own_median(values);
+          std::fill(values.begin(), values.end(), 0);
         }
-      });
-      result.at<uchar>(y, x) = own_median(values);
-      std::fill(values.begin(), values.end(), 0);
-    }
-  }
+      }
+    });
+
   return result;
 }
 
@@ -229,31 +232,33 @@ cv::Mat calculate_weighted_cube(std::vector<cv::Mat> &images, int actual_frame, 
   auto non_empty_mat = [](const cv::Mat& m) { return !m.empty(); };
   int count = std::count_if(images.begin(), images.end(), non_empty_mat);
   cv::Mat result = images[actual_frame].clone();
-  cv::Mat hist_weights = cv::Mat::zeros(256, 1, CV_32FC1);
-  cv::Rect roi;
-  cv::Mat submat;
-  for(int y = 0; y < images[0].rows; y++){
+
+  cv::parallel_for_(cv::Range(0, images[0].rows), [&](const cv::Range& range) {
+    cv::Mat hist_weights = cv::Mat::zeros(256, 1, CV_32FC1);
+    cv::Rect roi;
+    cv::Mat submat;
+    for (int y = range.start; y < range.end; y++) {
     for(int x = 0; x < images[0].cols; x++){
       hist_weights *= 0;
       int frame_count = 0;
       std::for_each(images.begin(), images.end(), [&](const cv::Mat& frame) {
         if (!frame.empty()) {
-          roi = create_rect(x, y, kernel, frame);
+          int r_x, r_y;
+          std::tie(roi, r_y, r_x) = create_rect(x, y, kernel, frame);
           submat = frame(roi);
           for (int i = 0; i < submat.rows; i++) {
             for (int j = 0; j < submat.cols; j++) {
-              double weight = calc_weight(x, y, i, j, actual_frame, frame_count, kernel);
+              double weight = calc_weight(x, y, r_y + i, r_x + j, actual_frame, frame_count, kernel);
               int value = submat.at<uchar>(i, j); 
               hist_weights.at<float>(value, 0) += weight;
             }
           }
-          
         }
         frame_count++;
       });
       float median = 0;
       float sum = 0;
-      float middle = kernel * kernel * 0.5;
+      float middle = kernel * kernel * count * 0.25;
       for (int i = 0; i < 256; i++) {
           sum += hist_weights.at<float>(i, 0);
           if (sum >= middle) {
@@ -264,6 +269,7 @@ cv::Mat calculate_weighted_cube(std::vector<cv::Mat> &images, int actual_frame, 
       result.at<uchar>(y, x) = median;
     }
   }
+  });
   return result;
 
 }
@@ -675,6 +681,7 @@ double weighted_median_cube(std::string &video_path, std::string &video_name, in
   while(counter < neighbors){
     neighbors_vec[counter - neighbors] = cv::Mat();
     blurred = calculate_weighted_cube(neighbors_vec, counter, kernel_size, weight_type);
+    cv::imshow("video", blurred);
     psnr_sum += PSNR(neighbors_vec[counter], blurred);
     writer.write(blurred);
     counter++;

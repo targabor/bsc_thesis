@@ -51,8 +51,8 @@ def convert_args_to_parameter(video_name: str, kernel_str: str, weight_str: str,
 # if the program called from the command line
 if __name__ == '__main__':
     input_image = None
-    if len(sys.argv) != 4:
-        print('You must pass exactly three argument!', file=sys.stderr)
+    if len(sys.argv) != 5:
+        print('You must pass exactly four argument!', file=sys.stderr)
         exit(1)
     try:
         noisy_video, kernel, weight_t, neighbors = convert_args_to_parameter(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
