@@ -86,7 +86,6 @@ float own_median(std::vector<int> numbers) {
     } else {
         median = numbers[size / 2];
     }
-
   return median;
 }
 
@@ -274,6 +273,55 @@ cv::Mat calculate_weighted_cube(std::vector<cv::Mat> &images, int actual_frame, 
 
 }
 
+cv::Mat calculate_two_pass_cube(std::vector<cv::Mat> &images, int actual_frame){
+  auto non_empty_mat = [](const cv::Mat& m) { return !m.empty(); };
+  int count = std::count_if(images.begin(), images.end(), non_empty_mat);
+  cv::Mat apx_of_signal_only;
+  cv::medianBlur(images[actual_frame], apx_of_signal_only, 3);
+  cv::Mat apx_of_noise;
+  cv::absdiff(images[actual_frame], apx_of_signal_only, apx_of_noise);
+  cv::Mat noise_map = generate_noise_map(apx_of_noise);
+  cv::Mat result = images[actual_frame];
+  std::vector<int> values((count - 1), 0);
+  cv::Rect roi;
+  cv::Mat submat;
+  int kernel = 3;
+  std::vector<int> vec_values(count * kernel * kernel, 0);
+  for (int y = 0; y < images[0].rows; y++) {
+    for(int x = 0; x < images[0].cols; x++){
+      uchar noise = noise_map.at<uchar>(y,x);
+      uchar pixel = images[actual_frame].at<uchar>(y,x);
+      if(noise_map.at<uchar>(y,x) == 0){
+        continue;
+      }
+      int id = 0;
+      std::for_each(images.begin(), images.end(), [&](const cv::Mat& frame) {
+        if (!frame.empty()) {
+          values[id] = frame.at<uchar>(y,x);
+        }
+      });
+      int median = std::round(own_median(values));
+      if(median == 0){
+        int idx = 0;
+        std::for_each(images.begin(), images.end(), [&](const cv::Mat& frame) {
+          if (!frame.empty()) {
+            roi = std::get<0>(create_rect(x, y, kernel, frame));
+            submat = frame(roi);
+            for (int i = 0; i < submat.rows; i++) {
+              for (int j = 0; j < submat.cols; j++) {
+                vec_values[idx++] = submat.at<uchar>(i,j);
+              }
+            }
+          }
+        });
+        median = own_median(vec_values);
+        std::fill(vec_values.begin(), vec_values.end(), 0);
+      }
+      result.at<uchar>(y, x) = median;
+    }
+  }
+  return result;
+}
 //Image filters--------------------------------------------------------------------------------------
 cv::Mat basic_median_mat(cv::Mat &n_image, int kernel_size){
   cv::Mat filtered;
@@ -681,7 +729,61 @@ double weighted_median_cube(std::string &video_path, std::string &video_name, in
   while(counter < neighbors){
     neighbors_vec[counter - neighbors] = cv::Mat();
     blurred = calculate_weighted_cube(neighbors_vec, counter, kernel_size, weight_type);
-    cv::imshow("video", blurred);
+    psnr_sum += PSNR(neighbors_vec[counter], blurred);
+    writer.write(blurred);
+    counter++;
+  }
+  capture.release();
+  writer.release();
+  return psnr_sum / frame_count;
+}
+
+double two_pass_median_cube(std::string &video_path, std::string &video_name, int neighbors){
+  cv::VideoCapture capture(video_path + video_name);
+  int width = capture.get(cv::CAP_PROP_FRAME_WIDTH);
+  int height = capture.get(cv::CAP_PROP_FRAME_HEIGHT);
+  int fps = capture.get(cv::CAP_PROP_FPS);
+  int fourcc = capture.get(cv::CAP_PROP_FOURCC);
+  int frame_count = capture.get(cv::CAP_PROP_FRAME_COUNT);  
+  cv::VideoWriter writer((video_path + "two_pass_median_cube_n_" + std::to_string(neighbors) + "_" + video_name), fourcc, fps, cv::Size(width, height),0);
+  double psnr_sum = 0.0;
+  if (!capture.isOpened()) {
+    return 0.0;
+  }
+  cv::Mat frame;
+  int counter = -neighbors;
+  std::vector<cv::Mat> neighbors_vec(1 + 2 * neighbors, cv::Mat());
+  cv::Mat blurred;
+  while (capture.read(frame)) {
+    cv::cvtColor(frame, frame, cv::COLOR_BGR2GRAY);
+    if(counter < 0){
+      neighbors_vec[counter + neighbors] = frame.clone();
+      counter++;
+    }else if(counter < neighbors){
+      neighbors_vec[counter + neighbors] = frame.clone();
+      blurred = calculate_two_pass_cube(neighbors_vec, counter);
+      psnr_sum += PSNR(frame, blurred);
+      writer.write(blurred);
+      counter++;
+    }else if(counter == neighbors){
+      neighbors_vec[counter + neighbors] = frame.clone();
+      blurred = calculate_two_pass_cube(neighbors_vec, counter);
+      psnr_sum += PSNR(frame, blurred);
+      writer.write(blurred);
+      counter++;
+    }else{
+      counter = neighbors;
+      std::rotate(neighbors_vec.begin(), neighbors_vec.begin()+1, neighbors_vec.end());
+      neighbors_vec[counter + neighbors] = frame.clone();
+      blurred = calculate_two_pass_cube(neighbors_vec, counter);
+      psnr_sum += PSNR(frame, blurred);
+      writer.write(blurred);
+      counter++;
+    }
+  }
+  while(counter < neighbors){
+    neighbors_vec[counter - neighbors] = cv::Mat();
+    blurred = calculate_two_pass_cube(neighbors_vec, counter);
     psnr_sum += PSNR(neighbors_vec[counter], blurred);
     writer.write(blurred);
     counter++;
@@ -708,5 +810,6 @@ PYBIND11_MODULE(cpp_calculate, module_handle) {
 
     module_handle.def("simple_median_cube", &simple_median_cube);
     module_handle.def("weighted_median_cube", &weighted_median_cube);
+    module_handle.def("two_pass_median_cube", &two_pass_median_cube);
 
 }
