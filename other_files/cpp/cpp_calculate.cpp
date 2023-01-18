@@ -408,7 +408,9 @@ cv::Mat calculate_dir_w_cube(std::vector<cv::Mat> &images, int actual_frame, int
   int height = images[0].rows;
   int width = images[0].cols;
   cv::Mat u_ij = cv::Mat::zeros(height, width, CV_8UC1);
-
+  std::vector<int> d_k(4 , 0);
+  std::vector<int> std_k(4 , 0);
+  std::vector<int> dir_std(4 , 0);
   std::vector<int> values_for_pixel;
   for (int y = 0; y < height; y++)
   {
