@@ -83,3 +83,9 @@ def call_two_pass_median_cube(video_name: str, neighbors: int) -> float:
     path_to_video = os.path.dirname(__file__) + '\\..\\..\\videos\\'
     psnr = cpp_calculate.two_pass_median_cube(path_to_video, video_name, neighbors)
     return psnr
+
+
+def call_dir_w_median_cube(video_name: str, threshold: int, neighbors: int) -> float:
+    path_to_video = os.path.dirname(__file__) + '\\..\\..\\videos\\'
+    psnr = cpp_calculate.dir_w_median_cube(path_to_video, video_name, threshold,neighbors)
+    return psnr
