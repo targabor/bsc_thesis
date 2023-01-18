@@ -404,83 +404,84 @@ cv::Mat calculate_dir_w_cube(std::vector<cv::Mat> &images, int actual_frame, int
       {{0, -1}, {0, 1}},
       {{1, -1}, {-1, 1}},
       {{-1, 0}, {1, 0}}};
-  std::vector<int> d_k(4 , 0);
-  std::vector<int> std_k(4 , 0);
-  std::vector<int> dir_std(4 , 0);
-  std::vector<int> values_for_pixel;
+
   int height = images[0].rows;
   int width = images[0].cols;
-  cv::Mat u_ij = images[actual_frame].clone();
-    for (int y = 0; y < height; y++)
+  cv::Mat u_ij = cv::Mat::zeros(height, width, CV_8UC1);
+
+  std::vector<int> values_for_pixel;
+  for (int y = 0; y < height; y++)
+  {
+    for (int x = 0; x < width; x++)
     {
-      for (int x = 0; x < width; x++)
+      // std::cout << "Y:" << y << "\t" << "X:" << x << std::endl;
+      std::fill(d_k.begin(), d_k.end(), 0);
+      std::fill(std_k.begin(), std_k.end(), 0);
+      for (int direction = 0; direction < 4; direction++)
       {
-        // std::cout << "Y:" << y << "\t" << "X:" << x << std::endl;
-        std::fill(d_k.begin(), d_k.end(), 0);
-        std::fill(std_k.begin(), std_k.end(), 0);
-        std::for_each(images.begin(), images.end(), [&](const cv::Mat &frame){
-          if(!frame.empty()){
+        int d_sum = 0;
+        std::fill(dir_std.begin(), dir_std.end(), 0);
+        int counter = 0;
+        for (const auto &point : coordinates[direction])
+        {
+          int s = point.first;
+          int t = point.second;
+          int w_st = get_w_st(s, t);
+          int y_plus_s = calculate_y_plus_s(y, s, height);
+          int x_plus_t = calculate_x_plus_t(x, t, width);
+          int w_st_times_abs_y_with_st_minus_y = w_st * std::abs(images[actual_frame].at<uchar>(y_plus_s, x_plus_t) - images[actual_frame].at<uchar>(y, x));
+          d_sum += w_st_times_abs_y_with_st_minus_y;
+          dir_std[counter] = images[actual_frame].at<uchar>(y_plus_s, x_plus_t);
+          counter++;
+        }
+        // std::cout << "a" << std::endl;
+        d_k[direction] = d_sum;
+        // std::cout << "b" << "\t" << direction << std::endl;
+        std_k[direction] = own_std(dir_std);
+      }
+      // std::cout << "d" << std::endl;
+      int r_ij = *std::min_element(d_k.begin(), d_k.end());
+      // std::cout << "e" << std::endl;
+      int l_ij = own_argmin(std_k);
+          // std::cout << "f" << std::endl;
+      std::for_each(images.begin(), images.end(), [&](const cv::Mat &frame){
+        if(!frame.empty()){
+          if (r_ij <= threshold)
+          {
             for (int direction = 0; direction < 4; direction++)
             {
-              int d_sum = 0;
-              std::fill(dir_std.begin(), dir_std.end(), 0);
-              int counter = 0;
-              for (const auto &point : coordinates[direction])
+              for (const auto &point : o_3[direction])
               {
                 int s = point.first;
+                // std::cout << "g" << std::endl;
                 int t = point.second;
-                int w_st = get_w_st(s, t);
+                // std::cout << "h" << std::endl;
+                int w_st = is_s_t_in_coordinates(s, t, l_ij, coordinates);
+                // std::cout << "i" << std::endl;
                 int y_plus_s = calculate_y_plus_s(y, s, height);
+                // std::cout << "j" << std::endl;
                 int x_plus_t = calculate_x_plus_t(x, t, width);
-                int w_st_times_abs_y_with_st_minus_y = w_st * std::abs(frame.at<uchar>(y_plus_s, x_plus_t) - frame.at<uchar>(y, x));
-                d_sum += w_st_times_abs_y_with_st_minus_y;
-                dir_std[counter] = frame.at<uchar>(y_plus_s, x_plus_t);
-                counter++;
-              }
-              // std::cout << "a" << std::endl;
-              d_k[direction] = d_sum;
-              // std::cout << "b" << "\t" << direction << std::endl;
-              std_k[direction] = own_std(dir_std);
-            }
-            // std::cout << "d" << std::endl;
-            int r_ij = *std::min_element(d_k.begin(), d_k.end());
-            // std::cout << "e" << std::endl;
-            int l_ij = own_argmin(std_k);
-            // std::cout << "f" << std::endl;
-            if (r_ij <= threshold)
-            {
-              for (int direction = 0; direction < 4; direction++)
-              {
-                for (const auto &point : o_3[direction])
+                // std::cout << "k" << std::endl;
+                for (int rep = 0; rep < w_st; rep++)
                 {
-                  int s = point.first;
-                  // std::cout << "g" << std::endl;
-                  int t = point.second;
-                  // std::cout << "h" << std::endl;
-                  int w_st = is_s_t_in_coordinates(s, t, l_ij, coordinates);
-                  // std::cout << "i" << std::endl;
-                  int y_plus_s = calculate_y_plus_s(y, s, height);
-                  // std::cout << "j" << std::endl;
-                  int x_plus_t = calculate_x_plus_t(x, t, width);
-                  // std::cout << "k" << std::endl;
-                  for (int rep = 0; rep < w_st; rep++)
-                  {
-                    // // std::cout << "c" << std::endl;
-                    values_for_pixel.push_back(frame.at<uchar>(y_plus_s, x_plus_t));
-                  }
+                  // // std::cout << "c" << std::endl;
+                  values_for_pixel.push_back(frame.at<uchar>(y_plus_s, x_plus_t));
                 }
               }
-              // // std::cout << "l" << std::endl;
-              u_ij.at<uchar>(y, x) = own_median(values_for_pixel);
-              // // std::cout << "m" << std::endl;
-              values_for_pixel.clear();
-              // // std::cout << "n" << std::endl;
-            }             
-          }
-        });
-        
-      }
+            }
+            // // std::cout << "l" << std::endl;
+            u_ij.at<uchar>(y, x) = own_median(values_for_pixel);
+            // // std::cout << "m" << std::endl;
+            values_for_pixel.clear();
+            // // std::cout << "n" << std::endl;
+          }else{
+            u_ij.at<uchar>(y,x) = images[actual_frame].at<uchar>(y,x);
+          }             
+        }
+      });
+      
     }
+  }
   std::cout << "frame" << std::endl;
   return u_ij;
 }
