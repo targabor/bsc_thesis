@@ -90,27 +90,34 @@ std::vector<std::vector<int>> convert_mat_to_vector(cv::Mat myMat)
 
 float own_median(std::vector<int> numbers)
 {
-  // std::cout << 1 << std::endl;
   std::sort(numbers.begin(), numbers.end());
-  // std::cout << 1 << std::endl;
   int size = numbers.size();
   double median = 0;
   if (size % 2 == 0)
   {
-    // std::cout << 3 << std::endl;
-    // std::cout << "count: " << numbers.size() << std::endl;
     for(int i = 0; i<numbers.size() ; i++){
-      // std::cout << numbers[i] << " ";
     }
-    // std::cout << std::endl;
     median = (numbers[size / 2 - 1] + numbers[size / 2]) / 2.0;
-    // std::cout << 4 << std::endl;
   }
   else
   {
-    // std::cout << 5 << std::endl;
     median = numbers[size / 2];
-    // std::cout << 6 << std::endl;
+  }
+  return median;
+}
+
+float own_median(std::array<int, 4> numbers)
+{
+  std::sort(numbers.begin(), numbers.end());
+  int size = numbers.size();
+  double median = 0;
+  if (size % 2 == 0)
+  {
+    median = (numbers[size / 2 - 1] + numbers[size / 2]) / 2.0;
+  }
+  else
+  {
+    median = numbers[size / 2];
   }
   return median;
 }
@@ -169,6 +176,12 @@ int own_argmin(std::vector<int> &arr)
   return std::distance(arr.begin(), min_it);
 }
 
+int own_argmin(std::array<int, 4>& arr)
+{
+  auto min_it = std::min_element(arr.begin(), arr.end());
+  return std::distance(arr.begin(), min_it);
+}
+
 double own_mean(std::vector<int> &arr)
 {
   if (arr.empty())
@@ -183,7 +196,37 @@ double own_mean(std::vector<int> &arr)
   return sum / arr.size();
 }
 
+double own_mean(std::array<int, 4>& arr)
+{
+  if (arr.empty())
+  {
+    return 0;
+  }
+  double sum = 0;
+  for (int x : arr)
+  {
+    sum += x;
+  }
+  return sum / arr.size();
+}
+
 double own_std(std::vector<int> &arr)
+{
+  if (arr.empty())
+  {
+    return 0;
+  }
+  double mean = own_mean(arr);
+  double variance = 0;
+  for (int x : arr)
+  {
+    variance += (x - mean) * (x - mean);
+  }
+  variance /= arr.size();
+  return std::sqrt(variance);
+}
+
+double own_std(std::array<int, 4>& arr)
 {
   if (arr.empty())
   {
@@ -408,82 +451,67 @@ cv::Mat calculate_dir_w_cube(std::vector<cv::Mat> &images, int actual_frame, int
   int height = images[0].rows;
   int width = images[0].cols;
   cv::Mat u_ij = cv::Mat::zeros(height, width, CV_8UC1);
-  std::vector<int> d_k(4 , 0);
-  std::vector<int> std_k(4 , 0);
-  std::vector<int> dir_std(4 , 0);
-  std::vector<int> values_for_pixel;
-  for (int y = 0; y < height; y++)
-  {
-    for (int x = 0; x < width; x++)
+  cv::parallel_for_(cv::Range(0, images[0].rows), [&](const cv::Range &range){
+    for (int y = range.start; y < range.end; y++)
     {
-      // std::cout << "Y:" << y << "\t" << "X:" << x << std::endl;
-      std::fill(d_k.begin(), d_k.end(), 0);
-      std::fill(std_k.begin(), std_k.end(), 0);
-      for (int direction = 0; direction < 4; direction++)
+      std::array<int, 4> d_k{};
+      std::array<int, 4> std_k{};
+      std::array<int, 4> dir_std{};
+      std::vector<int> values_for_pixel;
+      for (int x = 0; x < width; x++)
       {
-        int d_sum = 0;
-        std::fill(dir_std.begin(), dir_std.end(), 0);
-        int counter = 0;
-        for (const auto &point : coordinates[direction])
+        std::fill(d_k.begin(), d_k.end(), 0);
+        std::fill(std_k.begin(), std_k.end(), 0);
+        for (int direction = 0; direction < 4; direction++)
         {
-          int s = point.first;
-          int t = point.second;
-          int w_st = get_w_st(s, t);
-          int y_plus_s = calculate_y_plus_s(y, s, height);
-          int x_plus_t = calculate_x_plus_t(x, t, width);
-          int w_st_times_abs_y_with_st_minus_y = w_st * std::abs(images[actual_frame].at<uchar>(y_plus_s, x_plus_t) - images[actual_frame].at<uchar>(y, x));
-          d_sum += w_st_times_abs_y_with_st_minus_y;
-          dir_std[counter] = images[actual_frame].at<uchar>(y_plus_s, x_plus_t);
-          counter++;
-        }
-        // std::cout << "a" << std::endl;
-        d_k[direction] = d_sum;
-        // std::cout << "b" << "\t" << direction << std::endl;
-        std_k[direction] = own_std(dir_std);
-      }
-      // std::cout << "d" << std::endl;
-      int r_ij = *std::min_element(d_k.begin(), d_k.end());
-      // std::cout << "e" << std::endl;
-      int l_ij = own_argmin(std_k);
-          // std::cout << "f" << std::endl;
-      std::for_each(images.begin(), images.end(), [&](const cv::Mat &frame){
-        if(!frame.empty()){
-          if (r_ij <= threshold)
+          int d_sum = 0;
+          std::fill(dir_std.begin(), dir_std.end(), 0);
+          int counter = 0;
+          for (const auto &point : coordinates[direction])
           {
-            for (int direction = 0; direction < 4; direction++)
-            {
-              for (const auto &point : o_3[direction])
+            int s = point.first;
+            int t = point.second;
+            int w_st = get_w_st(s, t);
+            int y_plus_s = calculate_y_plus_s(y, s, height);
+            int x_plus_t = calculate_x_plus_t(x, t, width);
+            int w_st_times_abs_y_with_st_minus_y = w_st * std::abs(images[actual_frame].at<uchar>(y_plus_s, x_plus_t) - images[actual_frame].at<uchar>(y, x));
+            d_sum += w_st_times_abs_y_with_st_minus_y;
+            dir_std[counter] = images[actual_frame].at<uchar>(y_plus_s, x_plus_t);
+            counter++;
+          }
+          d_k[direction] = d_sum;
+          std_k[direction] = own_std(dir_std);
+        }
+        int r_ij = *std::min_element(d_k.begin(), d_k.end());
+        int l_ij = own_argmin(std_k);
+        if (r_ij > threshold){
+          std::for_each(images.begin(), images.end(), [&](const cv::Mat &frame){
+            if(!frame.empty()){
+              for (int direction = 0; direction < 4; direction++)
               {
-                int s = point.first;
-                // std::cout << "g" << std::endl;
-                int t = point.second;
-                // std::cout << "h" << std::endl;
-                int w_st = is_s_t_in_coordinates(s, t, l_ij, coordinates);
-                // std::cout << "i" << std::endl;
-                int y_plus_s = calculate_y_plus_s(y, s, height);
-                // std::cout << "j" << std::endl;
-                int x_plus_t = calculate_x_plus_t(x, t, width);
-                // std::cout << "k" << std::endl;
-                for (int rep = 0; rep < w_st; rep++)
+                for (const auto &point : o_3[direction])
                 {
-                  // // std::cout << "c" << std::endl;
-                  values_for_pixel.push_back(frame.at<uchar>(y_plus_s, x_plus_t));
+                  int s = point.first;
+                  int t = point.second;
+                  int w_st = is_s_t_in_coordinates(s, t, l_ij, coordinates);
+                  int y_plus_s = calculate_y_plus_s(y, s, height);
+                  int x_plus_t = calculate_x_plus_t(x, t, width);
+                  for (int rep = 0; rep < w_st; rep++)
+                  {
+                    values_for_pixel.push_back(frame.at<uchar>(y_plus_s, x_plus_t));
+                  }
                 }
               }
             }
-            // // std::cout << "l" << std::endl;
-            u_ij.at<uchar>(y, x) = own_median(values_for_pixel);
-            // // std::cout << "m" << std::endl;
-            values_for_pixel.clear();
-            // // std::cout << "n" << std::endl;
-          }else{
-            u_ij.at<uchar>(y,x) = images[actual_frame].at<uchar>(y,x);
-          }             
-        }
-      });
-      
+          });
+          u_ij.at<uchar>(y, x) = own_median(values_for_pixel);
+          values_for_pixel.clear();
+        }else{
+          u_ij.at<uchar>(y,x) = images[actual_frame].at<uchar>(y,x);
+        } 
+      }
     }
-  }
+  });
   std::cout << "frame" << std::endl;
   return u_ij;
 }
@@ -509,9 +537,9 @@ cv::Mat directional_weighted_median_mat(cv::Mat &n_image, int threshold, int hei
       {{0, -1}, {0, 1}},
       {{1, -1}, {-1, 1}},
       {{-1, 0}, {1, 0}}};
-  std::vector<int> d_k(4, 0);
-  std::vector<int> std_k(4, 0);
-  std::vector<int> dir_std(4, 0);
+  std::array<int, 4> d_k{};
+  std::array<int, 4> std_k{};
+  std::array<int, 4> dir_std{};
   std::vector<int> values_for_pixel;
   cv::Mat u_ij = cv::Mat::zeros(height, width, CV_8UC1);
   for (int y = 0; y < height; y++)
