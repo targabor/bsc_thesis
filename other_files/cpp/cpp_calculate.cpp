@@ -685,20 +685,29 @@ cv::Mat two_pass_median_for_image_mat(const cv::Mat &image_to_filter)
   return _filtered_image;
 }
 // Video filters-----------------------------------------------------------------------------------------------------------
-double simple_median_for_video_frame(const std::string &video_path, const std::string &video_name, int kernel_size)
+double simple_median_for_video_frame(const std::string &video_path, const std::string &video_name, int kernel_size, std::string output_path = "")
 {
   cv::VideoCapture capture(video_path + video_name);
+  if (!capture.isOpened())
+  {
+    std::cerr << "Unable to open video file: " << video_path << std::endl;
+    return 0.0;
+  }
   int width = capture.get(cv::CAP_PROP_FRAME_WIDTH);
   int height = capture.get(cv::CAP_PROP_FRAME_HEIGHT);
   int fps = capture.get(cv::CAP_PROP_FPS);
   int fourcc = capture.get(cv::CAP_PROP_FOURCC);
   int frame_count = capture.get(cv::CAP_PROP_FRAME_COUNT);
-  cv::VideoWriter writer((video_path + "simple_median_" + video_name), fourcc, fps, cv::Size(width, height), 0);
-  double psnr_sum = 0.0;
-  if (!capture.isOpened())
-  {
-    std::cerr << "Unable to open video file: " << video_path << std::endl;
+  std::string output = "";
+  if(output_path == ""){
+    output = video_path + "simple_median_" + video_name;
+  }else{
+    output = output_path + "simple_median_" + video_name;
   }
+
+  cv::VideoWriter writer(output, fourcc, fps, cv::Size(width, height), 0);
+  double psnr_sum = 0.0;
+
   cv::Mat frame;
   while (capture.read(frame))
   {
@@ -714,23 +723,30 @@ double simple_median_for_video_frame(const std::string &video_path, const std::s
   }
   capture.release();
   writer.release();
+  std::cout << "done" << std::endl;
   return psnr_sum / frame_count;
 }
 
-double weighted_median_for_video_frame(const std::string &video_path, const std::string &video_name, int kernel_size, std::string weight_type)
+double weighted_median_for_video_frame(const std::string &video_path, const std::string &video_name, int kernel_size, std::string &weight_type, std::string output_path = "")
 {
   cv::VideoCapture capture(video_path + video_name);
+  if (!capture.isOpened())
+  {
+    std::cerr << "Unable to open video file: " << video_path << std::endl;
+    return 0.0;
+  }
   int width = capture.get(cv::CAP_PROP_FRAME_WIDTH);
   int height = capture.get(cv::CAP_PROP_FRAME_HEIGHT);
   int fps = capture.get(cv::CAP_PROP_FPS);
   int fourcc = capture.get(cv::CAP_PROP_FOURCC);
   int frame_count = capture.get(cv::CAP_PROP_FRAME_COUNT);
-  cv::VideoWriter writer((video_path + "weighted_median_ever_frame_" + std::to_string(kernel_size) + "_" + weight_type + "_" + video_name), fourcc, fps, cv::Size(width, height), 0);
-  double psnr_sum = 0.0;
-  if (!capture.isOpened())
-  {
-    std::cerr << "Unable to open video file: " << video_path << std::endl;
+  std::string output = "";
+  if(output_path == ""){
+    output = video_path + "weighted_median_" + video_name;
+  }else{
+    output = output_path + "weighted_median_" + video_name;
   }
+  cv::VideoWriter writer(output, fourcc, fps, cv::Size(width, height), 0);  double psnr_sum = 0.0;
   cv::Mat frame;
   while (capture.read(frame))
   {
@@ -749,21 +765,26 @@ double weighted_median_for_video_frame(const std::string &video_path, const std:
   return psnr_sum / frame_count;
 }
 
-double directional_weighted_median_for_video_frame(const std::string &video_path, const std::string &video_name, int threshold)
+double directional_weighted_median_for_video_frame(const std::string &video_path, const std::string &video_name, int threshold, std::string output_path = "")
 {
   cv::VideoCapture capture(video_path + video_name);
+  if (!capture.isOpened())
+  {
+    std::cerr << "Unable to open video file: " << video_path << std::endl;
+    return 0.0;
+  }
   int width = capture.get(cv::CAP_PROP_FRAME_WIDTH);
   int height = capture.get(cv::CAP_PROP_FRAME_HEIGHT);
   int fps = capture.get(cv::CAP_PROP_FPS);
   int fourcc = capture.get(cv::CAP_PROP_FOURCC);
   int frame_count = capture.get(cv::CAP_PROP_FRAME_COUNT);
-  cv::VideoWriter writer((video_path + "directional_weighted_median_ever_frame_" + std::to_string(threshold) + "_" + video_name), fourcc, fps, cv::Size(width, height), 0);
-  double psnr_sum = 0.0;
-
-  if (!capture.isOpened())
-  {
-    std::cerr << "Unable to open video file: " << video_path << std::endl;
+  std::string output = "";
+  if(output_path == ""){
+    output = video_path + "dir_w_median_" + video_name;
+  }else{
+    output = output_path + "dir_w_median_" + video_name;
   }
+  cv::VideoWriter writer(output, fourcc, fps, cv::Size(width, height), 0);  double psnr_sum = 0.0;
   cv::Mat frame;
   while (capture.read(frame))
   {
@@ -782,21 +803,29 @@ double directional_weighted_median_for_video_frame(const std::string &video_path
   return psnr_sum / frame_count;
 }
 
-double two_pass_median_median_for_video_frame(const std::string &video_path, const std::string &video_name)
+double two_pass_median_median_for_video_frame(const std::string &video_path, const std::string &video_name, std::string output_path = "")
 {
   cv::VideoCapture capture(video_path + video_name);
+  if (!capture.isOpened())
+  {
+    std::cerr << "Unable to open video file: " << video_path << std::endl;
+    return 0.0;
+  }
   int width = capture.get(cv::CAP_PROP_FRAME_WIDTH);
   int height = capture.get(cv::CAP_PROP_FRAME_HEIGHT);
   int fps = capture.get(cv::CAP_PROP_FPS);
   int fourcc = capture.get(cv::CAP_PROP_FOURCC);
   int frame_count = capture.get(cv::CAP_PROP_FRAME_COUNT);
-  cv::VideoWriter writer((video_path + "two_pass_median" + video_name), fourcc, fps, cv::Size(width, height), 0);
+  std::string output = "";
+  if(output_path == ""){
+    output = video_path + "two_pass_median_" + video_name;
+  }else{
+    output = output_path + "two_pass_median_" + video_name;
+  }
+  cv::VideoWriter writer(output, fourcc, fps, cv::Size(width, height), 0);
   double psnr_sum = 0.0;
 
-  if (!capture.isOpened())
-  {
-    std::cerr << "Unable to open video file: " << video_path << std::endl;
-  }
+
   cv::Mat frame;
   while (capture.read(frame))
   {
