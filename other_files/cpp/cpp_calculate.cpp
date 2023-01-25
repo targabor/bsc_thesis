@@ -700,9 +700,9 @@ double simple_median_for_video_frame(const std::string &video_path, const std::s
   int frame_count = capture.get(cv::CAP_PROP_FRAME_COUNT);
   std::string output = "";
   if(output_path == ""){
-    output = video_path + "simple_median_" + video_name;
+    output = video_path + "simple_median_" + std::to_string(kernel_size) + "_" + video_name;
   }else{
-    output = output_path + "simple_median_" + video_name;
+    output = output_path + "simple_median_" + std::to_string(kernel_size) + "_" + video_name;
   }
 
   cv::VideoWriter writer(output, fourcc, fps, cv::Size(width, height), 0);
@@ -715,7 +715,7 @@ double simple_median_for_video_frame(const std::string &video_path, const std::s
     cv::Mat blurred;
     cv::medianBlur(frame, blurred, kernel_size);
     psnr_sum += PSNR(frame, blurred);
-    writer.write(frame);
+    writer.write(blurred);
     if (cv::waitKey(33) >= 0)
     {
       break;
@@ -742,9 +742,9 @@ double weighted_median_for_video_frame(const std::string &video_path, const std:
   int frame_count = capture.get(cv::CAP_PROP_FRAME_COUNT);
   std::string output = "";
   if(output_path == ""){
-    output = video_path + "weighted_median_" + video_name;
+    output = video_path + "weighted_median_" + weight_type + "_" + std::to_string(kernel_size) + "_" + video_name;
   }else{
-    output = output_path + "weighted_median_" + video_name;
+    output = output_path + "weighted_median_"  + weight_type + "_" + std::to_string(kernel_size) + "_" + video_name;
   }
   cv::VideoWriter writer(output, fourcc, fps, cv::Size(width, height), 0);  double psnr_sum = 0.0;
   cv::Mat frame;
@@ -754,7 +754,7 @@ double weighted_median_for_video_frame(const std::string &video_path, const std:
     cv::Mat blurred;
     blurred = weighted_median_filter_mat(frame, kernel_size, weight_type);
     psnr_sum += PSNR(frame, blurred);
-    writer.write(frame);
+    writer.write(blurred);
     if (cv::waitKey(33) >= 0)
     {
       break;
@@ -780,9 +780,9 @@ double directional_weighted_median_for_video_frame(const std::string &video_path
   int frame_count = capture.get(cv::CAP_PROP_FRAME_COUNT);
   std::string output = "";
   if(output_path == ""){
-    output = video_path + "dir_w_median_" + video_name;
+    output = video_path + "dir_w_median_" + std::to_string(threshold) + "_" + video_name;
   }else{
-    output = output_path + "dir_w_median_" + video_name;
+    output = output_path + "dir_w_median_"+ std::to_string(threshold) + "_" + video_name;
   }
   cv::VideoWriter writer(output, fourcc, fps, cv::Size(width, height), 0);  double psnr_sum = 0.0;
   cv::Mat frame;
@@ -792,7 +792,7 @@ double directional_weighted_median_for_video_frame(const std::string &video_path
     cv::Mat blurred;
     blurred = directional_weighted_median_mat(frame, threshold, height, width);
     psnr_sum += PSNR(frame, blurred);
-    writer.write(frame);
+    writer.write(blurred);
     if (cv::waitKey(33) >= 0)
     {
       break;
@@ -832,7 +832,8 @@ double two_pass_median_median_for_video_frame(const std::string &video_path, con
     cv::cvtColor(frame, frame, cv::COLOR_BGR2GRAY);
     cv::Mat blurred;
     blurred = two_pass_median_for_image_mat(frame);
-    writer.write(frame);
+    psnr_sum += PSNR(frame, blurred);
+    writer.write(blurred);
     if (cv::waitKey(33) >= 0)
     {
       break;
@@ -843,19 +844,25 @@ double two_pass_median_median_for_video_frame(const std::string &video_path, con
   return psnr_sum / frame_count;
 }
 // Callers to python---------------------------------------------------------------------------------------------------
-void add_noise_to_video(const std::string &video_path, const std::string &video_name, float noise_percent)
+void add_noise_to_video(const std::string &video_path, const std::string &video_name, float noise_percent, std::string output_path = "")
 {
   cv::VideoCapture capture(video_path + video_name);
+  if (!capture.isOpened())
+  {
+    std::cerr << "Unable to open video file: " << video_path << std::endl;
+    return;
+  }
   int width = capture.get(cv::CAP_PROP_FRAME_WIDTH);
   int height = capture.get(cv::CAP_PROP_FRAME_HEIGHT);
   int fps = capture.get(cv::CAP_PROP_FPS);
   int fourcc = capture.get(cv::CAP_PROP_FOURCC);
-  cv::VideoWriter writer((video_path + "noisy_" + video_name), fourcc, fps, cv::Size(width, height), 0);
-
-  if (!capture.isOpened())
-  {
-    std::cerr << "Unable to open video file: " << video_path << std::endl;
+  std::string output = "";
+  if(output_path == ""){
+    output = video_path + "_" + std::to_string(noise_percent * 100) + "_noise_" + video_name;
+  }else{
+    output = output_path + "_" + std::to_string(noise_percent * 100) + "_noise_" + video_name;
   }
+  cv::VideoWriter writer(output, fourcc, fps, cv::Size(width, height), 0);
   cv::Mat frame;
   while (capture.read(frame))
   {
@@ -900,20 +907,26 @@ std::tuple<std::vector<std::vector<int>>, double> basic_median_for_image_vector(
 }
 
 // Video methods with neighbors-----------------------------------------------------------------------------------------
-double simple_median_cube(std::string &video_path, std::string &video_name, int kernel_size, int neighbors)
+double simple_median_cube(std::string &video_path, std::string &video_name, int kernel_size, int neighbors, std::string output_path = "")
 {
   cv::VideoCapture capture(video_path + video_name);
+  if (!capture.isOpened())
+  {
+    std::cerr << "Unable to open video file: " << video_path << std::endl;
+    return 0.0;
+  }
   int width = capture.get(cv::CAP_PROP_FRAME_WIDTH);
   int height = capture.get(cv::CAP_PROP_FRAME_HEIGHT);
   int fps = capture.get(cv::CAP_PROP_FPS);
   int fourcc = capture.get(cv::CAP_PROP_FOURCC);
   int frame_count = capture.get(cv::CAP_PROP_FRAME_COUNT);
-  cv::VideoWriter writer((video_path + "simple_median_cube_" + std::to_string(kernel_size) + "_n_" + std::to_string(neighbors) + "_" + video_name), fourcc, fps, cv::Size(width, height), 0);
-  double psnr_sum = 0.0;
-  if (!capture.isOpened())
-  {
-    return 0.0;
+  std::string output = "";
+  if(output_path == ""){
+    output = video_path + "simple_cube_" + std::to_string(neighbors) + "_" + std::to_string(kernel_size) + "_" + video_name;
+  }else{
+    output = output_path + "simple_cube_" + std::to_string(neighbors) + "_" + std::to_string(kernel_size) + "_" + video_name;
   }
+  cv::VideoWriter writer(output, fourcc, fps, cv::Size(width, height), 0);  double psnr_sum = 0.0;
   cv::Mat frame;
   int counter = -neighbors;
   std::vector<cv::Mat> neighbors_vec(1 + 2 * neighbors, cv::Mat());
@@ -966,20 +979,26 @@ double simple_median_cube(std::string &video_path, std::string &video_name, int 
   return psnr_sum / frame_count;
 }
 
-double weighted_median_cube(std::string &video_path, std::string &video_name, int kernel_size, std::string &weight_type, int neighbors)
+double weighted_median_cube(std::string &video_path, std::string &video_name, int kernel_size, std::string &weight_type, int neighbors, std::string output_path = "")
 {
   cv::VideoCapture capture(video_path + video_name);
+  if (!capture.isOpened())
+  {
+    std::cerr << "Unable to open video file: " << video_path << std::endl;
+    return 0.0;
+  }
   int width = capture.get(cv::CAP_PROP_FRAME_WIDTH);
   int height = capture.get(cv::CAP_PROP_FRAME_HEIGHT);
   int fps = capture.get(cv::CAP_PROP_FPS);
   int fourcc = capture.get(cv::CAP_PROP_FOURCC);
   int frame_count = capture.get(cv::CAP_PROP_FRAME_COUNT);
-  cv::VideoWriter writer((video_path + "weighted_median_cube_" + std::to_string(kernel_size) + "_n_" + std::to_string(neighbors) + "_" + weight_type + "_" + video_name), fourcc, fps, cv::Size(width, height), 0);
-  double psnr_sum = 0.0;
-  if (!capture.isOpened())
-  {
-    return 0.0;
+  std::string output = "";
+  if(output_path == ""){
+    output = video_path + "weighted_median_" + std::to_string(neighbors) + "_" + std::to_string(kernel_size) + "_" + weight_type + "_" + video_name;
+  }else{
+    output = output_path + "weighted_median_" + std::to_string(neighbors) + "_" + std::to_string(kernel_size) + "_" + weight_type + "_" + video_name;
   }
+  cv::VideoWriter writer(output, fourcc, fps, cv::Size(width, height), 0);  double psnr_sum = 0.0;
   cv::Mat frame;
   int counter = -neighbors;
   std::vector<cv::Mat> neighbors_vec(1 + 2 * neighbors, cv::Mat());
@@ -1032,20 +1051,26 @@ double weighted_median_cube(std::string &video_path, std::string &video_name, in
   return psnr_sum / frame_count;
 }
 
-double two_pass_median_cube(std::string &video_path, std::string &video_name, int neighbors)
+double two_pass_median_cube(std::string &video_path, std::string &video_name, int neighbors, std::string output_path = "")
 {
   cv::VideoCapture capture(video_path + video_name);
+  if (!capture.isOpened())
+  {
+    std::cerr << "Unable to open video file: " << video_path << std::endl;
+    return 0.0;
+  }
   int width = capture.get(cv::CAP_PROP_FRAME_WIDTH);
   int height = capture.get(cv::CAP_PROP_FRAME_HEIGHT);
   int fps = capture.get(cv::CAP_PROP_FPS);
   int fourcc = capture.get(cv::CAP_PROP_FOURCC);
   int frame_count = capture.get(cv::CAP_PROP_FRAME_COUNT);
-  cv::VideoWriter writer((video_path + "two_pass_median_cube_n_" + std::to_string(neighbors) + "_" + video_name), fourcc, fps, cv::Size(width, height), 0);
-  double psnr_sum = 0.0;
-  if (!capture.isOpened())
-  {
-    return 0.0;
+  std::string output = "";
+  if(output_path == ""){
+    output = video_path + "two_pass_median_" + std::to_string(neighbors) + "_" + video_name;
+  }else{
+    output = output_path + "two_pass_median_" + std::to_string(neighbors) + "_" + video_name;
   }
+  cv::VideoWriter writer(output, fourcc, fps, cv::Size(width, height), 0);  double psnr_sum = 0.0;
   cv::Mat frame;
   int counter = -neighbors;
   std::vector<cv::Mat> neighbors_vec(1 + 2 * neighbors, cv::Mat());
@@ -1098,20 +1123,26 @@ double two_pass_median_cube(std::string &video_path, std::string &video_name, in
   return psnr_sum / frame_count;
 }
 
-double dir_w_median_cube(std::string &video_path, std::string &video_name, int threshold, int neighbors)
+double dir_w_median_cube(std::string &video_path, std::string &video_name, int threshold, int neighbors, std::string output_path = "")
 {
   cv::VideoCapture capture(video_path + video_name);
+  if (!capture.isOpened())
+  {
+    std::cerr << "Unable to open video file: " << video_path << std::endl;
+    return 0.0;
+  }
   int width = capture.get(cv::CAP_PROP_FRAME_WIDTH);
   int height = capture.get(cv::CAP_PROP_FRAME_HEIGHT);
   int fps = capture.get(cv::CAP_PROP_FPS);
   int fourcc = capture.get(cv::CAP_PROP_FOURCC);
   int frame_count = capture.get(cv::CAP_PROP_FRAME_COUNT);
-  cv::VideoWriter writer((video_path + "dir_w_median_cube_" + std::to_string(threshold) + "_n_" + std::to_string(neighbors) + "_" + video_name), fourcc, fps, cv::Size(width, height), 0);
-  double psnr_sum = 0.0;
-  if (!capture.isOpened())
-  {
-    return 0.0;
+  std::string output = "";
+  if(output_path == ""){
+    output = video_path + "dir_w_cube_" + std::to_string(neighbors) + "_" + std::to_string(threshold) + "_" + video_name;
+  }else{
+    output = output_path + "dir_w_cube_" + std::to_string(neighbors) + "_" + std::to_string(threshold) + "_" + video_name;
   }
+  cv::VideoWriter writer(output, fourcc, fps, cv::Size(width, height), 0);  double psnr_sum = 0.0;
   cv::Mat frame;
   int counter = -neighbors;
   std::vector<cv::Mat> neighbors_vec(1 + 2 * neighbors, cv::Mat());

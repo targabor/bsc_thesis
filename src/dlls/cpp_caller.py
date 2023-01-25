@@ -32,9 +32,14 @@ def call_basic_median_for_image_vector(n_image: cv.Mat, kernel_size: int) -> (cv
 
 
 # Video noising
-def call_add_noise_to_video(video_name: str, noise_percent: float):
-    path_to_video = os.path.dirname(__file__) + '\\..\\..\\videos\\'
-    cpp_calculate.add_noise_to_video(path_to_video, video_name, noise_percent)
+def call_add_noise_to_video(video_name: str, noise_percent: float, path_to_video='', output_path=''):
+    if path_to_video == '':
+        path_to_video = os.path.dirname(__file__) + '\\..\\..\\videos\\'
+    else:
+        video_name = os.path.basename(path_to_video)
+        path_to_video = os.path.dirname(path_to_video) + '/'
+        output_path = output_path + '/'
+    cpp_calculate.add_noise_to_video(path_to_video, video_name, noise_percent, output_path)
 
 
 # Video downscale
@@ -51,12 +56,11 @@ def call_simple_median_for_video_frame(video_name: str, kernel_size: int, path_t
         video_name = os.path.basename(path_to_video)
         path_to_video = os.path.dirname(path_to_video) + '/'
         output_path = output_path + '/'
-    print(f'{path_to_video=}, {video_name=}, {kernel_size=}, {output_path=}')
     psnr = cpp_calculate.simple_median_for_video_frame(path_to_video, video_name, kernel_size, output_path)
     return psnr
 
 
-def call_two_pass_median_for_video_frame(video_name: str, path_to_video='', output_path = '') -> float:
+def call_two_pass_median_for_video_frame(video_name: str, path_to_video='', output_path='') -> float:
     if path_to_video == '':
         path_to_video = os.path.dirname(__file__) + '\\..\\..\\videos\\'
     else:
@@ -68,57 +72,71 @@ def call_two_pass_median_for_video_frame(video_name: str, path_to_video='', outp
 
 
 def call_weighted_median_for_video_frame(video_name: str, kernel_size: int, weight_type: str,
-                                         path_to_video='') -> float:
+                                         path_to_video='', output_path='') -> float:
     if path_to_video == '':
         path_to_video = os.path.dirname(__file__) + '\\..\\..\\videos\\'
     else:
-        video_name = ''
-    psnr = cpp_calculate.weighted_median_for_video_frame(path_to_video, video_name, kernel_size, weight_type)
+        video_name = os.path.basename(path_to_video)
+        path_to_video = os.path.dirname(path_to_video) + '/'
+        output_path = output_path + '/'
+    psnr = cpp_calculate.weighted_median_for_video_frame(path_to_video, video_name, kernel_size, weight_type,
+                                                         output_path)
     return psnr
 
 
-def call_directional_weighted_median_for_video_frame(video_name: str, threshold: int, path_to_video='') -> float:
+def call_directional_weighted_median_for_video_frame(video_name: str, threshold: int, path_to_video='',
+                                                     output_path='') -> float:
     if path_to_video == '':
         path_to_video = os.path.dirname(__file__) + '\\..\\..\\videos\\'
     else:
-        video_name = ''
-    psnr = cpp_calculate.directional_weighted_median_for_video_frame(path_to_video, video_name, threshold)
+        video_name = os.path.basename(path_to_video)
+        path_to_video = os.path.dirname(path_to_video) + '/'
+        output_path = output_path + '/'
+    psnr = cpp_calculate.directional_weighted_median_for_video_frame(path_to_video, video_name, threshold, output_path)
     return psnr
 
 
 # Filter with respect of other frames
-def call_simple_median_cube(video_name: str, kernel: int, neighbors: int, path_to_video='') -> float:
+def call_simple_median_cube(video_name: str, kernel: int, neighbors: int, path_to_video='', output_path='') -> float:
     if path_to_video == '':
         path_to_video = os.path.dirname(__file__) + '\\..\\..\\videos\\'
     else:
-        video_name = ''
-    psnr = cpp_calculate.simple_median_cube(path_to_video, video_name, kernel, neighbors)
+        video_name = os.path.basename(path_to_video)
+        path_to_video = os.path.dirname(path_to_video) + '/'
+        output_path = output_path + '/'
+    psnr = cpp_calculate.simple_median_cube(path_to_video, video_name, kernel, neighbors, output_path)
     return psnr
 
 
 def call_weighted_median_cube(video_name: str, kernel: int, weight_type: str, neighbors: int,
-                              path_to_video='') -> float:
+                              path_to_video='', output_path='') -> float:
     if path_to_video == '':
         path_to_video = os.path.dirname(__file__) + '\\..\\..\\videos\\'
     else:
-        video_name = ''
-    psnr = cpp_calculate.weighted_median_cube(path_to_video, video_name, kernel, weight_type, neighbors)
+        video_name = os.path.basename(path_to_video)
+        path_to_video = os.path.dirname(path_to_video) + '/'
+        output_path = output_path + '/'
+    psnr = cpp_calculate.weighted_median_cube(path_to_video, video_name, kernel, weight_type, neighbors, output_path)
     return psnr
 
 
-def call_two_pass_median_cube(video_name: str, neighbors: int, path_to_video='') -> float:
+def call_two_pass_median_cube(video_name: str, neighbors: int, path_to_video='', output_path='') -> float:
     if path_to_video == '':
         path_to_video = os.path.dirname(__file__) + '\\..\\..\\videos\\'
     else:
-        video_name = ''
-    psnr = cpp_calculate.two_pass_median_cube(path_to_video, video_name, neighbors)
+        video_name = os.path.basename(path_to_video)
+        path_to_video = os.path.dirname(path_to_video) + '/'
+        output_path = output_path + '/'
+    psnr = cpp_calculate.two_pass_median_cube(path_to_video, video_name, neighbors, output_path)
     return psnr
 
 
-def call_dir_w_median_cube(video_name: str, threshold: int, neighbors: int, path_to_video='') -> float:
+def call_dir_w_median_cube(video_name: str, threshold: int, neighbors: int, path_to_video='', output_path='') -> float:
     if path_to_video == '':
         path_to_video = os.path.dirname(__file__) + '\\..\\..\\videos\\'
     else:
-        video_name = ''
-    psnr = cpp_calculate.dir_w_median_cube(path_to_video, video_name, threshold, neighbors)
+        video_name = os.path.basename(path_to_video)
+        path_to_video = os.path.dirname(path_to_video) + '/'
+        output_path = output_path + '/'
+    psnr = cpp_calculate.dir_w_median_cube(path_to_video, video_name, threshold, neighbors, output_path)
     return psnr
