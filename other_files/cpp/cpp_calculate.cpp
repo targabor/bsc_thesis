@@ -512,7 +512,6 @@ cv::Mat calculate_dir_w_cube(std::vector<cv::Mat> &images, int actual_frame, int
       }
     }
   });
-  std::cout << "frame" << std::endl;
   return u_ij;
 }
 
@@ -723,7 +722,6 @@ double simple_median_for_video_frame(const std::string &video_path, const std::s
   }
   capture.release();
   writer.release();
-  std::cout << "done" << std::endl;
   return psnr_sum / frame_count;
 }
 
@@ -978,7 +976,7 @@ double simple_median_cube(std::string &video_path, std::string &video_name, int 
   writer.release();
   return psnr_sum / frame_count;
 }
-
+  
 double weighted_median_cube(std::string &video_path, std::string &video_name, int kernel_size, std::string &weight_type, int neighbors, std::string output_path = "")
 {
   cv::VideoCapture capture(video_path + video_name);
