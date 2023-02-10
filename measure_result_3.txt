@@ -1,0 +1,5100 @@
+Simple median filter with 3 kernel size ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.17445819989835 db
+SSIM: 0.7274767858804138
+
+Simple median filter with 5 kernel size ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.51322875468795 db
+SSIM: 0.7870097109240323
+
+Simple median filter with 7 kernel size ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.24969442564794 db
+SSIM: 0.7825154409223621
+
+Two Pass median filter ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 36.07614330682065 db
+SSIM: 0.5897494797379468
+
+Weighted median filter with 3 kernel size and distance weight type ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 34.35181431224054 db
+SSIM: 0.5855971267955252
+
+Weighted median filter with 5 kernel size and distance weight type ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 33.456363350650655 db
+SSIM: 0.6801787968176297
+
+Weighted median filter with 7 kernel size and distance weight type ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 32.999057941968566 db
+SSIM: 0.7028413179334185
+
+Directional weighted median filter with 510 threshodld ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 41.669753061773214 db
+SSIM: 0.37336805257458805
+
+Directional weighted median filter with 408 threshodld ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 39.80141502848065 db
+SSIM: 0.4459129450335818
+
+Directional weighted median filter with 326 threshodld ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 38.37823058734472 db
+SSIM: 0.5097474210133325
+
+Directional weighted median filter with 260 threshodld ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 37.05085937776629 db
+SSIM: 0.555976195609983
+
+Directional weighted median filter with 208 threshodld ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 35.73047509302794 db
+SSIM: 0.5949260757278689
+
+Directional weighted median filter with 166 threshodld ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 34.437960570720726 db
+SSIM: 0.6297092237344827
+
+Directional weighted median filter with 132 threshodld ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 33.25241624339595 db
+SSIM: 0.6583152470309376
+
+Directional weighted median filter with 105 threshodld ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 32.30712821452609 db
+SSIM: 0.6767657762724666
+
+Simple median cube with 1 neighbors and 3 kernel size ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.64498429465427 db
+SSIM: 0.7446166526689869
+
+Simple median cube with 1 neighbors and 5 kernel size ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.49166168827664 db
+SSIM: 0.7594780159777788
+
+Simple median cube with 1 neighbors and 7 kernel size ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.39826683264146 db
+SSIM: 0.7521027806185534
+
+Simple median cube with 2 neighbors and 3 kernel size ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.1513530446577 db
+SSIM: 0.732426815549423
+
+Simple median cube with 2 neighbors and 5 kernel size ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.064259319288446 db
+SSIM: 0.7423407074495896
+
+Simple median cube with 2 neighbors and 7 kernel size ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.0064522428806 db
+SSIM: 0.7363236650817437
+
+Simple median cube with 3 neighbors and 3 kernel size ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.828091079868766 db
+SSIM: 0.7216073405607318
+
+Simple median cube with 3 neighbors and 5 kernel size ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.767016850060077 db
+SSIM: 0.7301035173980713
+
+Simple median cube with 3 neighbors and 7 kernel size ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.72462805335268 db
+SSIM: 0.7253729154403599
+
+Two Pass cube with 1 neighbors ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.86993140922493 db
+SSIM: 0.4825612117855359
+
+Two Pass cube with 2 neighbors ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.28845349334385 db
+SSIM: 0.5879567157028223
+
+Two Pass cube with 3 neighbors ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.071300275869422 db
+SSIM: 0.5930157131110049
+
+Weighted median cube with 1 neighbors and 3 kernel size and distance weight type ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.587551277439925 db
+SSIM: 0.7501639406638178
+
+Weighted median cube with 1 neighbors and 5 kernel size and distance weight type ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.337365352724355 db
+SSIM: 0.7597049262324553
+
+Weighted median cube with 1 neighbors and 7 kernel size and distance weight type ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.192005790748613 db
+SSIM: 0.7518391443769309
+
+Weighted median cube with 2 neighbors and 3 kernel size and distance weight type ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.549225978210224 db
+SSIM: 0.745709437358222
+
+Weighted median cube with 2 neighbors and 5 kernel size and distance weight type ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.14492185724117 db
+SSIM: 0.7477977097681854
+
+Weighted median cube with 2 neighbors and 7 kernel size and distance weight type ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.960017660059076 db
+SSIM: 0.738926882948689
+
+Weighted median cube with 3 neighbors and 3 kernel size and distance weight type ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.695274512489878 db
+SSIM: 0.7366647151935994
+
+Weighted median cube with 3 neighbors and 5 kernel size and distance weight type ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.096316413599798 db
+SSIM: 0.7400342193671408
+
+Weighted median cube with 3 neighbors and 7 kernel size and distance weight type ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.843647658036605 db
+SSIM: 0.7312020348718113
+
+Directional weighted median cube with 1 neighbors and 510 threshodld ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.453249024533932 db
+SSIM: 0.37302129395721095
+
+Directional weighted median cube with 1 neighbors and 408 threshodld ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.461988281961222 db
+SSIM: 0.44667859237572816
+
+Directional weighted median cube with 1 neighbors and 326 threshodld ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.48159747843701 db
+SSIM: 0.5104142244887827
+
+Directional weighted median cube with 1 neighbors and 260 threshodld ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.51667979116643 db
+SSIM: 0.5605814981066035
+
+Directional weighted median cube with 1 neighbors and 208 threshodld ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.572640609571533 db
+SSIM: 0.6029472545519532
+
+Directional weighted median cube with 1 neighbors and 166 threshodld ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.653831762759772 db
+SSIM: 0.641415560221692
+
+Directional weighted median cube with 1 neighbors and 132 threshodld ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.7551188609457 db
+SSIM: 0.6782633684942387
+
+Directional weighted median cube with 1 neighbors and 105 threshodld ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.861128096603764 db
+SSIM: 0.7048581070275503
+
+Directional weighted median cube with 2 neighbors and 510 threshodld ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.195525241618235 db
+SSIM: 0.37232811244389163
+
+Directional weighted median cube with 2 neighbors and 408 threshodld ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.200505312915464 db
+SSIM: 0.4451689524021059
+
+Directional weighted median cube with 2 neighbors and 326 threshodld ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.215457953917866 db
+SSIM: 0.5094297098023887
+
+Directional weighted median cube with 2 neighbors and 260 threshodld ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.24378400484499 db
+SSIM: 0.558953862370598
+
+Directional weighted median cube with 2 neighbors and 208 threshodld ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.2899770103528 db
+SSIM: 0.6004323473599298
+
+Directional weighted median cube with 2 neighbors and 166 threshodld ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.3574162472247 db
+SSIM: 0.6389884175574813
+
+Directional weighted median cube with 2 neighbors and 132 threshodld ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.441587293809665 db
+SSIM: 0.6741734798907322
+
+Directional weighted median cube with 2 neighbors and 105 threshodld ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.529782993452987 db
+SSIM: 0.6996293072267661
+
+Directional weighted median cube with 3 neighbors and 510 threshodld ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.992377864140806 db
+SSIM: 0.3715692461150542
+
+Directional weighted median cube with 3 neighbors and 408 threshodld ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.994877234141832 db
+SSIM: 0.44409032043973007
+
+Directional weighted median cube with 3 neighbors and 326 threshodld ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.006917090808727 db
+SSIM: 0.5076667715356982
+
+Directional weighted median cube with 3 neighbors and 260 threshodld ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.03115457492657 db
+SSIM: 0.5571338212376892
+
+Directional weighted median cube with 3 neighbors and 208 threshodld ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.071488682042897 db
+SSIM: 0.5984902545537957
+
+Directional weighted median cube with 3 neighbors and 166 threshodld ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.130909559523182 db
+SSIM: 0.6359788242066926
+
+Directional weighted median cube with 3 neighbors and 132 threshodld ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.205307164284328 db
+SSIM: 0.6691334839536105
+
+Directional weighted median cube with 3 neighbors and 105 threshodld ended for measures/noised/_20.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.283790613911183 db
+SSIM: 0.6927909111482842
+
+Simple median filter with 3 kernel size ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.71841776782986 db
+SSIM: 0.6742141725933537
+
+Simple median filter with 5 kernel size ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.074985211159564 db
+SSIM: 0.7560574232108749
+
+Simple median filter with 7 kernel size ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.838348787991038 db
+SSIM: 0.7617465495845451
+
+Two Pass median filter ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 35.6700438958968 db
+SSIM: 0.5296249236697215
+
+Weighted median filter with 3 kernel size and distance weight type ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 33.956997484343134 db
+SSIM: 0.5378487292367824
+
+Weighted median filter with 5 kernel size and distance weight type ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 33.04890844817519 db
+SSIM: 0.6356530943936546
+
+Weighted median filter with 7 kernel size and distance weight type ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 32.60307038555663 db
+SSIM: 0.6681226912691366
+
+Directional weighted median filter with 510 threshodld ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 41.24799311349843 db
+SSIM: 0.31089564983397106
+
+Directional weighted median filter with 408 threshodld ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 39.26357363558959 db
+SSIM: 0.37753257597427814
+
+Directional weighted median filter with 326 threshodld ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 37.67567049447845 db
+SSIM: 0.44838049833114446
+
+Directional weighted median filter with 260 threshodld ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 36.21765511494564 db
+SSIM: 0.5076144862807883
+
+Directional weighted median filter with 208 threshodld ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 34.83476876935225 db
+SSIM: 0.5506683783088594
+
+Directional weighted median filter with 166 threshodld ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 33.53882899429982 db
+SSIM: 0.5859098690870449
+
+Directional weighted median filter with 132 threshodld ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 32.41874542571243 db
+SSIM: 0.6118593541595128
+
+Directional weighted median filter with 105 threshodld ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.580693999954462 db
+SSIM: 0.6274045429909638
+
+Simple median cube with 1 neighbors and 3 kernel size ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.348029558485795 db
+SSIM: 0.7129842085017122
+
+Simple median cube with 1 neighbors and 5 kernel size ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.19395220893876 db
+SSIM: 0.742243502783513
+
+Simple median cube with 1 neighbors and 7 kernel size ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.104985252869852 db
+SSIM: 0.7400290067485247
+
+Simple median cube with 2 neighbors and 3 kernel size ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.902917729339947 db
+SSIM: 0.7084263892560776
+
+Simple median cube with 2 neighbors and 5 kernel size ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.814793612653155 db
+SSIM: 0.7284216331674926
+
+Simple median cube with 2 neighbors and 7 kernel size ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.759549770807602 db
+SSIM: 0.7259981903533597
+
+Simple median cube with 3 neighbors and 3 kernel size ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.60821269734704 db
+SSIM: 0.7009324352581574
+
+Simple median cube with 3 neighbors and 5 kernel size ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.546184555755833 db
+SSIM: 0.7179107141927846
+
+Simple median cube with 3 neighbors and 7 kernel size ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.505586831956162 db
+SSIM: 0.71605714483181
+
+Two Pass cube with 1 neighbors ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.634351184339394 db
+SSIM: 0.4299715497355114
+
+Two Pass cube with 2 neighbors ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.088635583111248 db
+SSIM: 0.5322855852061849
+
+Two Pass cube with 3 neighbors ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.8927065177511 db
+SSIM: 0.5359715328009585
+
+Weighted median cube with 1 neighbors and 3 kernel size and distance weight type ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.292888450379678 db
+SSIM: 0.7204893030519202
+
+Weighted median cube with 1 neighbors and 5 kernel size and distance weight type ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.047252338152237 db
+SSIM: 0.7454730979900605
+
+Weighted median cube with 1 neighbors and 7 kernel size and distance weight type ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.910785025214025 db
+SSIM: 0.7434141851888408
+
+Weighted median cube with 2 neighbors and 3 kernel size and distance weight type ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.298659909936447 db
+SSIM: 0.7216961778405542
+
+Weighted median cube with 2 neighbors and 5 kernel size and distance weight type ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.89605082923322 db
+SSIM: 0.7365001116097937
+
+Weighted median cube with 2 neighbors and 7 kernel size and distance weight type ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.71741828470199 db
+SSIM: 0.7320751943711716
+
+Weighted median cube with 3 neighbors and 3 kernel size and distance weight type ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.479592712422136 db
+SSIM: 0.7137733673501802
+
+Weighted median cube with 3 neighbors and 5 kernel size and distance weight type ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.874653202334425 db
+SSIM: 0.7294545704674624
+
+Weighted median cube with 3 neighbors and 7 kernel size and distance weight type ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.62623072050897 db
+SSIM: 0.7246703144092347
+
+Directional weighted median cube with 1 neighbors and 510 threshodld ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.23526028500569 db
+SSIM: 0.31050341053301284
+
+Directional weighted median cube with 1 neighbors and 408 threshodld ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.24096705474104 db
+SSIM: 0.3784742313575464
+
+Directional weighted median cube with 1 neighbors and 326 threshodld ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.26040308829788 db
+SSIM: 0.4518041866555043
+
+Directional weighted median cube with 1 neighbors and 260 threshodld ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.299195575352453 db
+SSIM: 0.5147462176657525
+
+Directional weighted median cube with 1 neighbors and 208 threshodld ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.36077008668835 db
+SSIM: 0.5635061579229018
+
+Directional weighted median cube with 1 neighbors and 166 threshodld ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.446994990785914 db
+SSIM: 0.6071895233627227
+
+Directional weighted median cube with 1 neighbors and 132 threshodld ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.54840964181062 db
+SSIM: 0.6426082983325478
+
+Directional weighted median cube with 1 neighbors and 105 threshodld ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.648423513232796 db
+SSIM: 0.6673054172708813
+
+Directional weighted median cube with 2 neighbors and 510 threshodld ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.011568503265085 db
+SSIM: 0.30975004948885376
+
+Directional weighted median cube with 2 neighbors and 408 threshodld ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.013421486623567 db
+SSIM: 0.377396271074281
+
+Directional weighted median cube with 2 neighbors and 326 threshodld ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.02770287423028 db
+SSIM: 0.45081535924665833
+
+Directional weighted median cube with 2 neighbors and 260 threshodld ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.059043842338614 db
+SSIM: 0.5132937675289111
+
+Directional weighted median cube with 2 neighbors and 208 threshodld ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.109984731367767 db
+SSIM: 0.5621820900020824
+
+Directional weighted median cube with 2 neighbors and 166 threshodld ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.18209288459853 db
+SSIM: 0.6053302326196921
+
+Directional weighted median cube with 2 neighbors and 132 threshodld ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.267034026927956 db
+SSIM: 0.6411937336739871
+
+Directional weighted median cube with 2 neighbors and 105 threshodld ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.351421365928125 db
+SSIM: 0.6657431401049307
+
+Directional weighted median cube with 3 neighbors and 510 threshodld ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.828675597904738 db
+SSIM: 0.30905368176544584
+
+Directional weighted median cube with 3 neighbors and 408 threshodld ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.828294923017157 db
+SSIM: 0.3760332648839414
+
+Directional weighted median cube with 3 neighbors and 326 threshodld ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.839367967336234 db
+SSIM: 0.44871659665392916
+
+Directional weighted median cube with 3 neighbors and 260 threshodld ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.866119104910887 db
+SSIM: 0.5113674628098853
+
+Directional weighted median cube with 3 neighbors and 208 threshodld ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.910846071294788 db
+SSIM: 0.5595715671887689
+
+Directional weighted median cube with 3 neighbors and 166 threshodld ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.975009784827886 db
+SSIM: 0.6018947711590095
+
+Directional weighted median cube with 3 neighbors and 132 threshodld ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.050972365612743 db
+SSIM: 0.636331723130899
+
+Directional weighted median cube with 3 neighbors and 105 threshodld ended for measures/noised/_25.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.126773392926516 db
+SSIM: 0.6605222640761005
+
+Simple median filter with 3 kernel size ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.35959890897022 db
+SSIM: 0.6283108152733676
+
+Simple median filter with 5 kernel size ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.7379376604512 db
+SSIM: 0.7260872265641163
+
+Simple median filter with 7 kernel size ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.5241053538462 db
+SSIM: 0.7411665683344149
+
+Two Pass median filter ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 35.35313750231895 db
+SSIM: 0.47747114601987545
+
+Weighted median filter with 3 kernel size and distance weight type ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 33.656423381234575 db
+SSIM: 0.5017900777033026
+
+Weighted median filter with 5 kernel size and distance weight type ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 32.73960939656684 db
+SSIM: 0.5967961428287687
+
+Weighted median filter with 7 kernel size and distance weight type ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 32.302606793491314 db
+SSIM: 0.6362847073299333
+
+Directional weighted median filter with 510 threshodld ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 40.98677386905875 db
+SSIM: 0.26282343119367146
+
+Directional weighted median filter with 408 threshodld ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 38.84461980419972 db
+SSIM: 0.328718611314059
+
+Directional weighted median filter with 326 threshodld ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 37.11379031341473 db
+SSIM: 0.398284202173282
+
+Directional weighted median filter with 260 threshodld ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 35.55083304576515 db
+SSIM: 0.464580604377406
+
+Directional weighted median filter with 208 threshodld ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 34.127236954071826 db
+SSIM: 0.5130781429464091
+
+Directional weighted median filter with 166 threshodld ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 32.839783666991714 db
+SSIM: 0.5487552405508629
+
+Directional weighted median filter with 132 threshodld ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.785587132500346 db
+SSIM: 0.5714631694575882
+
+Directional weighted median filter with 105 threshodld ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.03263330896129 db
+SSIM: 0.5856392299959379
+
+Simple median cube with 1 neighbors and 3 kernel size ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.117438395593204 db
+SSIM: 0.6817034577283333
+
+Simple median cube with 1 neighbors and 5 kernel size ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.964392485476687 db
+SSIM: 0.7238340616816321
+
+Simple median cube with 1 neighbors and 7 kernel size ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.879866302046818 db
+SSIM: 0.727484663742783
+
+Simple median cube with 2 neighbors and 3 kernel size ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.710046810531697 db
+SSIM: 0.6844350757514
+
+Simple median cube with 2 neighbors and 5 kernel size ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.621677866638212 db
+SSIM: 0.7141997415348947
+
+Simple median cube with 2 neighbors and 7 kernel size ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.569134241201514 db
+SSIM: 0.7154183171190849
+
+Simple median cube with 3 neighbors and 3 kernel size ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.437703158134852 db
+SSIM: 0.6802663964169317
+
+Simple median cube with 3 neighbors and 5 kernel size ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.375348128521875 db
+SSIM: 0.7056732609341207
+
+Simple median cube with 3 neighbors and 7 kernel size ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.336745403105642 db
+SSIM: 0.7066371733163207
+
+Two Pass cube with 1 neighbors ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.459387338964138 db
+SSIM: 0.38341998652651493
+
+Two Pass cube with 2 neighbors ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.940714312155094 db
+SSIM: 0.4860722468490152
+
+Two Pass cube with 3 neighbors ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.7596905917847 db
+SSIM: 0.48648231980647705
+
+Weighted median cube with 1 neighbors and 3 kernel size and distance weight type ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.06575317586097 db
+SSIM: 0.6909826573944526
+
+Weighted median cube with 1 neighbors and 5 kernel size and distance weight type ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.82219649116594 db
+SSIM: 0.7302786479141947
+
+Weighted median cube with 1 neighbors and 7 kernel size and distance weight type ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.69283728988325 db
+SSIM: 0.7342390752839415
+
+Weighted median cube with 2 neighbors and 3 kernel size and distance weight type ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.10490632844126 db
+SSIM: 0.6975265143330018
+
+Weighted median cube with 2 neighbors and 5 kernel size and distance weight type ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.702101922199603 db
+SSIM: 0.7244867318424726
+
+Weighted median cube with 2 neighbors and 7 kernel size and distance weight type ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.528201310049692 db
+SSIM: 0.7244788764583335
+
+Weighted median cube with 3 neighbors and 3 kernel size and distance weight type ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.31367190007493 db
+SSIM: 0.6906008583829373
+
+Weighted median cube with 3 neighbors and 5 kernel size and distance weight type ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.70204013596819 db
+SSIM: 0.718438982119818
+
+Weighted median cube with 3 neighbors and 7 kernel size and distance weight type ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.455942230340348 db
+SSIM: 0.7177158754919377
+
+Directional weighted median cube with 1 neighbors and 510 threshodld ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.079055700232235 db
+SSIM: 0.2623421814689337
+
+Directional weighted median cube with 1 neighbors and 408 threshodld ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.08201039677099 db
+SSIM: 0.32953579017117157
+
+Directional weighted median cube with 1 neighbors and 326 threshodld ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.10090695306595 db
+SSIM: 0.4036594280051874
+
+Directional weighted median cube with 1 neighbors and 260 threshodld ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.142298875143112 db
+SSIM: 0.4765951014415336
+
+Directional weighted median cube with 1 neighbors and 208 threshodld ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.208029701052602 db
+SSIM: 0.5306325885937558
+
+Directional weighted median cube with 1 neighbors and 166 threshodld ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.297218755975578 db
+SSIM: 0.5760495073547583
+
+Directional weighted median cube with 1 neighbors and 132 threshodld ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.396046662533987 db
+SSIM: 0.6093658413046371
+
+Directional weighted median cube with 1 neighbors and 105 threshodld ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.489600538325977 db
+SSIM: 0.6321271994139211
+
+Directional weighted median cube with 2 neighbors and 510 threshodld ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.877230593652804 db
+SSIM: 0.2617877826575334
+
+Directional weighted median cube with 2 neighbors and 408 threshodld ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.876452371666247 db
+SSIM: 0.3287777517668057
+
+Directional weighted median cube with 2 neighbors and 326 threshodld ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.889969682564068 db
+SSIM: 0.40254219111196604
+
+Directional weighted median cube with 2 neighbors and 260 threshodld ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.923389266382678 db
+SSIM: 0.4757086055789879
+
+Directional weighted median cube with 2 neighbors and 208 threshodld ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.97821055092427 db
+SSIM: 0.5308818265869442
+
+Directional weighted median cube with 2 neighbors and 166 threshodld ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.05329044183595 db
+SSIM: 0.5764023553715637
+
+Directional weighted median cube with 2 neighbors and 132 threshodld ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.13747456745974 db
+SSIM: 0.6107039802487352
+
+Directional weighted median cube with 2 neighbors and 105 threshodld ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.21780670028586 db
+SSIM: 0.6341651081289508
+
+Directional weighted median cube with 3 neighbors and 510 threshodld ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.708480863549127 db
+SSIM: 0.261094785759009
+
+Directional weighted median cube with 3 neighbors and 408 threshodld ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.70537827181354 db
+SSIM: 0.3276103305116682
+
+Directional weighted median cube with 3 neighbors and 326 threshodld ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.71571021523206 db
+SSIM: 0.4011379698044629
+
+Directional weighted median cube with 3 neighbors and 260 threshodld ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.744409828792207 db
+SSIM: 0.47341977101810995
+
+Directional weighted median cube with 3 neighbors and 208 threshodld ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.792961448765308 db
+SSIM: 0.5279352716961636
+
+Directional weighted median cube with 3 neighbors and 166 threshodld ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.86018014145656 db
+SSIM: 0.5736772999280684
+
+Directional weighted median cube with 3 neighbors and 132 threshodld ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.936135974746588 db
+SSIM: 0.6073325078596313
+
+Directional weighted median cube with 3 neighbors and 105 threshodld ended for measures/noised/_30.000002_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.009336752679815 db
+SSIM: 0.6302133644026162
+
+Simple median filter with 3 kernel size ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.07458601949603 db
+SSIM: 0.5882693528594839
+
+Simple median filter with 5 kernel size ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.472365777091255 db
+SSIM: 0.6970660509780614
+
+Simple median filter with 7 kernel size ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.274835774813656 db
+SSIM: 0.7211813426096252
+
+Two Pass median filter ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 35.143302746244004 db
+SSIM: 0.42604313714353303
+
+Weighted median filter with 3 kernel size and distance weight type ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 33.42177195061287 db
+SSIM: 0.47190245724456215
+
+Weighted median filter with 5 kernel size and distance weight type ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 32.50003216953336 db
+SSIM: 0.5628804004109799
+
+Weighted median filter with 7 kernel size and distance weight type ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 32.07001722515758 db
+SSIM: 0.6077643648471058
+
+Directional weighted median filter with 510 threshodld ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 40.78860703618949 db
+SSIM: 0.22979919917402966
+
+Directional weighted median filter with 408 threshodld ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 38.502954920507044 db
+SSIM: 0.2873429861908857
+
+Directional weighted median filter with 326 threshodld ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 36.649893211474385 db
+SSIM: 0.3563129576453538
+
+Directional weighted median filter with 260 threshodld ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 35.004717653933376 db
+SSIM: 0.42339058863028217
+
+Directional weighted median filter with 208 threshodld ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 33.5477584095594 db
+SSIM: 0.47809519330410144
+
+Directional weighted median filter with 166 threshodld ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 32.27617388881679 db
+SSIM: 0.5148229028998843
+
+Directional weighted median filter with 132 threshodld ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.284447631452856 db
+SSIM: 0.5357498405304436
+
+Directional weighted median filter with 105 threshodld ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.601860034850286 db
+SSIM: 0.5486458066775827
+
+Simple median cube with 1 neighbors and 3 kernel size ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.93330816415242 db
+SSIM: 0.6504498268622141
+
+Simple median cube with 1 neighbors and 5 kernel size ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.78082001166191 db
+SSIM: 0.7051242365134688
+
+Simple median cube with 1 neighbors and 7 kernel size ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.7000831160973 db
+SSIM: 0.7144422453962818
+
+Simple median cube with 2 neighbors and 3 kernel size ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.556399229456137 db
+SSIM: 0.6598573031286827
+
+Simple median cube with 2 neighbors and 5 kernel size ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.46774331196176 db
+SSIM: 0.6994730988705141
+
+Simple median cube with 2 neighbors and 7 kernel size ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.41713775450531 db
+SSIM: 0.7044202476277698
+
+Simple median cube with 3 neighbors and 3 kernel size ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.30200267074405 db
+SSIM: 0.658791980672449
+
+Simple median cube with 3 neighbors and 5 kernel size ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.239126949061266 db
+SSIM: 0.6929531347357428
+
+Simple median cube with 3 neighbors and 7 kernel size ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.201874965034754 db
+SSIM: 0.6969929466461113
+
+Two Pass cube with 1 neighbors ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.33224772824331 db
+SSIM: 0.33863482231709013
+
+Two Pass cube with 2 neighbors ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.827660992423127 db
+SSIM: 0.43902812754269527
+
+Two Pass cube with 3 neighbors ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.65785863358657 db
+SSIM: 0.43790103307917333
+
+Weighted median cube with 1 neighbors and 3 kernel size and distance weight type ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.8872400809131 db
+SSIM: 0.6606309310292059
+
+Weighted median cube with 1 neighbors and 5 kernel size and distance weight type ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.64515257546609 db
+SSIM: 0.7140418353807072
+
+Weighted median cube with 1 neighbors and 7 kernel size and distance weight type ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.52085214157773 db
+SSIM: 0.7242914583756176
+
+Weighted median cube with 2 neighbors and 3 kernel size and distance weight type ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.952366911514314 db
+SSIM: 0.6726926065740305
+
+Weighted median cube with 2 neighbors and 5 kernel size and distance weight type ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.54919337631118 db
+SSIM: 0.7116626306907518
+
+Weighted median cube with 2 neighbors and 7 kernel size and distance weight type ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.37886243869703 db
+SSIM: 0.7161145247153633
+
+Weighted median cube with 3 neighbors and 3 kernel size and distance weight type ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.182074017411217 db
+SSIM: 0.6667705726574776
+
+Weighted median cube with 3 neighbors and 5 kernel size and distance weight type ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.565479057015562 db
+SSIM: 0.7066660260289291
+
+Weighted median cube with 3 neighbors and 7 kernel size and distance weight type ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.32146112872975 db
+SSIM: 0.7100185763806673
+
+Directional weighted median cube with 1 neighbors and 510 threshodld ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.962205884103927 db
+SSIM: 0.22927684682683325
+
+Directional weighted median cube with 1 neighbors and 408 threshodld ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.962419967959427 db
+SSIM: 0.2885822538235176
+
+Directional weighted median cube with 1 neighbors and 326 threshodld ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.980742472021564 db
+SSIM: 0.36274109338116883
+
+Directional weighted median cube with 1 neighbors and 260 threshodld ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.024121456173894 db
+SSIM: 0.4400752083413279
+
+Directional weighted median cube with 1 neighbors and 208 threshodld ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.092732873492963 db
+SSIM: 0.5020716086050476
+
+Directional weighted median cube with 1 neighbors and 166 threshodld ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.182866060602517 db
+SSIM: 0.5468563376223297
+
+Directional weighted median cube with 1 neighbors and 132 threshodld ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.278278363028964 db
+SSIM: 0.578426527175128
+
+Directional weighted median cube with 1 neighbors and 105 threshodld ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.365236135088903 db
+SSIM: 0.5990037474461843
+
+Directional weighted median cube with 2 neighbors and 510 threshodld ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.77690135631923 db
+SSIM: 0.22871974240925336
+
+Directional weighted median cube with 2 neighbors and 408 threshodld ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.77360001684467 db
+SSIM: 0.2877250135886015
+
+Directional weighted median cube with 2 neighbors and 326 threshodld ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.786614358250564 db
+SSIM: 0.3618887034300658
+
+Directional weighted median cube with 2 neighbors and 260 threshodld ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.821779324358754 db
+SSIM: 0.44032595391979135
+
+Directional weighted median cube with 2 neighbors and 208 threshodld ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.879436167862615 db
+SSIM: 0.502390202008062
+
+Directional weighted median cube with 2 neighbors and 166 threshodld ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.95621799576894 db
+SSIM: 0.54952100595178
+
+Directional weighted median cube with 2 neighbors and 132 threshodld ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.03829491863592 db
+SSIM: 0.5826973319951692
+
+Directional weighted median cube with 2 neighbors and 105 threshodld ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.114075807177752 db
+SSIM: 0.6048597386302607
+
+Directional weighted median cube with 3 neighbors and 510 threshodld ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.618681165465055 db
+SSIM: 0.22820284008288955
+
+Directional weighted median cube with 3 neighbors and 408 threshodld ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.613125876382956 db
+SSIM: 0.28666975606789763
+
+Directional weighted median cube with 3 neighbors and 326 threshodld ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.622583789086196 db
+SSIM: 0.36059418611893534
+
+Directional weighted median cube with 3 neighbors and 260 threshodld ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.652962126717078 db
+SSIM: 0.4382021782098631
+
+Directional weighted median cube with 3 neighbors and 208 threshodld ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.704262985276532 db
+SSIM: 0.5005292593438446
+
+Directional weighted median cube with 3 neighbors and 166 threshodld ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.773549624466835 db
+SSIM: 0.5474304524965576
+
+Directional weighted median cube with 3 neighbors and 132 threshodld ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.848222269640697 db
+SSIM: 0.5805843362575588
+
+Directional weighted median cube with 3 neighbors and 105 threshodld ended for measures/noised/_35.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.91787553805325 db
+SSIM: 0.6028314731649679
+
+Simple median filter with 3 kernel size ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.875396037122616 db
+SSIM: 0.553836291679428
+
+Simple median filter with 5 kernel size ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.285304000512262 db
+SSIM: 0.6697078236372778
+
+Simple median filter with 7 kernel size ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.098668320447576 db
+SSIM: 0.7010038450353521
+
+Two Pass median filter ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 34.953417170221805 db
+SSIM: 0.3832402113601646
+
+Weighted median filter with 3 kernel size and distance weight type ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 33.26888551503441 db
+SSIM: 0.4471037537143059
+
+Weighted median filter with 5 kernel size and distance weight type ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 32.34083558383911 db
+SSIM: 0.5359747857582834
+
+Weighted median filter with 7 kernel size and distance weight type ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.91411165954329 db
+SSIM: 0.5834534419157997
+
+Directional weighted median filter with 510 threshodld ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 40.67666117024832 db
+SSIM: 0.20777225496816706
+
+Directional weighted median filter with 408 threshodld ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 38.25177128813583 db
+SSIM: 0.25620418145102525
+
+Directional weighted median filter with 326 threshodld ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 36.292135309005516 db
+SSIM: 0.3241760039201371
+
+Directional weighted median filter with 260 threshodld ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 34.58202373695247 db
+SSIM: 0.39033787570896417
+
+Directional weighted median filter with 208 threshodld ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 33.100945459139965 db
+SSIM: 0.44601489634218894
+
+Directional weighted median filter with 166 threshodld ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.853420248225028 db
+SSIM: 0.48370806973756136
+
+Directional weighted median filter with 132 threshodld ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.92174234027578 db
+SSIM: 0.5041015672921685
+
+Directional weighted median filter with 105 threshodld ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.293938279719672 db
+SSIM: 0.5167653002242871
+
+Simple median cube with 1 neighbors and 3 kernel size ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.79943575085807 db
+SSIM: 0.6221231645861268
+
+Simple median cube with 1 neighbors and 5 kernel size ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.647315755727096 db
+SSIM: 0.6868356694092242
+
+Simple median cube with 1 neighbors and 7 kernel size ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.56959204867926 db
+SSIM: 0.7014416322964215
+
+Simple median cube with 2 neighbors and 3 kernel size ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.442987166576998 db
+SSIM: 0.6359680397823539
+
+Simple median cube with 2 neighbors and 5 kernel size ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.354445050864516 db
+SSIM: 0.6850726361504698
+
+Simple median cube with 2 neighbors and 7 kernel size ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.30571973400599 db
+SSIM: 0.6935192616524977
+
+Simple median cube with 3 neighbors and 3 kernel size ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.201736893457657 db
+SSIM: 0.6385326768002485
+
+Simple median cube with 3 neighbors and 5 kernel size ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.138857107376353 db
+SSIM: 0.6801646656884233
+
+Simple median cube with 3 neighbors and 7 kernel size ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.102825126275626 db
+SSIM: 0.6872942674065481
+
+Two Pass cube with 1 neighbors ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.235655122144877 db
+SSIM: 0.3005546922652376
+
+Two Pass cube with 2 neighbors ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.749136415938448 db
+SSIM: 0.3975179507141969
+
+Two Pass cube with 3 neighbors ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.58625898047127 db
+SSIM: 0.396893619006061
+
+Weighted median cube with 1 neighbors and 3 kernel size and distance weight type ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.756025975361666 db
+SSIM: 0.6316188341354316
+
+Weighted median cube with 1 neighbors and 5 kernel size and distance weight type ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.514359194784703 db
+SSIM: 0.6980425679923611
+
+Weighted median cube with 1 neighbors and 7 kernel size and distance weight type ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.394253674819932 db
+SSIM: 0.7139337413738154
+
+Weighted median cube with 2 neighbors and 3 kernel size and distance weight type ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.838442898971802 db
+SSIM: 0.648519409757757
+
+Weighted median cube with 2 neighbors and 5 kernel size and distance weight type ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.434511213980727 db
+SSIM: 0.6987782979317443
+
+Weighted median cube with 2 neighbors and 7 kernel size and distance weight type ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.2670724790217 db
+SSIM: 0.7075284642635853
+
+Weighted median cube with 3 neighbors and 3 kernel size and distance weight type ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.08450701048855 db
+SSIM: 0.6446121998092935
+
+Weighted median cube with 3 neighbors and 5 kernel size and distance weight type ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.46285001142951 db
+SSIM: 0.6947532492375569
+
+Weighted median cube with 3 neighbors and 7 kernel size and distance weight type ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.2204641337529 db
+SSIM: 0.7021135750861512
+
+Directional weighted median cube with 1 neighbors and 510 threshodld ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.88208538807434 db
+SSIM: 0.2072966196199643
+
+Directional weighted median cube with 1 neighbors and 408 threshodld ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.880412028230236 db
+SSIM: 0.25732366460483025
+
+Directional weighted median cube with 1 neighbors and 326 threshodld ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.898555566036528 db
+SSIM: 0.33105288070705313
+
+Directional weighted median cube with 1 neighbors and 260 threshodld ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.943407893574058 db
+SSIM: 0.40928869937652035
+
+Directional weighted median cube with 1 neighbors and 208 threshodld ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.014152420642176 db
+SSIM: 0.475275677200901
+
+Directional weighted median cube with 1 neighbors and 166 threshodld ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.103932905918455 db
+SSIM: 0.5209167884828015
+
+Directional weighted median cube with 1 neighbors and 132 threshodld ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.195322509431932 db
+SSIM: 0.551026447961548
+
+Directional weighted median cube with 1 neighbors and 105 threshodld ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.27643953637423 db
+SSIM: 0.5696212992755174
+
+Directional weighted median cube with 2 neighbors and 510 threshodld ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.705646952838997 db
+SSIM: 0.20695026897818392
+
+Directional weighted median cube with 2 neighbors and 408 threshodld ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.700421240799574 db
+SSIM: 0.2566529934556002
+
+Directional weighted median cube with 2 neighbors and 326 threshodld ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.713093833629504 db
+SSIM: 0.33089180590265627
+
+Directional weighted median cube with 2 neighbors and 260 threshodld ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.749843570421547 db
+SSIM: 0.4095034636654098
+
+Directional weighted median cube with 2 neighbors and 208 threshodld ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.809848012127215 db
+SSIM: 0.4766817229385288
+
+Directional weighted median cube with 2 neighbors and 166 threshodld ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.887284855253366 db
+SSIM: 0.5249038963769342
+
+Directional weighted median cube with 2 neighbors and 132 threshodld ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.967327200923158 db
+SSIM: 0.5575045644038772
+
+Directional weighted median cube with 2 neighbors and 105 threshodld ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.0387380848634 db
+SSIM: 0.5783066484570667
+
+Directional weighted median cube with 3 neighbors and 510 threshodld ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.55354032499113 db
+SSIM: 0.20654766353406298
+
+Directional weighted median cube with 3 neighbors and 408 threshodld ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.54624440038864 db
+SSIM: 0.25583528901138247
+
+Directional weighted median cube with 3 neighbors and 326 threshodld ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.55558763138446 db
+SSIM: 0.3297051509096803
+
+Directional weighted median cube with 3 neighbors and 260 threshodld ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.58750899346502 db
+SSIM: 0.40771128197001044
+
+Directional weighted median cube with 3 neighbors and 208 threshodld ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.641453587334645 db
+SSIM: 0.47558802629286046
+
+Directional weighted median cube with 3 neighbors and 166 threshodld ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.712237637022042 db
+SSIM: 0.5239399090501003
+
+Directional weighted median cube with 3 neighbors and 132 threshodld ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.78612685565509 db
+SSIM: 0.5571169933930142
+
+Directional weighted median cube with 3 neighbors and 105 threshodld ended for measures/noised/_40.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.852486655529326 db
+SSIM: 0.5782840453728062
+
+Simple median filter with 3 kernel size ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.705596662291235 db
+SSIM: 0.523755034249706
+
+Simple median filter with 5 kernel size ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.125409509479912 db
+SSIM: 0.6439809145546798
+
+Simple median filter with 7 kernel size ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.945998589308353 db
+SSIM: 0.6806962511450412
+
+Two Pass median filter ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 34.869091867663364 db
+SSIM: 0.34323364523725614
+
+Weighted median filter with 3 kernel size and distance weight type ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 33.13840915135195 db
+SSIM: 0.4245826984149682
+
+Weighted median filter with 5 kernel size and distance weight type ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 32.208206238169154 db
+SSIM: 0.5123518379290719
+
+Weighted median filter with 7 kernel size and distance weight type ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.7838639388961 db
+SSIM: 0.5625854710114838
+
+Directional weighted median filter with 510 threshodld ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 40.582594344928694 db
+SSIM: 0.18893892639015833
+
+Directional weighted median filter with 408 threshodld ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 38.0382962577941 db
+SSIM: 0.2299732094590908
+
+Directional weighted median filter with 326 threshodld ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 35.98534819174056 db
+SSIM: 0.2955819171292344
+
+Directional weighted median filter with 260 threshodld ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 34.21737947255772 db
+SSIM: 0.359851083247089
+
+Directional weighted median filter with 208 threshodld ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 32.71638733151742 db
+SSIM: 0.415953078095239
+
+Directional weighted median filter with 166 threshodld ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.494440158160607 db
+SSIM: 0.4536727535989842
+
+Directional weighted median filter with 132 threshodld ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.61660442600945 db
+SSIM: 0.4752112988845307
+
+Directional weighted median filter with 105 threshodld ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.03500253099404 db
+SSIM: 0.4866748873398658
+
+Simple median cube with 1 neighbors and 3 kernel size ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.68431298470264 db
+SSIM: 0.5943325729803371
+
+Simple median cube with 1 neighbors and 5 kernel size ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.532281201592106 db
+SSIM: 0.6690498397060601
+
+Simple median cube with 1 neighbors and 7 kernel size ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.45666936868866 db
+SSIM: 0.6884658183236587
+
+Simple median cube with 2 neighbors and 3 kernel size ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.346519084389925 db
+SSIM: 0.6122304584998401
+
+Simple median cube with 2 neighbors and 5 kernel size ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.25771948233149 db
+SSIM: 0.6702431137100107
+
+Simple median cube with 2 neighbors and 7 kernel size ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.210026283230338 db
+SSIM: 0.682644798844266
+
+Simple median cube with 3 neighbors and 3 kernel size ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.11639370600622 db
+SSIM: 0.6180632744353654
+
+Simple median cube with 3 neighbors and 5 kernel size ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.053035339716878 db
+SSIM: 0.6673461359228002
+
+Simple median cube with 3 neighbors and 7 kernel size ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.017607261976433 db
+SSIM: 0.6775751115170601
+
+Two Pass cube with 1 neighbors ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.16481757047963 db
+SSIM: 0.2644920192225807
+
+Two Pass cube with 2 neighbors ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.682185610458788 db
+SSIM: 0.3559019893569531
+
+Two Pass cube with 3 neighbors ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.52624882540632 db
+SSIM: 0.35496683766815074
+
+Weighted median cube with 1 neighbors and 3 kernel size and distance weight type ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.644791231619955 db
+SSIM: 0.6044904753691007
+
+Weighted median cube with 1 neighbors and 5 kernel size and distance weight type ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.403511399302527 db
+SSIM: 0.6824136779894092
+
+Weighted median cube with 1 neighbors and 7 kernel size and distance weight type ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.2867256504506 db
+SSIM: 0.7034431043508688
+
+Weighted median cube with 2 neighbors and 3 kernel size and distance weight type ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.742659663353603 db
+SSIM: 0.6245460353112157
+
+Weighted median cube with 2 neighbors and 5 kernel size and distance weight type ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.337859672301597 db
+SSIM: 0.6855906809525575
+
+Weighted median cube with 2 neighbors and 7 kernel size and distance weight type ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.172740383063275 db
+SSIM: 0.6986250371596756
+
+Weighted median cube with 3 neighbors and 3 kernel size and distance weight type ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.00217508885526 db
+SSIM: 0.6223466024974981
+
+Weighted median cube with 3 neighbors and 5 kernel size and distance weight type ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.375702822905925 db
+SSIM: 0.6827656821249037
+
+Weighted median cube with 3 neighbors and 7 kernel size and distance weight type ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.13442916707994 db
+SSIM: 0.6939428100557974
+
+Directional weighted median cube with 1 neighbors and 510 threshodld ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.813942575922503 db
+SSIM: 0.18843871226478573
+
+Directional weighted median cube with 1 neighbors and 408 threshodld ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.81097673541333 db
+SSIM: 0.23086137732009956
+
+Directional weighted median cube with 1 neighbors and 326 threshodld ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.829233956907053 db
+SSIM: 0.30219279071699573
+
+Directional weighted median cube with 1 neighbors and 260 threshodld ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.87544582377796 db
+SSIM: 0.3797806031052477
+
+Directional weighted median cube with 1 neighbors and 208 threshodld ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.947637862389026 db
+SSIM: 0.44990889969594816
+
+Directional weighted median cube with 1 neighbors and 166 threshodld ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.036366135631994 db
+SSIM: 0.49546689137655403
+
+Directional weighted median cube with 1 neighbors and 132 threshodld ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.123388741494676 db
+SSIM: 0.5249129377113396
+
+Directional weighted median cube with 1 neighbors and 105 threshodld ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.1988986994115 db
+SSIM: 0.5425198939715513
+
+Directional weighted median cube with 2 neighbors and 510 threshodld ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.646736822207366 db
+SSIM: 0.18797480540295192
+
+Directional weighted median cube with 2 neighbors and 408 threshodld ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.640289898014927 db
+SSIM: 0.23020577927024183
+
+Directional weighted median cube with 2 neighbors and 326 threshodld ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.65296512928674 db
+SSIM: 0.30189303046536553
+
+Directional weighted median cube with 2 neighbors and 260 threshodld ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.69106844661729 db
+SSIM: 0.3811087440365505
+
+Directional weighted median cube with 2 neighbors and 208 threshodld ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.752725993570994 db
+SSIM: 0.4535654284657612
+
+Directional weighted median cube with 2 neighbors and 166 threshodld ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.8301003573836 db
+SSIM: 0.5017365589085571
+
+Directional weighted median cube with 2 neighbors and 132 threshodld ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.906815629034547 db
+SSIM: 0.5337275658538309
+
+Directional weighted median cube with 2 neighbors and 105 threshodld ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.974082514927552 db
+SSIM: 0.5530494960497114
+
+Directional weighted median cube with 3 neighbors and 510 threshodld ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.50069497245458 db
+SSIM: 0.18753978901683901
+
+Directional weighted median cube with 3 neighbors and 408 threshodld ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.492222095821685 db
+SSIM: 0.22943415435883194
+
+Directional weighted median cube with 3 neighbors and 326 threshodld ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.50159501034793 db
+SSIM: 0.3010919994459088
+
+Directional weighted median cube with 3 neighbors and 260 threshodld ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.534899418920656 db
+SSIM: 0.37984747017385934
+
+Directional weighted median cube with 3 neighbors and 208 threshodld ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.591072418025753 db
+SSIM: 0.45232257765401884
+
+Directional weighted median cube with 3 neighbors and 166 threshodld ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.662111122959626 db
+SSIM: 0.5017450879757873
+
+Directional weighted median cube with 3 neighbors and 132 threshodld ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.733328910367355 db
+SSIM: 0.5337341245079232
+
+Directional weighted median cube with 3 neighbors and 105 threshodld ended for measures/noised/_45.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.796041076031845 db
+SSIM: 0.5553210520373768
+
+Simple median filter with 3 kernel size ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 34.88959795837345 db
+SSIM: 0.9066374693143352
+
+Simple median filter with 5 kernel size ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 33.88344345904449 db
+SSIM: 0.8761105985287393
+
+Simple median filter with 7 kernel size ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 33.326511857062414 db
+SSIM: 0.8387643088736891
+
+Two Pass median filter ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 39.31356956069648 db
+SSIM: 0.8552476478902514
+
+Weighted median filter with 3 kernel size and distance weight type ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 37.96639219760838 db
+SSIM: 0.8449355133978514
+
+Weighted median filter with 5 kernel size and distance weight type ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 37.005276946478574 db
+SSIM: 0.844713282539013
+
+Weighted median filter with 7 kernel size and distance weight type ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 36.45542400878549 db
+SSIM: 0.8047737901026845
+
+Directional weighted median filter with 510 threshodld ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 44.96755867745089 db
+SSIM: 0.7113749676658394
+
+Directional weighted median filter with 408 threshodld ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 43.75454020273228 db
+SSIM: 0.7598188973075076
+
+Directional weighted median filter with 326 threshodld ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 42.91195605104826 db
+SSIM: 0.7925138782448962
+
+Directional weighted median filter with 260 threshodld ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 42.266502871153605 db
+SSIM: 0.8133214730904063
+
+Directional weighted median filter with 208 threshodld ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 41.60672569781598 db
+SSIM: 0.8257569164651515
+
+Directional weighted median filter with 166 threshodld ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 40.705775019161706 db
+SSIM: 0.8358160705779303
+
+Directional weighted median filter with 132 threshodld ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 39.445394123449034 db
+SSIM: 0.8483201888717525
+
+Directional weighted median filter with 105 threshodld ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 38.04189028011791 db
+SSIM: 0.8646129910969514
+
+Simple median cube with 1 neighbors and 3 kernel size ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.711738221940198 db
+SSIM: 0.8310702573654174
+
+Simple median cube with 1 neighbors and 5 kernel size ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.493233543839512 db
+SSIM: 0.8091407854928855
+
+Simple median cube with 1 neighbors and 7 kernel size ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.33820766104217 db
+SSIM: 0.787461029048597
+
+Simple median cube with 2 neighbors and 3 kernel size ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.81011259554694 db
+SSIM: 0.799474539198862
+
+Simple median cube with 2 neighbors and 5 kernel size ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.690177110028003 db
+SSIM: 0.7831983311453427
+
+Simple median cube with 2 neighbors and 7 kernel size ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.59514898770824 db
+SSIM: 0.7666914950166677
+
+Simple median cube with 3 neighbors and 3 kernel size ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.25483178936152 db
+SSIM: 0.7781966689611648
+
+Simple median cube with 3 neighbors and 5 kernel size ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.174838785576068 db
+SSIM: 0.7659429045988212
+
+Simple median cube with 3 neighbors and 7 kernel size ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.10725108948354 db
+SSIM: 0.752390608642012
+
+Two Pass cube with 1 neighbors ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.84163681575934 db
+SSIM: 0.6792067386333832
+
+Two Pass cube with 2 neighbors ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.84527151540482 db
+SSIM: 0.8444496954836647
+
+Two Pass cube with 3 neighbors ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.404018861568478 db
+SSIM: 0.8440853953229166
+
+Weighted median cube with 1 neighbors and 3 kernel size and distance weight type ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.58897410647018 db
+SSIM: 0.8312917455876764
+
+Weighted median cube with 1 neighbors and 5 kernel size and distance weight type ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.1926112542261 db
+SSIM: 0.7991976642526545
+
+Weighted median cube with 1 neighbors and 7 kernel size and distance weight type ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.95377088734174 db
+SSIM: 0.7750288765883894
+
+Weighted median cube with 2 neighbors and 3 kernel size and distance weight type ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.18388876612522 db
+SSIM: 0.8112213726201524
+
+Weighted median cube with 2 neighbors and 5 kernel size and distance weight type ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.683971158864953 db
+SSIM: 0.777003524867825
+
+Weighted median cube with 2 neighbors and 7 kernel size and distance weight type ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.430569586430117 db
+SSIM: 0.7549305636562792
+
+Weighted median cube with 3 neighbors and 3 kernel size and distance weight type ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.090480679133933 db
+SSIM: 0.7997052552601777
+
+Weighted median cube with 3 neighbors and 5 kernel size and distance weight type ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.449539640204566 db
+SSIM: 0.7684880715173525
+
+Weighted median cube with 3 neighbors and 7 kernel size and distance weight type ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.14254568587947 db
+SSIM: 0.7458895475052244
+
+Directional weighted median cube with 1 neighbors and 510 threshodld ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.343260571439977 db
+SSIM: 0.7098857422741734
+
+Directional weighted median cube with 1 neighbors and 408 threshodld ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.359593690884587 db
+SSIM: 0.7573759368887826
+
+Directional weighted median cube with 1 neighbors and 326 threshodld ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.376453450246565 db
+SSIM: 0.7908494955729927
+
+Directional weighted median cube with 1 neighbors and 260 threshodld ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.392680629623925 db
+SSIM: 0.8111276303718623
+
+Directional weighted median cube with 1 neighbors and 208 threshodld ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.410661925825597 db
+SSIM: 0.8234838988802508
+
+Directional weighted median cube with 1 neighbors and 166 threshodld ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.43884777139667 db
+SSIM: 0.8324721231547135
+
+Directional weighted median cube with 1 neighbors and 132 threshodld ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.490094604287385 db
+SSIM: 0.8445285440081771
+
+Directional weighted median cube with 1 neighbors and 105 threshodld ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.571995453144762 db
+SSIM: 0.857269535302236
+
+Directional weighted median cube with 2 neighbors and 510 threshodld ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.705305176807673 db
+SSIM: 0.7093160959622216
+
+Directional weighted median cube with 2 neighbors and 408 threshodld ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.71801787484954 db
+SSIM: 0.7563006568548893
+
+Directional weighted median cube with 2 neighbors and 326 threshodld ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.731346992149682 db
+SSIM: 0.7896424715880012
+
+Directional weighted median cube with 2 neighbors and 260 threshodld ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.744279644227245 db
+SSIM: 0.8093544186623588
+
+Directional weighted median cube with 2 neighbors and 208 threshodld ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.758777528858257 db
+SSIM: 0.8216021746505182
+
+Directional weighted median cube with 2 neighbors and 166 threshodld ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.781455003210088 db
+SSIM: 0.8304439762246669
+
+Directional weighted median cube with 2 neighbors and 132 threshodld ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.822540837119956 db
+SSIM: 0.8409028633846609
+
+Directional weighted median cube with 2 neighbors and 105 threshodld ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.88813914167244 db
+SSIM: 0.8518487163307785
+
+Directional weighted median cube with 3 neighbors and 510 threshodld ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.282047666475457 db
+SSIM: 0.7079385828705602
+
+Directional weighted median cube with 3 neighbors and 408 threshodld ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.2926106863985 db
+SSIM: 0.7549402634232815
+
+Directional weighted median cube with 3 neighbors and 326 threshodld ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.303840327424567 db
+SSIM: 0.7878973889936468
+
+Directional weighted median cube with 3 neighbors and 260 threshodld ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.31483386847672 db
+SSIM: 0.8075292980719989
+
+Directional weighted median cube with 3 neighbors and 208 threshodld ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.32727404380051 db
+SSIM: 0.8195046556284291
+
+Directional weighted median cube with 3 neighbors and 166 threshodld ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.34677700828046 db
+SSIM: 0.8281048054510531
+
+Directional weighted median cube with 3 neighbors and 132 threshodld ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.38196110977703 db
+SSIM: 0.8375418905427565
+
+Directional weighted median cube with 3 neighbors and 105 threshodld ended for measures/noised/_5.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.43783682260478 db
+SSIM: 0.8469787325232216
+
+Simple median filter with 3 kernel size ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.562722821714807 db
+SSIM: 0.49821763950666614
+
+Simple median filter with 5 kernel size ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.990041907935854 db
+SSIM: 0.6202985253487786
+
+Simple median filter with 7 kernel size ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.816496882012725 db
+SSIM: 0.6622856211579812
+
+Two Pass median filter ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 34.761867887439344 db
+SSIM: 0.3125050420737909
+
+Weighted median filter with 3 kernel size and distance weight type ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 33.02507794848779 db
+SSIM: 0.4047611231335353
+
+Weighted median filter with 5 kernel size and distance weight type ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 32.10093693137865 db
+SSIM: 0.49363124786053575
+
+Weighted median filter with 7 kernel size and distance weight type ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.682214403740307 db
+SSIM: 0.545391498770127
+
+Directional weighted median filter with 510 threshodld ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 40.475094509758684 db
+SSIM: 0.17451499846776716
+
+Directional weighted median filter with 408 threshodld ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 37.83111517021122 db
+SSIM: 0.2101113019254308
+
+Directional weighted median filter with 326 threshodld ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 35.70323975060208 db
+SSIM: 0.27194988162584677
+
+Directional weighted median filter with 260 threshodld ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 33.893219714243095 db
+SSIM: 0.33674758844286523
+
+Directional weighted median filter with 208 threshodld ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 32.382629878309814 db
+SSIM: 0.3915287696693237
+
+Directional weighted median filter with 166 threshodld ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.191019726638395 db
+SSIM: 0.4280690373217231
+
+Directional weighted median filter with 132 threshodld ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.359840026298826 db
+SSIM: 0.44914030631608653
+
+Directional weighted median filter with 105 threshodld ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.815919736856415 db
+SSIM: 0.46109251427693687
+
+Simple median cube with 1 neighbors and 3 kernel size ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.585623708397893 db
+SSIM: 0.5702528228885211
+
+Simple median cube with 1 neighbors and 5 kernel size ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.432886925334433 db
+SSIM: 0.6524476012383087
+
+Simple median cube with 1 neighbors and 7 kernel size ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.358756637312663 db
+SSIM: 0.6761082758122463
+
+Simple median cube with 2 neighbors and 3 kernel size ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.263174809230705 db
+SSIM: 0.5910345393654118
+
+Simple median cube with 2 neighbors and 5 kernel size ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.17345272128958 db
+SSIM: 0.6563632679309143
+
+Simple median cube with 2 neighbors and 7 kernel size ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.12672027454967 db
+SSIM: 0.6723828941042425
+
+Simple median cube with 3 neighbors and 3 kernel size ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.04242573042799 db
+SSIM: 0.5993183412667167
+
+Simple median cube with 3 neighbors and 5 kernel size ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.978333631713344 db
+SSIM: 0.6554476431733589
+
+Simple median cube with 3 neighbors and 7 kernel size ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.94355622494724 db
+SSIM: 0.6683379503147906
+
+Two Pass cube with 1 neighbors ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.09958944187829 db
+SSIM: 0.23540530145547175
+
+Two Pass cube with 2 neighbors ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.629598429120854 db
+SSIM: 0.3246498900028453
+
+Two Pass cube with 3 neighbors ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.478797748150058 db
+SSIM: 0.32308056133032803
+
+Weighted median cube with 1 neighbors and 3 kernel size and distance weight type ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.549379361349132 db
+SSIM: 0.5813528220253743
+
+Weighted median cube with 1 neighbors and 5 kernel size and distance weight type ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.30700519338956 db
+SSIM: 0.6671990017930783
+
+Weighted median cube with 1 neighbors and 7 kernel size and distance weight type ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.193294555648155 db
+SSIM: 0.6931600632252244
+
+Weighted median cube with 2 neighbors and 3 kernel size and distance weight type ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.65941094095003 db
+SSIM: 0.6023152775831587
+
+Weighted median cube with 2 neighbors and 5 kernel size and distance weight type ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.253412446097073 db
+SSIM: 0.6725792585963666
+
+Weighted median cube with 2 neighbors and 7 kernel size and distance weight type ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.09052750053604 db
+SSIM: 0.6900021211850937
+
+Weighted median cube with 3 neighbors and 3 kernel size and distance weight type ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.930887641993586 db
+SSIM: 0.6018937983706183
+
+Weighted median cube with 3 neighbors and 5 kernel size and distance weight type ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.29963353631927 db
+SSIM: 0.670863395006019
+
+Weighted median cube with 3 neighbors and 7 kernel size and distance weight type ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.059623870791597 db
+SSIM: 0.6858657881305408
+
+Directional weighted median cube with 1 neighbors and 510 threshodld ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.75916256373447 db
+SSIM: 0.17401183440962967
+
+Directional weighted median cube with 1 neighbors and 408 threshodld ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.755237622403524 db
+SSIM: 0.21079776247814702
+
+Directional weighted median cube with 1 neighbors and 326 threshodld ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.773976539549174 db
+SSIM: 0.2795199650720065
+
+Directional weighted median cube with 1 neighbors and 260 threshodld ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.82113150735958 db
+SSIM: 0.35686991365180665
+
+Directional weighted median cube with 1 neighbors and 208 threshodld ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.893862666544575 db
+SSIM: 0.4283697175044935
+
+Directional weighted median cube with 1 neighbors and 166 threshodld ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.98051677388483 db
+SSIM: 0.4742829612681549
+
+Directional weighted median cube with 1 neighbors and 132 threshodld ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.063111624270338 db
+SSIM: 0.5020197600953983
+
+Directional weighted median cube with 1 neighbors and 105 threshodld ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.133427578063987 db
+SSIM: 0.5179997899150942
+
+Directional weighted median cube with 2 neighbors and 510 threshodld ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.598080349059035 db
+SSIM: 0.17366187282411766
+
+Directional weighted median cube with 2 neighbors and 408 threshodld ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.590983991342476 db
+SSIM: 0.21028298787458022
+
+Directional weighted median cube with 2 neighbors and 326 threshodld ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.604265887045926 db
+SSIM: 0.2796901168098014
+
+Directional weighted median cube with 2 neighbors and 260 threshodld ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.643561761397358 db
+SSIM: 0.3592361148896643
+
+Directional weighted median cube with 2 neighbors and 208 threshodld ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.70632276714419 db
+SSIM: 0.43311387326855255
+
+Directional weighted median cube with 2 neighbors and 166 threshodld ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.78237820410894 db
+SSIM: 0.48295428785222905
+
+Directional weighted median cube with 2 neighbors and 132 threshodld ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.855954361484645 db
+SSIM: 0.5128527750662467
+
+Directional weighted median cube with 2 neighbors and 105 threshodld ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.919232306138763 db
+SSIM: 0.5317892954080232
+
+Directional weighted median cube with 3 neighbors and 510 threshodld ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.45670314091491 db
+SSIM: 0.17335372592425394
+
+Directional weighted median cube with 3 neighbors and 408 threshodld ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.447504680144792 db
+SSIM: 0.20967281090762452
+
+Directional weighted median cube with 3 neighbors and 326 threshodld ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.45745156179147 db
+SSIM: 0.27866722687947953
+
+Directional weighted median cube with 3 neighbors and 260 threshodld ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.49218862521035 db
+SSIM: 0.35800146325868265
+
+Directional weighted median cube with 3 neighbors and 208 threshodld ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.549291132387108 db
+SSIM: 0.4323963731620016
+
+Directional weighted median cube with 3 neighbors and 166 threshodld ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.619702686628365 db
+SSIM: 0.48270800931223823
+
+Directional weighted median cube with 3 neighbors and 132 threshodld ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.688322972400254 db
+SSIM: 0.5153504399347868
+
+Directional weighted median cube with 3 neighbors and 105 threshodld ended for measures/noised/_50.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.747597594870836 db
+SSIM: 0.5353533392898457
+
+Simple median filter with 3 kernel size ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.44671844852612 db
+SSIM: 0.47686860949348303
+
+Simple median filter with 5 kernel size ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.880430424697156 db
+SSIM: 0.5995949170802811
+
+Simple median filter with 7 kernel size ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.711950516977684 db
+SSIM: 0.6453736943847426
+
+Two Pass median filter ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 34.65325457821636 db
+SSIM: 0.28867792942785875
+
+Weighted median filter with 3 kernel size and distance weight type ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 32.93658845478616 db
+SSIM: 0.3893952286422277
+
+Weighted median filter with 5 kernel size and distance weight type ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 32.01800963181483 db
+SSIM: 0.4775408407255335
+
+Weighted median filter with 7 kernel size and distance weight type ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.603448816606235 db
+SSIM: 0.5311132738812452
+
+Directional weighted median filter with 510 threshodld ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 40.38958756031814 db
+SSIM: 0.16371822546903622
+
+Directional weighted median filter with 408 threshodld ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 37.66350565206452 db
+SSIM: 0.19540243591483525
+
+Directional weighted median filter with 326 threshodld ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 35.473288369198336 db
+SSIM: 0.25133134444129507
+
+Directional weighted median filter with 260 threshodld ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 33.62768122828816 db
+SSIM: 0.3165649580459728
+
+Directional weighted median filter with 208 threshodld ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 32.11190300236992 db
+SSIM: 0.3705070944875924
+
+Directional weighted median filter with 166 threshodld ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.947093040378615 db
+SSIM: 0.4055218343787394
+
+Directional weighted median filter with 132 threshodld ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.153423859868415 db
+SSIM: 0.4273866918187344
+
+Directional weighted median filter with 105 threshodld ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.640077760732957 db
+SSIM: 0.43912240004627007
+
+Simple median cube with 1 neighbors and 3 kernel size ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.50646155311476 db
+SSIM: 0.5497730970035799
+
+Simple median cube with 1 neighbors and 5 kernel size ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.35383718185735 db
+SSIM: 0.6373569317609085
+
+Simple median cube with 1 neighbors and 7 kernel size ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.281706370863166 db
+SSIM: 0.6647147117591689
+
+Simple median cube with 2 neighbors and 3 kernel size ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.19613909868006 db
+SSIM: 0.5714248126486718
+
+Simple median cube with 2 neighbors and 5 kernel size ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.106495512611442 db
+SSIM: 0.6432806694429891
+
+Simple median cube with 2 neighbors and 7 kernel size ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.061110727153984 db
+SSIM: 0.6628432943996333
+
+Simple median cube with 3 neighbors and 3 kernel size ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.982105034587665 db
+SSIM: 0.5815290674831786
+
+Simple median cube with 3 neighbors and 5 kernel size ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.917966283044798 db
+SSIM: 0.6439426906163812
+
+Simple median cube with 3 neighbors and 7 kernel size ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.884278397197832 db
+SSIM: 0.6597853606826815
+
+Two Pass cube with 1 neighbors ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.042289180545538 db
+SSIM: 0.21327285230435006
+
+Two Pass cube with 2 neighbors ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.58981169169272 db
+SSIM: 0.2992199719958781
+
+Two Pass cube with 3 neighbors ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.441514239433783 db
+SSIM: 0.2982159450936598
+
+Weighted median cube with 1 neighbors and 3 kernel size and distance weight type ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.47254208104522 db
+SSIM: 0.5607123928135008
+
+Weighted median cube with 1 neighbors and 5 kernel size and distance weight type ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.230228095150448 db
+SSIM: 0.6537882542748525
+
+Weighted median cube with 1 neighbors and 7 kernel size and distance weight type ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.119485667359935 db
+SSIM: 0.6833882792647548
+
+Weighted median cube with 2 neighbors and 3 kernel size and distance weight type ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.592717444392566 db
+SSIM: 0.5818718297698438
+
+Weighted median cube with 2 neighbors and 5 kernel size and distance weight type ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.186011585559665 db
+SSIM: 0.6605154773209647
+
+Weighted median cube with 2 neighbors and 7 kernel size and distance weight type ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.02506762875482 db
+SSIM: 0.6816700442129664
+
+Weighted median cube with 3 neighbors and 3 kernel size and distance weight type ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.873232116865605 db
+SSIM: 0.5835145114857718
+
+Weighted median cube with 3 neighbors and 5 kernel size and distance weight type ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.23833953804362 db
+SSIM: 0.6596410161646125
+
+Weighted median cube with 3 neighbors and 7 kernel size and distance weight type ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.99962166416844 db
+SSIM: 0.6780655202756359
+
+Directional weighted median cube with 1 neighbors and 510 threshodld ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.71583460471557 db
+SSIM: 0.16331718823327743
+
+Directional weighted median cube with 1 neighbors and 408 threshodld ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.71203673767993 db
+SSIM: 0.19594433834577085
+
+Directional weighted median cube with 1 neighbors and 326 threshodld ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.731593811987395 db
+SSIM: 0.25956372308471
+
+Directional weighted median cube with 1 neighbors and 260 threshodld ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.7798049398864 db
+SSIM: 0.3380797394268209
+
+Directional weighted median cube with 1 neighbors and 208 threshodld ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.85240344207125 db
+SSIM: 0.4100146489177069
+
+Directional weighted median cube with 1 neighbors and 166 threshodld ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.936298555258233 db
+SSIM: 0.4554856132667097
+
+Directional weighted median cube with 1 neighbors and 132 threshodld ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.01442132907607 db
+SSIM: 0.4821527158541146
+
+Directional weighted median cube with 1 neighbors and 105 threshodld ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.079655181700602 db
+SSIM: 0.49820447255993616
+
+Directional weighted median cube with 2 neighbors and 510 threshodld ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.558874456298696 db
+SSIM: 0.16301683286957033
+
+Directional weighted median cube with 2 neighbors and 408 threshodld ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.55205415975023 db
+SSIM: 0.19546419011670224
+
+Directional weighted median cube with 2 neighbors and 326 threshodld ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.566391208945745 db
+SSIM: 0.2598338121150982
+
+Directional weighted median cube with 2 neighbors and 260 threshodld ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.60708848595204 db
+SSIM: 0.34043250493666694
+
+Directional weighted median cube with 2 neighbors and 208 threshodld ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.670506105771327 db
+SSIM: 0.4157940395580236
+
+Directional weighted median cube with 2 neighbors and 166 threshodld ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.745109537598587 db
+SSIM: 0.46376670823559946
+
+Directional weighted median cube with 2 neighbors and 132 threshodld ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.815770005271254 db
+SSIM: 0.4942280841653025
+
+Directional weighted median cube with 2 neighbors and 105 threshodld ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.875084185875174 db
+SSIM: 0.5125618535706653
+
+Directional weighted median cube with 3 neighbors and 510 threshodld ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.41984440761983 db
+SSIM: 0.16279097086126298
+
+Directional weighted median cube with 3 neighbors and 408 threshodld ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.411062697884592 db
+SSIM: 0.19492861772153505
+
+Directional weighted median cube with 3 neighbors and 326 threshodld ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.422279047211134 db
+SSIM: 0.2590283582712568
+
+Directional weighted median cube with 3 neighbors and 260 threshodld ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.458623736328235 db
+SSIM: 0.33961271551885974
+
+Directional weighted median cube with 3 neighbors and 208 threshodld ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.51704529970498 db
+SSIM: 0.41609060065337833
+
+Directional weighted median cube with 3 neighbors and 166 threshodld ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.586754184282878 db
+SSIM: 0.46523750313595896
+
+Directional weighted median cube with 3 neighbors and 132 threshodld ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.653229336107387 db
+SSIM: 0.4978074147317473
+
+Directional weighted median cube with 3 neighbors and 105 threshodld ended for measures/noised/_55.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.709053025774843 db
+SSIM: 0.5175012138746247
+
+Simple median filter with 3 kernel size ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.362392920787777 db
+SSIM: 0.4564672963231944
+
+Simple median filter with 5 kernel size ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.79894719251381 db
+SSIM: 0.5787407744067282
+
+Simple median filter with 7 kernel size ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.63343944151195 db
+SSIM: 0.6289035228965939
+
+Two Pass median filter ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 34.61856091247971 db
+SSIM: 0.2664135939932732
+
+Weighted median filter with 3 kernel size and distance weight type ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 32.880130822443874 db
+SSIM: 0.37407287722044746
+
+Weighted median filter with 5 kernel size and distance weight type ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.962293603998393 db
+SSIM: 0.4639727306578458
+
+Weighted median filter with 7 kernel size and distance weight type ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.54949359390419 db
+SSIM: 0.5185438308627391
+
+Directional weighted median filter with 510 threshodld ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 40.35435210715837 db
+SSIM: 0.15517376207495132
+
+Directional weighted median filter with 408 threshodld ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 37.55091779797236 db
+SSIM: 0.18346255305431572
+
+Directional weighted median filter with 326 threshodld ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 35.302721982692624 db
+SSIM: 0.23446867762793697
+
+Directional weighted median filter with 260 threshodld ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 33.42138323593072 db
+SSIM: 0.2991616898548586
+
+Directional weighted median filter with 208 threshodld ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.90143285653012 db
+SSIM: 0.3513107400962813
+
+Directional weighted median filter with 166 threshodld ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.763973224375928 db
+SSIM: 0.3855784629277947
+
+Directional weighted median filter with 132 threshodld ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.00199045946997 db
+SSIM: 0.40558140008343785
+
+Directional weighted median filter with 105 threshodld ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.513808167127515 db
+SSIM: 0.4182089079816986
+
+Simple median cube with 1 neighbors and 3 kernel size ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.446449825524706 db
+SSIM: 0.5308171392722366
+
+Simple median cube with 1 neighbors and 5 kernel size ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.292796727122223 db
+SSIM: 0.621911425348285
+
+Simple median cube with 1 neighbors and 7 kernel size ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.22181737716286 db
+SSIM: 0.6529901797572099
+
+Simple median cube with 2 neighbors and 3 kernel size ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.144944574127212 db
+SSIM: 0.5519993231883762
+
+Simple median cube with 2 neighbors and 5 kernel size ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.054483713096197 db
+SSIM: 0.6301608131431298
+
+Simple median cube with 2 neighbors and 7 kernel size ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.009739564551065 db
+SSIM: 0.6529949114613928
+
+Simple median cube with 3 neighbors and 3 kernel size ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.937588134807324 db
+SSIM: 0.564893442893742
+
+Simple median cube with 3 neighbors and 5 kernel size ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.872763316856396 db
+SSIM: 0.6325174502596043
+
+Simple median cube with 3 neighbors and 7 kernel size ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.83946800246842 db
+SSIM: 0.6507031474353779
+
+Two Pass cube with 1 neighbors ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.007410167889073 db
+SSIM: 0.1956822057005533
+
+Two Pass cube with 2 neighbors ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.55943084501126 db
+SSIM: 0.27547665694881734
+
+Two Pass cube with 3 neighbors ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.41400615880704 db
+SSIM: 0.274081576888885
+
+Weighted median cube with 1 neighbors and 3 kernel size and distance weight type ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.41402532161755 db
+SSIM: 0.541223940992091
+
+Weighted median cube with 1 neighbors and 5 kernel size and distance weight type ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.171056825561273 db
+SSIM: 0.6397119859393895
+
+Weighted median cube with 1 neighbors and 7 kernel size and distance weight type ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.062271231550685 db
+SSIM: 0.6732324685089106
+
+Weighted median cube with 2 neighbors and 3 kernel size and distance weight type ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.540874678158072 db
+SSIM: 0.5617358622246863
+
+Weighted median cube with 2 neighbors and 5 kernel size and distance weight type ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.132869372600357 db
+SSIM: 0.6479919716906869
+
+Weighted median cube with 2 neighbors and 7 kernel size and distance weight type ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.973456777386524 db
+SSIM: 0.6729454260835034
+
+Weighted median cube with 3 neighbors and 3 kernel size and distance weight type ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.82985898145465 db
+SSIM: 0.5650031821827904
+
+Weighted median cube with 3 neighbors and 5 kernel size and distance weight type ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.190730197467335 db
+SSIM: 0.6484431866127872
+
+Weighted median cube with 3 neighbors and 7 kernel size and distance weight type ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.95239851961528 db
+SSIM: 0.6699904489823296
+
+Directional weighted median cube with 1 neighbors and 510 threshodld ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.684157971061822 db
+SSIM: 0.15479201958317748
+
+Directional weighted median cube with 1 neighbors and 408 threshodld ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.680553961673287 db
+SSIM: 0.18398986834918085
+
+Directional weighted median cube with 1 neighbors and 326 threshodld ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.701050006116855 db
+SSIM: 0.24214196637732266
+
+Directional weighted median cube with 1 neighbors and 260 threshodld ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.749990606674075 db
+SSIM: 0.3198452688232363
+
+Directional weighted median cube with 1 neighbors and 208 threshodld ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.82259571955949 db
+SSIM: 0.3916882202417394
+
+Directional weighted median cube with 1 neighbors and 166 threshodld ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.904305675743082 db
+SSIM: 0.4376528659383365
+
+Directional weighted median cube with 1 neighbors and 132 threshodld ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.978491045209463 db
+SSIM: 0.463183733541638
+
+Directional weighted median cube with 1 neighbors and 105 threshodld ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.03950819551176 db
+SSIM: 0.4774763614324088
+
+Directional weighted median cube with 2 neighbors and 510 threshodld ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.529989301087546 db
+SSIM: 0.15437547313763297
+
+Directional weighted median cube with 2 neighbors and 408 threshodld ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.523386956913598 db
+SSIM: 0.18344873897960676
+
+Directional weighted median cube with 2 neighbors and 326 threshodld ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.53880518811739 db
+SSIM: 0.24243959678204755
+
+Directional weighted median cube with 2 neighbors and 260 threshodld ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.580386289567052 db
+SSIM: 0.32285493747779515
+
+Directional weighted median cube with 2 neighbors and 208 threshodld ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.6443965472422 db
+SSIM: 0.3988152068008479
+
+Directional weighted median cube with 2 neighbors and 166 threshodld ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.71754354735093 db
+SSIM: 0.446732871089656
+
+Directional weighted median cube with 2 neighbors and 132 threshodld ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.785048219324164 db
+SSIM: 0.47659040890464843
+
+Directional weighted median cube with 2 neighbors and 105 threshodld ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.84080222676338 db
+SSIM: 0.49356689352891914
+
+Directional weighted median cube with 3 neighbors and 510 threshodld ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.393086192994346 db
+SSIM: 0.15400523802824764
+
+Directional weighted median cube with 3 neighbors and 408 threshodld ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.3848073772728 db
+SSIM: 0.18287331231102782
+
+Directional weighted median cube with 3 neighbors and 326 threshodld ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.39716869026181 db
+SSIM: 0.24164711615391915
+
+Directional weighted median cube with 3 neighbors and 260 threshodld ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.434737012581643 db
+SSIM: 0.3227657930225464
+
+Directional weighted median cube with 3 neighbors and 208 threshodld ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.49411129251054 db
+SSIM: 0.39940570986361273
+
+Directional weighted median cube with 3 neighbors and 166 threshodld ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.56299878762073 db
+SSIM: 0.4492268171472262
+
+Directional weighted median cube with 3 neighbors and 132 threshodld ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.627035172204934 db
+SSIM: 0.48142204837841546
+
+Directional weighted median cube with 3 neighbors and 105 threshodld ended for measures/noised/_60.000004_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.679807160304986 db
+SSIM: 0.5006760748711521
+
+Simple median filter with 3 kernel size ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.280018571821817 db
+SSIM: 0.43876424946077097
+
+Simple median filter with 5 kernel size ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.721148576224337 db
+SSIM: 0.5600093864729709
+
+Simple median filter with 7 kernel size ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.558888071359725 db
+SSIM: 0.6137007415488508
+
+Two Pass median filter ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 34.60472691566506 db
+SSIM: 0.2449754190132455
+
+Weighted median filter with 3 kernel size and distance weight type ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 32.822196198180094 db
+SSIM: 0.3606473338358242
+
+Weighted median filter with 5 kernel size and distance weight type ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.90659061705617 db
+SSIM: 0.4515424619992216
+
+Weighted median filter with 7 kernel size and distance weight type ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.49721603033245 db
+SSIM: 0.5076610064309467
+
+Directional weighted median filter with 510 threshodld ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 40.314568373514085 db
+SSIM: 0.14650368479300066
+
+Directional weighted median filter with 408 threshodld ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 37.441484497383506 db
+SSIM: 0.17235306002256576
+
+Directional weighted median filter with 326 threshodld ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 35.14014159266831 db
+SSIM: 0.21938374716483197
+
+Directional weighted median filter with 260 threshodld ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 33.22634272511912 db
+SSIM: 0.28377989900309075
+
+Directional weighted median filter with 208 threshodld ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.70315297532484 db
+SSIM: 0.3344842297953091
+
+Directional weighted median filter with 166 threshodld ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.590075481122078 db
+SSIM: 0.3678592332342956
+
+Directional weighted median filter with 132 threshodld ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.85718976626339 db
+SSIM: 0.38681577044275617
+
+Directional weighted median filter with 105 threshodld ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.391775695590887 db
+SSIM: 0.3997933723457327
+
+Simple median cube with 1 neighbors and 3 kernel size ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.39019277500033 db
+SSIM: 0.5137991860480182
+
+Simple median cube with 1 neighbors and 5 kernel size ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.2362295700949 db
+SSIM: 0.6080428713512105
+
+Simple median cube with 1 neighbors and 7 kernel size ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.16692049296297 db
+SSIM: 0.6422089094867467
+
+Simple median cube with 2 neighbors and 3 kernel size ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.098361547161797 db
+SSIM: 0.535115680831293
+
+Simple median cube with 2 neighbors and 5 kernel size ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.00775554435053 db
+SSIM: 0.6178866117867812
+
+Simple median cube with 2 neighbors and 7 kernel size ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.964119204314436 db
+SSIM: 0.6438338009172256
+
+Simple median cube with 3 neighbors and 3 kernel size ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.896506523272034 db
+SSIM: 0.5497256589273509
+
+Simple median cube with 3 neighbors and 5 kernel size ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.831589187370852 db
+SSIM: 0.6219020308392212
+
+Simple median cube with 3 neighbors and 7 kernel size ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.799187250975773 db
+SSIM: 0.6425637570123839
+
+Two Pass cube with 1 neighbors ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.977958535792318 db
+SSIM: 0.18011857856369334
+
+Two Pass cube with 2 neighbors ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.534820467081513 db
+SSIM: 0.2528763211247063
+
+Two Pass cube with 3 neighbors ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.393171891161394 db
+SSIM: 0.2517803092271118
+
+Weighted median cube with 1 neighbors and 3 kernel size and distance weight type ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.36132183632188 db
+SSIM: 0.5231877349239568
+
+Weighted median cube with 1 neighbors and 5 kernel size and distance weight type ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.11899757931502 db
+SSIM: 0.626615892707863
+
+Weighted median cube with 1 neighbors and 7 kernel size and distance weight type ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.012765428138067 db
+SSIM: 0.663308214086044
+
+Weighted median cube with 2 neighbors and 3 kernel size and distance weight type ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.49637328246029 db
+SSIM: 0.5437554975005155
+
+Weighted median cube with 2 neighbors and 5 kernel size and distance weight type ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.08871017276788 db
+SSIM: 0.636179398308628
+
+Weighted median cube with 2 neighbors and 7 kernel size and distance weight type ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.931126675552335 db
+SSIM: 0.6646070521002148
+
+Weighted median cube with 3 neighbors and 3 kernel size and distance weight type ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.791640327454843 db
+SSIM: 0.5486880921256465
+
+Weighted median cube with 3 neighbors and 5 kernel size and distance weight type ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.151095088805306 db
+SSIM: 0.6373566294189972
+
+Weighted median cube with 3 neighbors and 7 kernel size and distance weight type ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.914223523858194 db
+SSIM: 0.662156932641514
+
+Directional weighted median cube with 1 neighbors and 510 threshodld ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.655640074272885 db
+SSIM: 0.14611828045372804
+
+Directional weighted median cube with 1 neighbors and 408 threshodld ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.652704312875194 db
+SSIM: 0.1727385196647478
+
+Directional weighted median cube with 1 neighbors and 326 threshodld ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.674268430445064 db
+SSIM: 0.22657940700693657
+
+Directional weighted median cube with 1 neighbors and 260 threshodld ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.72379179446812 db
+SSIM: 0.3040865292374781
+
+Directional weighted median cube with 1 neighbors and 208 threshodld ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.796143109588957 db
+SSIM: 0.37542128064040664
+
+Directional weighted median cube with 1 neighbors and 166 threshodld ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.87571253337691 db
+SSIM: 0.42085612223331725
+
+Directional weighted median cube with 1 neighbors and 132 threshodld ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.94614545606055 db
+SSIM: 0.4454998398534726
+
+Directional weighted median cube with 1 neighbors and 105 threshodld ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.003236131978756 db
+SSIM: 0.46122390242665234
+
+Directional weighted median cube with 2 neighbors and 510 threshodld ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.5065285070021 db
+SSIM: 0.1458219040748765
+
+Directional weighted median cube with 2 neighbors and 408 threshodld ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.500670045587796 db
+SSIM: 0.17235659018754632
+
+Directional weighted median cube with 2 neighbors and 326 threshodld ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.51713314315575 db
+SSIM: 0.22696316316320772
+
+Directional weighted median cube with 2 neighbors and 260 threshodld ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.559756267402374 db
+SSIM: 0.30726626781123356
+
+Directional weighted median cube with 2 neighbors and 208 threshodld ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.623633131483487 db
+SSIM: 0.38283750093724855
+
+Directional weighted median cube with 2 neighbors and 166 threshodld ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.69516428288373 db
+SSIM: 0.43252078682399836
+
+Directional weighted median cube with 2 neighbors and 132 threshodld ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.759558736611094 db
+SSIM: 0.460903259380867
+
+Directional weighted median cube with 2 neighbors and 105 threshodld ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.81200718548478 db
+SSIM: 0.47838195008042156
+
+Directional weighted median cube with 3 neighbors and 510 threshodld ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.372789590896097 db
+SSIM: 0.14552394165843488
+
+Directional weighted median cube with 3 neighbors and 408 threshodld ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.36524457856093 db
+SSIM: 0.17184453041375466
+
+Directional weighted median cube with 3 neighbors and 326 threshodld ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.37877220011076 db
+SSIM: 0.22636647646467326
+
+Directional weighted median cube with 3 neighbors and 260 threshodld ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.417366379943278 db
+SSIM: 0.3073233158653864
+
+Directional weighted median cube with 3 neighbors and 208 threshodld ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.476896432888648 db
+SSIM: 0.3835413583728521
+
+Directional weighted median cube with 3 neighbors and 166 threshodld ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.544213076378682 db
+SSIM: 0.4347106312068895
+
+Directional weighted median cube with 3 neighbors and 132 threshodld ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.60532926150716 db
+SSIM: 0.4667349600628108
+
+Directional weighted median cube with 3 neighbors and 105 threshodld ended for measures/noised/_65.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.65492382277178 db
+SSIM: 0.48585595466355164
+
+Simple median filter with 3 kernel size ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.197582628852935 db
+SSIM: 0.42278296212345795
+
+Simple median filter with 5 kernel size ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.642368332289397 db
+SSIM: 0.5434749160248248
+
+Simple median filter with 7 kernel size ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.483211260741868 db
+SSIM: 0.5995822723471423
+
+Two Pass median filter ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 34.64352159676569 db
+SSIM: 0.22457036757387036
+
+Weighted median filter with 3 kernel size and distance weight type ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 32.75942051275203 db
+SSIM: 0.3488106345048332
+
+Weighted median filter with 5 kernel size and distance weight type ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.848739825268748 db
+SSIM: 0.44089317095431485
+
+Weighted median filter with 7 kernel size and distance weight type ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.444428752948046 db
+SSIM: 0.49849339732064196
+
+Directional weighted median filter with 510 threshodld ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 40.28091911582602 db
+SSIM: 0.138208545917473
+
+Directional weighted median filter with 408 threshodld ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 37.3426640667745 db
+SSIM: 0.1618975351050414
+
+Directional weighted median filter with 326 threshodld ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 34.99463333735885 db
+SSIM: 0.20592315381205192
+
+Directional weighted median filter with 260 threshodld ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 33.05204864002742 db
+SSIM: 0.2698148136231219
+
+Directional weighted median filter with 208 threshodld ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.525572351743566 db
+SSIM: 0.31908820332427995
+
+Directional weighted median filter with 166 threshodld ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.433080701471916 db
+SSIM: 0.35141202082554546
+
+Directional weighted median filter with 132 threshodld ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.721512101523643 db
+SSIM: 0.3716268198972684
+
+Directional weighted median filter with 105 threshodld ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.27497004520145 db
+SSIM: 0.38294706589036326
+
+Simple median cube with 1 neighbors and 3 kernel size ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.33034680438624 db
+SSIM: 0.49918943850579955
+
+Simple median cube with 1 neighbors and 5 kernel size ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.175119754303285 db
+SSIM: 0.59572688600697
+
+Simple median cube with 1 neighbors and 7 kernel size ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.10672696687858 db
+SSIM: 0.6320965876135366
+
+Simple median cube with 2 neighbors and 3 kernel size ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.045685224610704 db
+SSIM: 0.5196534383980079
+
+Simple median cube with 2 neighbors and 5 kernel size ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.954022689272325 db
+SSIM: 0.6069297944829546
+
+Simple median cube with 2 neighbors and 7 kernel size ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.91078843804632 db
+SSIM: 0.6354142013125993
+
+Simple median cube with 3 neighbors and 3 kernel size ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.848393967523087 db
+SSIM: 0.5361805927976604
+
+Simple median cube with 3 neighbors and 5 kernel size ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.782419988643483 db
+SSIM: 0.6123814358079258
+
+Simple median cube with 3 neighbors and 7 kernel size ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.750274198326853 db
+SSIM: 0.6351066194348616
+
+Two Pass cube with 1 neighbors ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.954639200831107 db
+SSIM: 0.1663388794194667
+
+Two Pass cube with 2 neighbors ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.50610172997634 db
+SSIM: 0.23205913839143724
+
+Two Pass cube with 3 neighbors ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.367294387884137 db
+SSIM: 0.2308374866957243
+
+Weighted median cube with 1 neighbors and 3 kernel size and distance weight type ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.303443786643143 db
+SSIM: 0.508394547715324
+
+Weighted median cube with 1 neighbors and 5 kernel size and distance weight type ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.06048660280585 db
+SSIM: 0.6142981819282001
+
+Weighted median cube with 1 neighbors and 7 kernel size and distance weight type ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.956661593946507 db
+SSIM: 0.6540780991417082
+
+Weighted median cube with 2 neighbors and 3 kernel size and distance weight type ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.4444040400962 db
+SSIM: 0.5275560711964555
+
+Weighted median cube with 2 neighbors and 5 kernel size and distance weight type ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.035868175890393 db
+SSIM: 0.6254460552866817
+
+Weighted median cube with 2 neighbors and 7 kernel size and distance weight type ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.880109727471897 db
+SSIM: 0.6566375599177963
+
+Weighted median cube with 3 neighbors and 3 kernel size and distance weight type ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.745939507682206 db
+SSIM: 0.5338482288327658
+
+Weighted median cube with 3 neighbors and 5 kernel size and distance weight type ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.10185308317311 db
+SSIM: 0.6279132366312684
+
+Weighted median cube with 3 neighbors and 7 kernel size and distance weight type ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.866234997393455 db
+SSIM: 0.6549488619263248
+
+Directional weighted median cube with 1 neighbors and 510 threshodld ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.625562875370218 db
+SSIM: 0.137866790936748
+
+Directional weighted median cube with 1 neighbors and 408 threshodld ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.623486874044872 db
+SSIM: 0.16231669566563756
+
+Directional weighted median cube with 1 neighbors and 326 threshodld ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.645938813538233 db
+SSIM: 0.2127077880501142
+
+Directional weighted median cube with 1 neighbors and 260 threshodld ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.695626240028513 db
+SSIM: 0.2899467929269604
+
+Directional weighted median cube with 1 neighbors and 208 threshodld ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.766525605656348 db
+SSIM: 0.3608212579698772
+
+Directional weighted median cube with 1 neighbors and 166 threshodld ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.842325335296017 db
+SSIM: 0.40624274207392946
+
+Directional weighted median cube with 1 neighbors and 132 threshodld ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.908972833449294 db
+SSIM: 0.43141514438858286
+
+Directional weighted median cube with 1 neighbors and 105 threshodld ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.961678145696578 db
+SSIM: 0.4448052390508582
+
+Directional weighted median cube with 2 neighbors and 510 threshodld ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.479496088730233 db
+SSIM: 0.13761420182472076
+
+Directional weighted median cube with 2 neighbors and 408 threshodld ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.474620359790595 db
+SSIM: 0.16201362952241066
+
+Directional weighted median cube with 2 neighbors and 326 threshodld ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.492114108533173 db
+SSIM: 0.21311597499090826
+
+Directional weighted median cube with 2 neighbors and 260 threshodld ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.534845533130383 db
+SSIM: 0.2937160320741011
+
+Directional weighted median cube with 2 neighbors and 208 threshodld ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.597905960805004 db
+SSIM: 0.36923075003866523
+
+Directional weighted median cube with 2 neighbors and 166 threshodld ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.666478051541954 db
+SSIM: 0.4190867491037198
+
+Directional weighted median cube with 2 neighbors and 132 threshodld ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.727352697123234 db
+SSIM: 0.44707472570147133
+
+Directional weighted median cube with 2 neighbors and 105 threshodld ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.775696299725084 db
+SSIM: 0.46288746494386523
+
+Directional weighted median cube with 3 neighbors and 510 threshodld ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.348150634426908 db
+SSIM: 0.13736527300732343
+
+Directional weighted median cube with 3 neighbors and 408 threshodld ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.34147952586735 db
+SSIM: 0.1615828634653733
+
+Directional weighted median cube with 3 neighbors and 326 threshodld ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.356088023987496 db
+SSIM: 0.21266328127658798
+
+Directional weighted median cube with 3 neighbors and 260 threshodld ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.395033871907003 db
+SSIM: 0.2938780824824489
+
+Directional weighted median cube with 3 neighbors and 208 threshodld ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.45358648767242 db
+SSIM: 0.37045710610304766
+
+Directional weighted median cube with 3 neighbors and 166 threshodld ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.518212458054084 db
+SSIM: 0.42326070218000095
+
+Directional weighted median cube with 3 neighbors and 132 threshodld ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.57605519207594 db
+SSIM: 0.4534523303843851
+
+Directional weighted median cube with 3 neighbors and 105 threshodld ended for measures/noised/_70.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.621910662644282 db
+SSIM: 0.47299665314126194
+
+Simple median filter with 3 kernel size ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.141681749623746 db
+SSIM: 0.4072355161489088
+
+Simple median filter with 5 kernel size ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.589341528889555 db
+SSIM: 0.5285938196253329
+
+Simple median filter with 7 kernel size ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.432348884671516 db
+SSIM: 0.5868733755100319
+
+Two Pass median filter ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 34.61719163122493 db
+SSIM: 0.211359907344569
+
+Weighted median filter with 3 kernel size and distance weight type ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 32.72189056115411 db
+SSIM: 0.33916471828932826
+
+Weighted median filter with 5 kernel size and distance weight type ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.814900805663473 db
+SSIM: 0.4316349899620855
+
+Weighted median filter with 7 kernel size and distance weight type ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.413969373417967 db
+SSIM: 0.49008689518913734
+
+Directional weighted median filter with 510 threshodld ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 40.264410166728425 db
+SSIM: 0.13261723573810505
+
+Directional weighted median filter with 408 threshodld ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 37.27104577126029 db
+SSIM: 0.15454418468057227
+
+Directional weighted median filter with 326 threshodld ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 34.88225864621024 db
+SSIM: 0.19584252069958277
+
+Directional weighted median filter with 260 threshodld ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 32.91618701234349 db
+SSIM: 0.258078836630254
+
+Directional weighted median filter with 208 threshodld ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.390497910084658 db
+SSIM: 0.3060548105735347
+
+Directional weighted median filter with 166 threshodld ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.318454969134315 db
+SSIM: 0.3368808412291872
+
+Directional weighted median filter with 132 threshodld ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.625625021554725 db
+SSIM: 0.35632211651897777
+
+Directional weighted median filter with 105 threshodld ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.195050689497133 db
+SSIM: 0.368752613292886
+
+Simple median cube with 1 neighbors and 3 kernel size ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.292145329536442 db
+SSIM: 0.48496299854955444
+
+Simple median cube with 1 neighbors and 5 kernel size ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.136705673357376 db
+SSIM: 0.5835314545007807
+
+Simple median cube with 1 neighbors and 7 kernel size ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.069389321059923 db
+SSIM: 0.6226085703518367
+
+Simple median cube with 2 neighbors and 3 kernel size ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.014669243793502 db
+SSIM: 0.5055288652851315
+
+Simple median cube with 2 neighbors and 5 kernel size ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.92265537700308 db
+SSIM: 0.5965633654251554
+
+Simple median cube with 2 neighbors and 7 kernel size ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.88018448272688 db
+SSIM: 0.6272135875998602
+
+Simple median cube with 3 neighbors and 3 kernel size ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.821506410975974 db
+SSIM: 0.523325894804888
+
+Simple median cube with 3 neighbors and 5 kernel size ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.75526327437649 db
+SSIM: 0.6032883429105278
+
+Simple median cube with 3 neighbors and 7 kernel size ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.72350558937372 db
+SSIM: 0.6276142934784528
+
+Two Pass cube with 1 neighbors ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.93014450051418 db
+SSIM: 0.15674019636617506
+
+Two Pass cube with 2 neighbors ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.491649346988083 db
+SSIM: 0.2176246833897374
+
+Two Pass cube with 3 neighbors ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.354345489972864 db
+SSIM: 0.21693142763447923
+
+Weighted median cube with 1 neighbors and 3 kernel size and distance weight type ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.266103748440365 db
+SSIM: 0.49246674688072856
+
+Weighted median cube with 1 neighbors and 5 kernel size and distance weight type ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.022601002709166 db
+SSIM: 0.602610893537921
+
+Weighted median cube with 1 neighbors and 7 kernel size and distance weight type ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.92046917647347 db
+SSIM: 0.6451618978685825
+
+Weighted median cube with 2 neighbors and 3 kernel size and distance weight type ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.41269042939951 db
+SSIM: 0.5126651142860966
+
+Weighted median cube with 2 neighbors and 5 kernel size and distance weight type ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.003004214439382 db
+SSIM: 0.6149452353793015
+
+Weighted median cube with 2 neighbors and 7 kernel size and distance weight type ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.848142805608852 db
+SSIM: 0.6490374802335075
+
+Weighted median cube with 3 neighbors and 3 kernel size and distance weight type ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.720440243558347 db
+SSIM: 0.5203287756096843
+
+Weighted median cube with 3 neighbors and 5 kernel size and distance weight type ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.07265815197147 db
+SSIM: 0.6182680525791845
+
+Weighted median cube with 3 neighbors and 7 kernel size and distance weight type ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.837075036851687 db
+SSIM: 0.6477249260621764
+
+Directional weighted median cube with 1 neighbors and 510 threshodld ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.607395514828937 db
+SSIM: 0.132392203219474
+
+Directional weighted median cube with 1 neighbors and 408 threshodld ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.606422870814814 db
+SSIM: 0.15506544559330465
+
+Directional weighted median cube with 1 neighbors and 326 threshodld ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.62997344644085 db
+SSIM: 0.20239882372133988
+
+Directional weighted median cube with 1 neighbors and 260 threshodld ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.6798279124614 db
+SSIM: 0.2787356605798361
+
+Directional weighted median cube with 1 neighbors and 208 threshodld ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.749895503952075 db
+SSIM: 0.3477030989670056
+
+Directional weighted median cube with 1 neighbors and 166 threshodld ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.823501666374817 db
+SSIM: 0.39518653854053704
+
+Directional weighted median cube with 1 neighbors and 132 threshodld ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.887036458168716 db
+SSIM: 0.41901974192639085
+
+Directional weighted median cube with 1 neighbors and 105 threshodld ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.936530145252824 db
+SSIM: 0.4319749802108753
+
+Directional weighted median cube with 2 neighbors and 510 threshodld ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.463487750915437 db
+SSIM: 0.13215405495609514
+
+Directional weighted median cube with 2 neighbors and 408 threshodld ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.459788642813894 db
+SSIM: 0.15480687560279846
+
+Directional weighted median cube with 2 neighbors and 326 threshodld ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.47860942800013 db
+SSIM: 0.20288249072789052
+
+Directional weighted median cube with 2 neighbors and 260 threshodld ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.52198575649446 db
+SSIM: 0.2824116204844831
+
+Directional weighted median cube with 2 neighbors and 208 threshodld ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.584449686066375 db
+SSIM: 0.3566499242392512
+
+Directional weighted median cube with 2 neighbors and 166 threshodld ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.651276315462518 db
+SSIM: 0.406443774965791
+
+Directional weighted median cube with 2 neighbors and 132 threshodld ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.709705547080357 db
+SSIM: 0.4333366377137071
+
+Directional weighted median cube with 2 neighbors and 105 threshodld ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.75532526780869 db
+SSIM: 0.45043157611339835
+
+Directional weighted median cube with 3 neighbors and 510 threshodld ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.333375182449245 db
+SSIM: 0.13196160369438428
+
+Directional weighted median cube with 3 neighbors and 408 threshodld ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.328009748895226 db
+SSIM: 0.15445555366910987
+
+Directional weighted median cube with 3 neighbors and 326 threshodld ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.344051032253667 db
+SSIM: 0.2025184921766565
+
+Directional weighted median cube with 3 neighbors and 260 threshodld ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.38376856021322 db
+SSIM: 0.2824540032450014
+
+Directional weighted median cube with 3 neighbors and 208 threshodld ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.442493705329678 db
+SSIM: 0.3586915619712046
+
+Directional weighted median cube with 3 neighbors and 166 threshodld ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.50593892221356 db
+SSIM: 0.41196421261259314
+
+Directional weighted median cube with 3 neighbors and 132 threshodld ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.56184302608387 db
+SSIM: 0.44268816540320927
+
+Directional weighted median cube with 3 neighbors and 105 threshodld ended for measures/noised/_75.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.605403553145045 db
+SSIM: 0.4614617755097973
+
+Simple median filter with 3 kernel size ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.08594568814721 db
+SSIM: 0.3924647217988393
+
+Simple median filter with 5 kernel size ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.539724020217406 db
+SSIM: 0.5148998970286047
+
+Simple median filter with 7 kernel size ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.385483363901066 db
+SSIM: 0.5753510771462618
+
+Two Pass median filter ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 34.58878325423674 db
+SSIM: 0.1995436197620135
+
+Weighted median filter with 3 kernel size and distance weight type ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 32.67516003119172 db
+SSIM: 0.32908697502281836
+
+Weighted median filter with 5 kernel size and distance weight type ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.777718225750302 db
+SSIM: 0.422457367676972
+
+Weighted median filter with 7 kernel size and distance weight type ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.381301933135227 db
+SSIM: 0.48257709818684946
+
+Directional weighted median filter with 510 threshodld ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 40.22511182162843 db
+SSIM: 0.12667105606323145
+
+Directional weighted median filter with 408 threshodld ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 37.18279424799471 db
+SSIM: 0.14724067120949524
+
+Directional weighted median filter with 326 threshodld ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 34.75928199109122 db
+SSIM: 0.18648545827780638
+
+Directional weighted median filter with 260 threshodld ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 32.77433497641438 db
+SSIM: 0.2473207015847494
+
+Directional weighted median filter with 208 threshodld ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.252067113014927 db
+SSIM: 0.29513826425573575
+
+Directional weighted median filter with 166 threshodld ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.19824408734334 db
+SSIM: 0.3249471552725283
+
+Directional weighted median filter with 132 threshodld ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.523204522016062 db
+SSIM: 0.3435713494475502
+
+Directional weighted median filter with 105 threshodld ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.10894612873806 db
+SSIM: 0.3542638904515948
+
+Simple median cube with 1 neighbors and 3 kernel size ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.256126958634994 db
+SSIM: 0.47045811981499647
+
+Simple median cube with 1 neighbors and 5 kernel size ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.10132671404284 db
+SSIM: 0.5725871304538138
+
+Simple median cube with 1 neighbors and 7 kernel size ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.035655273847194 db
+SSIM: 0.6138466685129292
+
+Simple median cube with 2 neighbors and 3 kernel size ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.98611717729489 db
+SSIM: 0.4917703264920983
+
+Simple median cube with 2 neighbors and 5 kernel size ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.894393847279936 db
+SSIM: 0.5864817337506802
+
+Simple median cube with 2 neighbors and 7 kernel size ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.852712705506406 db
+SSIM: 0.6196528284544873
+
+Simple median cube with 3 neighbors and 3 kernel size ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.797291189498583 db
+SSIM: 0.5110848944570954
+
+Simple median cube with 3 neighbors and 5 kernel size ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.731530573824926 db
+SSIM: 0.5943401510983594
+
+Simple median cube with 3 neighbors and 7 kernel size ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.700457645833996 db
+SSIM: 0.620670545199696
+
+Two Pass cube with 1 neighbors ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.90729402015983 db
+SSIM: 0.1476855412837433
+
+Two Pass cube with 2 neighbors ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.479646272874405 db
+SSIM: 0.2051483909724342
+
+Two Pass cube with 3 neighbors ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.344622207949577 db
+SSIM: 0.2045088622502411
+
+Weighted median cube with 1 neighbors and 3 kernel size and distance weight type ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.231521851432664 db
+SSIM: 0.4795260157548746
+
+Weighted median cube with 1 neighbors and 5 kernel size and distance weight type ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.98865285752718 db
+SSIM: 0.5913433868284068
+
+Weighted median cube with 1 neighbors and 7 kernel size and distance weight type ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.888088950675293 db
+SSIM: 0.6365973416199278
+
+Weighted median cube with 2 neighbors and 3 kernel size and distance weight type ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.384414555017752 db
+SSIM: 0.49815495846843544
+
+Weighted median cube with 2 neighbors and 5 kernel size and distance weight type ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.97425719462316 db
+SSIM: 0.6048297937188555
+
+Weighted median cube with 2 neighbors and 7 kernel size and distance weight type ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.82039774685872 db
+SSIM: 0.6415992252543438
+
+Weighted median cube with 3 neighbors and 3 kernel size and distance weight type ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.697910002033268 db
+SSIM: 0.507318673031969
+
+Weighted median cube with 3 neighbors and 5 kernel size and distance weight type ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.047741408436757 db
+SSIM: 0.6090291374740909
+
+Weighted median cube with 3 neighbors and 7 kernel size and distance weight type ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.812458656429506 db
+SSIM: 0.6408044608069023
+
+Directional weighted median cube with 1 neighbors and 510 threshodld ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.591421180062895 db
+SSIM: 0.1264969728129608
+
+Directional weighted median cube with 1 neighbors and 408 threshodld ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.591445501647996 db
+SSIM: 0.14782932981406546
+
+Directional weighted median cube with 1 neighbors and 326 threshodld ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.615920112846325 db
+SSIM: 0.1929448410676446
+
+Directional weighted median cube with 1 neighbors and 260 threshodld ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.66627394618671 db
+SSIM: 0.26829821897472456
+
+Directional weighted median cube with 1 neighbors and 208 threshodld ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.73536266248305 db
+SSIM: 0.3366939554292457
+
+Directional weighted median cube with 1 neighbors and 166 threshodld ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.806160551159756 db
+SSIM: 0.38389854442373633
+
+Directional weighted median cube with 1 neighbors and 132 threshodld ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.866463300024982 db
+SSIM: 0.4064405452644404
+
+Directional weighted median cube with 1 neighbors and 105 threshodld ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.912587680892322 db
+SSIM: 0.42019888795697513
+
+Directional weighted median cube with 2 neighbors and 510 threshodld ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.449519566474102 db
+SSIM: 0.12634240678756786
+
+Directional weighted median cube with 2 neighbors and 408 threshodld ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.447149039353565 db
+SSIM: 0.14762514546116737
+
+Directional weighted median cube with 2 neighbors and 326 threshodld ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.46706557804338 db
+SSIM: 0.1935072820951347
+
+Directional weighted median cube with 2 neighbors and 260 threshodld ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.5110240504734 db
+SSIM: 0.272194300640781
+
+Directional weighted median cube with 2 neighbors and 208 threshodld ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.57340260053425 db
+SSIM: 0.34632391861460593
+
+Directional weighted median cube with 2 neighbors and 166 threshodld ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.638599342655223 db
+SSIM: 0.39630106896930406
+
+Directional weighted median cube with 2 neighbors and 132 threshodld ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.6946609184764 db
+SSIM: 0.42374808090786065
+
+Directional weighted median cube with 2 neighbors and 105 threshodld ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.73770484698144 db
+SSIM: 0.43943168101320906
+
+Directional weighted median cube with 3 neighbors and 510 threshodld ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.32096127182375 db
+SSIM: 0.1261558911550837
+
+Directional weighted median cube with 3 neighbors and 408 threshodld ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.3170533258633 db
+SSIM: 0.14733332676235172
+
+Directional weighted median cube with 3 neighbors and 326 threshodld ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.334506403827735 db
+SSIM: 0.1932836934024556
+
+Directional weighted median cube with 3 neighbors and 260 threshodld ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.375457727505605 db
+SSIM: 0.2728640624554132
+
+Directional weighted median cube with 3 neighbors and 208 threshodld ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.43427996070966 db
+SSIM: 0.34867990876439187
+
+Directional weighted median cube with 3 neighbors and 166 threshodld ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.49648842606112 db
+SSIM: 0.40270179535728046
+
+Directional weighted median cube with 3 neighbors and 132 threshodld ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.550012661609927 db
+SSIM: 0.43304683684233536
+
+Directional weighted median cube with 3 neighbors and 105 threshodld ended for measures/noised/_80.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.591132662375998 db
+SSIM: 0.4505763596558102
+
+Simple median filter with 3 kernel size ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.035292080256834 db
+SSIM: 0.3801562189193553
+
+Simple median filter with 5 kernel size ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.493198799921107 db
+SSIM: 0.5030850917864627
+
+Simple median filter with 7 kernel size ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.341121022853805 db
+SSIM: 0.5647686064716616
+
+Two Pass median filter ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 34.542331405391 db
+SSIM: 0.18856845402348732
+
+Weighted median filter with 3 kernel size and distance weight type ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 32.63563969733507 db
+SSIM: 0.3202811633885615
+
+Weighted median filter with 5 kernel size and distance weight type ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.74556231102762 db
+SSIM: 0.41507956236090854
+
+Weighted median filter with 7 kernel size and distance weight type ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.352778695266057 db
+SSIM: 0.47597244861881605
+
+Directional weighted median filter with 510 threshodld ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 40.20954571388645 db
+SSIM: 0.12056044859571687
+
+Directional weighted median filter with 408 threshodld ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 37.11715852346561 db
+SSIM: 0.1399661921323742
+
+Directional weighted median filter with 326 threshodld ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 34.662465814081955 db
+SSIM: 0.1773688874430124
+
+Directional weighted median filter with 260 threshodld ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 32.65646618535628 db
+SSIM: 0.23658007463341352
+
+Directional weighted median filter with 208 threshodld ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.13471040132044 db
+SSIM: 0.2840393123059668
+
+Directional weighted median filter with 166 threshodld ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.097475532873517 db
+SSIM: 0.3133363276844789
+
+Directional weighted median filter with 132 threshodld ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.43700549218458 db
+SSIM: 0.33110023796846916
+
+Directional weighted median filter with 105 threshodld ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.036458053019608 db
+SSIM: 0.34200442028563366
+
+Simple median cube with 1 neighbors and 3 kernel size ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.22139911203867 db
+SSIM: 0.45854202290758245
+
+Simple median cube with 1 neighbors and 5 kernel size ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.066778023798562 db
+SSIM: 0.5622597546757825
+
+Simple median cube with 1 neighbors and 7 kernel size ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.002312060194384 db
+SSIM: 0.60522014139802
+
+Simple median cube with 2 neighbors and 3 kernel size ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.95591523493102 db
+SSIM: 0.47959514472501613
+
+Simple median cube with 2 neighbors and 5 kernel size ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.864233044445474 db
+SSIM: 0.577450650509316
+
+Simple median cube with 2 neighbors and 7 kernel size ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.823306076884048 db
+SSIM: 0.6125852219329379
+
+Simple median cube with 3 neighbors and 3 kernel size ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.769407914054455 db
+SSIM: 0.500652882672594
+
+Simple median cube with 3 neighbors and 5 kernel size ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.703621145816566 db
+SSIM: 0.586225934094801
+
+Simple median cube with 3 neighbors and 7 kernel size ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.673135191800885 db
+SSIM: 0.6140511673472576
+
+Two Pass cube with 1 neighbors ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.88039705787788 db
+SSIM: 0.13926625193182596
+
+Two Pass cube with 2 neighbors ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.466532933870617 db
+SSIM: 0.19365740148506666
+
+Two Pass cube with 3 neighbors ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.331907173849405 db
+SSIM: 0.19311827386070357
+
+Weighted median cube with 1 neighbors and 3 kernel size and distance weight type ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.19814453779774 db
+SSIM: 0.46638352355826107
+
+Weighted median cube with 1 neighbors and 5 kernel size and distance weight type ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.95569873508238 db
+SSIM: 0.5807385439003355
+
+Weighted median cube with 1 neighbors and 7 kernel size and distance weight type ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.856983057261786 db
+SSIM: 0.6282310474091146
+
+Weighted median cube with 2 neighbors and 3 kernel size and distance weight type ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.354145697303405 db
+SSIM: 0.48498356374540413
+
+Weighted median cube with 2 neighbors and 5 kernel size and distance weight type ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.944252199036335 db
+SSIM: 0.5953014741851901
+
+Weighted median cube with 2 neighbors and 7 kernel size and distance weight type ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.791621575612297 db
+SSIM: 0.6345121117718524
+
+Weighted median cube with 3 neighbors and 3 kernel size and distance weight type ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.6715710404386 db
+SSIM: 0.4960095099385932
+
+Weighted median cube with 3 neighbors and 5 kernel size and distance weight type ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.01970852310752 db
+SSIM: 0.6005244701393498
+
+Weighted median cube with 3 neighbors and 7 kernel size and distance weight type ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.785475657661767 db
+SSIM: 0.6342324301696055
+
+Directional weighted median cube with 1 neighbors and 510 threshodld ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.57462966427706 db
+SSIM: 0.12045079341392105
+
+Directional weighted median cube with 1 neighbors and 408 threshodld ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.576360561403163 db
+SSIM: 0.14057147643384457
+
+Directional weighted median cube with 1 neighbors and 326 threshodld ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.602038228795656 db
+SSIM: 0.1837896069853295
+
+Directional weighted median cube with 1 neighbors and 260 threshodld ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.65219971729332 db
+SSIM: 0.2585111795347231
+
+Directional weighted median cube with 1 neighbors and 208 threshodld ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.71972408207716 db
+SSIM: 0.3269385605086091
+
+Directional weighted median cube with 1 neighbors and 166 threshodld ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.787800778890215 db
+SSIM: 0.3740930865602954
+
+Directional weighted median cube with 1 neighbors and 132 threshodld ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.845361350143325 db
+SSIM: 0.39558400329972343
+
+Directional weighted median cube with 1 neighbors and 105 threshodld ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.88862867299443 db
+SSIM: 0.40856922738754836
+
+Directional weighted median cube with 2 neighbors and 510 threshodld ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.433911115210535 db
+SSIM: 0.12031040327402252
+
+Directional weighted median cube with 2 neighbors and 408 threshodld ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.433087458908172 db
+SSIM: 0.14038473788824765
+
+Directional weighted median cube with 2 neighbors and 326 threshodld ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.45470297606059 db
+SSIM: 0.18442953178982152
+
+Directional weighted median cube with 2 neighbors and 260 threshodld ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.499180103305715 db
+SSIM: 0.26249382774026475
+
+Directional weighted median cube with 2 neighbors and 208 threshodld ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.56065980865809 db
+SSIM: 0.3369950076148031
+
+Directional weighted median cube with 2 neighbors and 166 threshodld ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.623513952912212 db
+SSIM: 0.38682760776755754
+
+Directional weighted median cube with 2 neighbors and 132 threshodld ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.677146738189975 db
+SSIM: 0.41396268423781335
+
+Directional weighted median cube with 2 neighbors and 105 threshodld ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.717418714292776 db
+SSIM: 0.4288087046372821
+
+Directional weighted median cube with 3 neighbors and 510 threshodld ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.30587456074475 db
+SSIM: 0.1202054467242119
+
+Directional weighted median cube with 3 neighbors and 408 threshodld ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.303706722765845 db
+SSIM: 0.14016580265592476
+
+Directional weighted median cube with 3 neighbors and 326 threshodld ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.322842516336774 db
+SSIM: 0.184258438723677
+
+Directional weighted median cube with 3 neighbors and 260 threshodld ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.36420915876965 db
+SSIM: 0.2635341972969587
+
+Directional weighted median cube with 3 neighbors and 208 threshodld ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.422469775966928 db
+SSIM: 0.3401613328440424
+
+Directional weighted median cube with 3 neighbors and 166 threshodld ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.48286080307258 db
+SSIM: 0.39264147151438017
+
+Directional weighted median cube with 3 neighbors and 132 threshodld ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.534194474323655 db
+SSIM: 0.42294004254036766
+
+Directional weighted median cube with 3 neighbors and 105 threshodld ended for measures/noised/_85.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.572805677600158 db
+SSIM: 0.439443283437212
+
+Simple median filter with 3 kernel size ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.989071460478947 db
+SSIM: 0.36861209316620963
+
+Simple median filter with 5 kernel size ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.44955614412987 db
+SSIM: 0.49269904713429835
+
+Simple median filter with 7 kernel size ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.300082435029477 db
+SSIM: 0.5552253498315314
+
+Two Pass median filter ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 34.523391223691895 db
+SSIM: 0.17889917771528416
+
+Weighted median filter with 3 kernel size and distance weight type ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 32.59896371110823 db
+SSIM: 0.31257582726471944
+
+Weighted median filter with 5 kernel size and distance weight type ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.71425970082232 db
+SSIM: 0.40804476778696996
+
+Weighted median filter with 7 kernel size and distance weight type ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.325509993841052 db
+SSIM: 0.4699814021725878
+
+Directional weighted median filter with 510 threshodld ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 40.19731802515671 db
+SSIM: 0.11539179206390199
+
+Directional weighted median filter with 408 threshodld ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 37.06257780662057 db
+SSIM: 0.13382999405742854
+
+Directional weighted median filter with 326 threshodld ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 34.57724851784994 db
+SSIM: 0.16967330768704253
+
+Directional weighted median filter with 260 threshodld ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 32.554502981534384 db
+SSIM: 0.22740677340175602
+
+Directional weighted median filter with 208 threshodld ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.032862005515828 db
+SSIM: 0.274259763318839
+
+Directional weighted median filter with 166 threshodld ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.00986097631569 db
+SSIM: 0.3029205874503463
+
+Directional weighted median filter with 132 threshodld ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.36136689083847 db
+SSIM: 0.32035303411209143
+
+Directional weighted median filter with 105 threshodld ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.971195008499905 db
+SSIM: 0.33131634164572055
+
+Simple median cube with 1 neighbors and 3 kernel size ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.18911979872881 db
+SSIM: 0.4484063966785351
+
+Simple median cube with 1 neighbors and 5 kernel size ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.03423021955848 db
+SSIM: 0.5531270511238517
+
+Simple median cube with 1 neighbors and 7 kernel size ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.970814869382178 db
+SSIM: 0.5979335692664826
+
+Simple median cube with 2 neighbors and 3 kernel size ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.92869346945144 db
+SSIM: 0.46867309061336615
+
+Simple median cube with 2 neighbors and 5 kernel size ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.8367653461512 db
+SSIM: 0.5694633619860762
+
+Simple median cube with 2 neighbors and 7 kernel size ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.796409343825648 db
+SSIM: 0.6064878699081405
+
+Simple median cube with 3 neighbors and 3 kernel size ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.745226447940556 db
+SSIM: 0.4907821811029042
+
+Simple median cube with 3 neighbors and 5 kernel size ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.679130782038985 db
+SSIM: 0.5791232205964685
+
+Simple median cube with 3 neighbors and 7 kernel size ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.64885111866196 db
+SSIM: 0.6084392344994063
+
+Two Pass cube with 1 neighbors ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.860052069444038 db
+SSIM: 0.1320303683548465
+
+Two Pass cube with 2 neighbors ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.45636283538798 db
+SSIM: 0.1837763743047087
+
+Two Pass cube with 3 neighbors ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.32355064895148 db
+SSIM: 0.1834076809117935
+
+Weighted median cube with 1 neighbors and 3 kernel size and distance weight type ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.16722231556356 db
+SSIM: 0.455618430871452
+
+Weighted median cube with 1 neighbors and 5 kernel size and distance weight type ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.924936793697288 db
+SSIM: 0.5716040184879572
+
+Weighted median cube with 1 neighbors and 7 kernel size and distance weight type ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.82779244360658 db
+SSIM: 0.6207170622492884
+
+Weighted median cube with 2 neighbors and 3 kernel size and distance weight type ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.327961891479575 db
+SSIM: 0.47336880430809153
+
+Weighted median cube with 2 neighbors and 5 kernel size and distance weight type ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.917608389363004 db
+SSIM: 0.5866848999106952
+
+Weighted median cube with 2 neighbors and 7 kernel size and distance weight type ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.76602083017279 db
+SSIM: 0.6280044542065123
+
+Weighted median cube with 3 neighbors and 3 kernel size and distance weight type ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.64917695901501 db
+SSIM: 0.48592245863819494
+
+Weighted median cube with 3 neighbors and 5 kernel size and distance weight type ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.995660888092527 db
+SSIM: 0.5929910503258248
+
+Weighted median cube with 3 neighbors and 7 kernel size and distance weight type ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.762035249773625 db
+SSIM: 0.6281319109422655
+
+Directional weighted median cube with 1 neighbors and 510 threshodld ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.560089585850992 db
+SSIM: 0.11535023278690279
+
+Directional weighted median cube with 1 neighbors and 408 threshodld ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.56337038741562 db
+SSIM: 0.13453304103208757
+
+Directional weighted median cube with 1 neighbors and 326 threshodld ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.58992172395025 db
+SSIM: 0.17610555948454593
+
+Directional weighted median cube with 1 neighbors and 260 threshodld ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.640027017323828 db
+SSIM: 0.25037321587802647
+
+Directional weighted median cube with 1 neighbors and 208 threshodld ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.706250951342426 db
+SSIM: 0.31734799268724667
+
+Directional weighted median cube with 1 neighbors and 166 threshodld ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.77157518789766 db
+SSIM: 0.3643430730370863
+
+Directional weighted median cube with 1 neighbors and 132 threshodld ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.82612709434133 db
+SSIM: 0.3865031921493555
+
+Directional weighted median cube with 1 neighbors and 105 threshodld ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.86667970264834 db
+SSIM: 0.39931228661228185
+
+Directional weighted median cube with 2 neighbors and 510 threshodld ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.421598757249964 db
+SSIM: 0.1152523274662496
+
+Directional weighted median cube with 2 neighbors and 408 threshodld ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.42274742169919 db
+SSIM: 0.13442597954004623
+
+Directional weighted median cube with 2 neighbors and 326 threshodld ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.445382701059113 db
+SSIM: 0.1768485248713944
+
+Directional weighted median cube with 2 neighbors and 260 threshodld ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.48998447156901 db
+SSIM: 0.2543551978555943
+
+Directional weighted median cube with 2 neighbors and 208 threshodld ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.55034852067408 db
+SSIM: 0.32842700910993367
+
+Directional weighted median cube with 2 neighbors and 166 threshodld ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.6109549478187 db
+SSIM: 0.378867237627718
+
+Directional weighted median cube with 2 neighbors and 132 threshodld ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.66181841378552 db
+SSIM: 0.4054798907634963
+
+Directional weighted median cube with 2 neighbors and 105 threshodld ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.69948335094156 db
+SSIM: 0.4192424493569797
+
+Directional weighted median cube with 3 neighbors and 510 threshodld ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.29502810348713 db
+SSIM: 0.11513953719398859
+
+Directional weighted median cube with 3 neighbors and 408 threshodld ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.294594255679684 db
+SSIM: 0.134247701087275
+
+Directional weighted median cube with 3 neighbors and 326 threshodld ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.315025533855838 db
+SSIM: 0.17675941720900348
+
+Directional weighted median cube with 3 neighbors and 260 threshodld ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.356774538045737 db
+SSIM: 0.2555455050045303
+
+Directional weighted median cube with 3 neighbors and 208 threshodld ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.41400633755104 db
+SSIM: 0.33167735376294827
+
+Directional weighted median cube with 3 neighbors and 166 threshodld ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.471974964114104 db
+SSIM: 0.3848101516118328
+
+Directional weighted median cube with 3 neighbors and 132 threshodld ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.520664030720678 db
+SSIM: 0.41362416063415036
+
+Directional weighted median cube with 3 neighbors and 105 threshodld ended for measures/noised/_90.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.556758597631422 db
+SSIM: 0.43177969387986265
+
+Simple median filter with 3 kernel size ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.963967794827106 db
+SSIM: 0.35861725300748243
+
+Simple median filter with 5 kernel size ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.425458796964534 db
+SSIM: 0.48198011488977105
+
+Simple median filter with 7 kernel size ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.276455410139615 db
+SSIM: 0.5459260239543873
+
+Two Pass median filter ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 34.52280941721122 db
+SSIM: 0.17154933547683013
+
+Weighted median filter with 3 kernel size and distance weight type ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 32.58262875787642 db
+SSIM: 0.30533362471801573
+
+Weighted median filter with 5 kernel size and distance weight type ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.700798977138554 db
+SSIM: 0.4016496778316797
+
+Weighted median filter with 7 kernel size and distance weight type ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 31.313833155553446 db
+SSIM: 0.4639576496516651
+
+Directional weighted median filter with 510 threshodld ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 40.21007524453375 db
+SSIM: 0.11211624260060817
+
+Directional weighted median filter with 408 threshodld ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 37.033471454844836 db
+SSIM: 0.12965621173386718
+
+Directional weighted median filter with 326 threshodld ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 34.52008954699346 db
+SSIM: 0.1640992620668042
+
+Directional weighted median filter with 260 threshodld ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 32.48227921212364 db
+SSIM: 0.21977456975383772
+
+Directional weighted median filter with 208 threshodld ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 30.96332140653858 db
+SSIM: 0.2666637260793828
+
+Directional weighted median filter with 166 threshodld ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.953581296659323 db
+SSIM: 0.2939620866713888
+
+Directional weighted median filter with 132 threshodld ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 29.314563301318323 db
+SSIM: 0.3108650209931101
+
+Directional weighted median filter with 105 threshodld ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.933116002634883 db
+SSIM: 0.32167942951474243
+
+Simple median cube with 1 neighbors and 3 kernel size ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.170541124184794 db
+SSIM: 0.4388980427743378
+
+Simple median cube with 1 neighbors and 5 kernel size ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 28.015346216297754 db
+SSIM: 0.5441653174204089
+
+Simple median cube with 1 neighbors and 7 kernel size ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.952584415916203 db
+SSIM: 0.5903333825022127
+
+Simple median cube with 2 neighbors and 3 kernel size ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.91354546208032 db
+SSIM: 0.4588075719969817
+
+Simple median cube with 2 neighbors and 5 kernel size ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.82121116993891 db
+SSIM: 0.5611802173616482
+
+Simple median cube with 2 neighbors and 7 kernel size ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.781345310168344 db
+SSIM: 0.5998542600716863
+
+Simple median cube with 3 neighbors and 3 kernel size ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.732605882431205 db
+SSIM: 0.4819419055797682
+
+Simple median cube with 3 neighbors and 5 kernel size ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.666305590658194 db
+SSIM: 0.5719615727906456
+
+Simple median cube with 3 neighbors and 7 kernel size ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.636449733407414 db
+SSIM: 0.6025276162608113
+
+Two Pass cube with 1 neighbors ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.849851297065694 db
+SSIM: 0.12677392734240878
+
+Two Pass cube with 2 neighbors ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.451585101745895 db
+SSIM: 0.17574813771924808
+
+Two Pass cube with 3 neighbors ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.31994915203107 db
+SSIM: 0.1750012337208641
+
+Weighted median cube with 1 neighbors and 3 kernel size and distance weight type ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.149615729063623 db
+SSIM: 0.4442983347453175
+
+Weighted median cube with 1 neighbors and 5 kernel size and distance weight type ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.90748045827776 db
+SSIM: 0.562477944666795
+
+Weighted median cube with 1 neighbors and 7 kernel size and distance weight type ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.81146165151824 db
+SSIM: 0.613292173714135
+
+Weighted median cube with 2 neighbors and 3 kernel size and distance weight type ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.31285518411273 db
+SSIM: 0.4625259025416764
+
+Weighted median cube with 2 neighbors and 5 kernel size and distance weight type ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.90231169196923 db
+SSIM: 0.5783402684584794
+
+Weighted median cube with 2 neighbors and 7 kernel size and distance weight type ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.751486132797215 db
+SSIM: 0.6217877021186093
+
+Weighted median cube with 3 neighbors and 3 kernel size and distance weight type ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.637440173643792 db
+SSIM: 0.47606095350137834
+
+Weighted median cube with 3 neighbors and 5 kernel size and distance weight type ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.982033554356615 db
+SSIM: 0.5855758342853167
+
+Weighted median cube with 3 neighbors and 7 kernel size and distance weight type ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 26.748715018981784 db
+SSIM: 0.6224509784429452
+
+Directional weighted median cube with 1 neighbors and 510 threshodld ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.553420086823913 db
+SSIM: 0.11208714651742935
+
+Directional weighted median cube with 1 neighbors and 408 threshodld ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.558124704656887 db
+SSIM: 0.13033929379273634
+
+Directional weighted median cube with 1 neighbors and 326 threshodld ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.58582162557043 db
+SSIM: 0.1703861284051794
+
+Directional weighted median cube with 1 neighbors and 260 threshodld ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.636208821274636 db
+SSIM: 0.24412244042834935
+
+Directional weighted median cube with 1 neighbors and 208 threshodld ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.701420676675994 db
+SSIM: 0.3099737897772923
+
+Directional weighted median cube with 1 neighbors and 166 threshodld ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.764643674403985 db
+SSIM: 0.3569687470143376
+
+Directional weighted median cube with 1 neighbors and 132 threshodld ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.81712616510485 db
+SSIM: 0.37826423055694247
+
+Directional weighted median cube with 1 neighbors and 105 threshodld ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.855395525738956 db
+SSIM: 0.3904977219627858
+
+Directional weighted median cube with 2 neighbors and 510 threshodld ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.41483086389111 db
+SSIM: 0.11181945189050695
+
+Directional weighted median cube with 2 neighbors and 408 threshodld ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.41744271575021 db
+SSIM: 0.13008881878780645
+
+Directional weighted median cube with 2 neighbors and 326 threshodld ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.44145135216438 db
+SSIM: 0.17100124837579814
+
+Directional weighted median cube with 2 neighbors and 260 threshodld ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.48641420084356 db
+SSIM: 0.24806779849981786
+
+Directional weighted median cube with 2 neighbors and 208 threshodld ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.5460683658532 db
+SSIM: 0.32049811890767493
+
+Directional weighted median cube with 2 neighbors and 166 threshodld ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.60491102819902 db
+SSIM: 0.3717488118843224
+
+Directional weighted median cube with 2 neighbors and 132 threshodld ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.65386670906058 db
+SSIM: 0.3978286793828252
+
+Directional weighted median cube with 2 neighbors and 105 threshodld ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.68980347244349 db
+SSIM: 0.40977080906837493
+
+Directional weighted median cube with 3 neighbors and 510 threshodld ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.289086924098626 db
+SSIM: 0.11159678282154542
+
+Directional weighted median cube with 3 neighbors and 408 threshodld ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.29048016887655 db
+SSIM: 0.12976739516911848
+
+Directional weighted median cube with 3 neighbors and 326 threshodld ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.31229975906486 db
+SSIM: 0.17083540061096675
+
+Directional weighted median cube with 3 neighbors and 260 threshodld ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.35470501619966 db
+SSIM: 0.24888208765759393
+
+Directional weighted median cube with 3 neighbors and 208 threshodld ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.411559095381392 db
+SSIM: 0.3240979200262386
+
+Directional weighted median cube with 3 neighbors and 166 threshodld ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.46798960529652 db
+SSIM: 0.37759335859245885
+
+Directional weighted median cube with 3 neighbors and 132 threshodld ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.514817090482037 db
+SSIM: 0.40648328280733226
+
+Directional weighted median cube with 3 neighbors and 105 threshodld ended for measures/noised/_95.000000_noise_gray_luna_bimbi.mp4
+Stats:
+PSNR: 27.549310123159486 db
+SSIM: 0.4231614739395963
+

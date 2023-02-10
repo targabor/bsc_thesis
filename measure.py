@@ -22,7 +22,7 @@ def calculate_ssim_for_videos(original_path: str, filtered_path: str) -> float:
     while True:
         orig_ret, orig_frame = original_video.read()
         filt_ret, filt_frame = filtered_video.read()
-        if not orig_ret and not filt_ret:
+        if not orig_ret or not filt_ret:
             break
 
         ssim_score, _ = cv.quality.QualitySSIM_compute(orig_frame, filt_frame)
@@ -43,11 +43,11 @@ for file in files:
     file_path = os.path.join(noise_output_path, file)
     file_paths.append(file_path)
 
-with open("measure_result.txt", "w", buffering=1024) as file:
+with open("measure_result_3.txt", "w", buffering=1024) as file:
     # Simple median every frame
     for file_path in file_paths:
         output_folder_path = 'measures/simple_median_every_frame'
-        for kernel in range(3, 11, 2):
+        for kernel in range(3, 9, 2):
             psnr_for_noisy_and_filtered = cpp_caller.call_simple_median_for_video_frame('', kernel, file_path,
                                                                                         output_folder_path)  # higher is better
             ssim = calculate_ssim_for_videos(test_input_video_path,
@@ -56,7 +56,7 @@ with open("measure_result.txt", "w", buffering=1024) as file:
                        f'Stats:\n'
                        f'PSNR: {psnr_for_noisy_and_filtered} db\n'
                        f'SSIM: {ssim}\n\n')
-            
+            file.flush()
 
         # Two pass every frame
         output_folder_path = 'measures/two_pass_every_frame'
@@ -68,24 +68,24 @@ with open("measure_result.txt", "w", buffering=1024) as file:
                    f'Stats:\n'
                    f'PSNR: {psnr_for_noisy_and_filtered} db\n'
                    f'SSIM: {ssim}\n\n')
+        file.flush()
 
         # Weighted median every frame
         output_folder_path = 'measures/weighted_every_frame'
-        for kernel in range(3, 11, 2):
-            for weight_type in ('uniform', 'distance'):
-                # def call_weighted_median_for_video_frame(video_name: str, kernel_size: int, weight_type: str,
-                #                                          path_to_video='', output_path='') -> float:
-                psnr_for_noisy_and_filtered = cpp_caller.call_weighted_median_for_video_frame('', kernel, weight_type,
-                                                                                              file_path,
-                                                                                              output_folder_path)  # higher is better
-                ssim = calculate_ssim_for_videos(test_input_video_path,
-                                                 output_folder_path + '/' + f'weighted_median_{weight_type}_{kernel}_{os.path.basename(file_path)}')  # higher is better
-                file.write(
-                    f'Weighted median filter with {kernel} kernel size and {weight_type} weight type ended for {file_path}\n'
-                    f'Stats:\n'
-                    f'PSNR: {psnr_for_noisy_and_filtered} db\n'
-                    f'SSIM: {ssim}\n\n')
-                
+        for kernel in range(3, 9, 2):
+            # def call_weighted_median_for_video_frame(video_name: str, kernel_size: int, weight_type: str,
+            #                                          path_to_video='', output_path='') -> float:
+            psnr_for_noisy_and_filtered = cpp_caller.call_weighted_median_for_video_frame('', kernel, 'distance',
+                                                                                          file_path,
+                                                                                          output_folder_path)  # higher is better
+            ssim = calculate_ssim_for_videos(test_input_video_path,
+                                             output_folder_path + '/' + f'weighted_median_distance_{kernel}_{os.path.basename(file_path)}')  # higher is better
+            file.write(
+                f'Weighted median filter with {kernel} kernel size and distance weight type ended for {file_path}\n'
+                f'Stats:\n'
+                f'PSNR: {psnr_for_noisy_and_filtered} db\n'
+                f'SSIM: {ssim}\n\n')
+            file.flush()
 
         # Directional weighted every frame
         output_folder_path = 'measures/directional_weighted_every_frame'
@@ -102,12 +102,13 @@ with open("measure_result.txt", "w", buffering=1024) as file:
                 f'Stats:\n'
                 f'PSNR: {psnr_for_noisy_and_filtered} db\n'
                 f'SSIM: {ssim}\n\n')
-            
+            file.flush()
+
             threshold = int(threshold * 0.8)
         # Simple median cube
         output_folder_path = 'measures/simple_cube'
-        for frame_n in range(1, 6):
-            for kernel in range(3, 11, 2):
+        for frame_n in range(1, 4):
+            for kernel in range(3, 9, 2):
                 psnr_for_noisy_and_filtered = cpp_caller.call_simple_median_cube('', kernel, frame_n,
                                                                                  file_path,
                                                                                  output_folder_path)  # higher is better
@@ -118,11 +119,11 @@ with open("measure_result.txt", "w", buffering=1024) as file:
                     f'Stats:\n'
                     f'PSNR: {psnr_for_noisy_and_filtered} db\n'
                     f'SSIM: {ssim}\n\n')
-                
+                file.flush()
 
         # Two pass median cube
         output_folder_path = 'measures/two_pass_cube'
-        for frame_n in range(1, 6):
+        for frame_n in range(1, 4):
             psnr_for_noisy_and_filtered = cpp_caller.call_two_pass_median_cube('', frame_n, file_path,
                                                                                output_folder_path)  # higher is better
             ssim = calculate_ssim_for_videos(test_input_video_path,
@@ -132,28 +133,27 @@ with open("measure_result.txt", "w", buffering=1024) as file:
                 f'Stats:\n'
                 f'PSNR: {psnr_for_noisy_and_filtered} db\n'
                 f'SSIM: {ssim}\n\n')
-            
+            file.flush()
 
         # Weighted median cube
         output_folder_path = 'measures/weighted_cube'
-        for frame_n in range(1, 6):
-            for kernel in range(3, 11, 2):
-                for weight_type in ('uniform', 'distance'):
-                    psnr_for_noisy_and_filtered = cpp_caller.call_weighted_median_cube('', kernel, weight_type, frame_n,
-                                                                                       file_path,
-                                                                                       output_folder_path)  # higher is better
-                    ssim = calculate_ssim_for_videos(test_input_video_path,
-                                                     output_folder_path + '/' + f'weighted_median_{frame_n}_{kernel}_{weight_type}_{os.path.basename(file_path)}')  # higher is better
-                    file.write(
-                        f'Weighted median cube with {frame_n} neighbors and {kernel} kernel size and {weight_type} weight type ended for {file_path}\n'
-                        f'Stats:\n'
-                        f'PSNR: {psnr_for_noisy_and_filtered} db\n'
-                        f'SSIM: {ssim}\n\n')
-                    
+        for frame_n in range(1, 4):
+            for kernel in range(3, 9, 2):
+                psnr_for_noisy_and_filtered = cpp_caller.call_weighted_median_cube('', kernel, 'distance', frame_n,
+                                                                                   file_path,
+                                                                                   output_folder_path)  # higher is better
+                ssim = calculate_ssim_for_videos(test_input_video_path,
+                                                 output_folder_path + '/' + f'weighted_median_{frame_n}_{kernel}_distance_{os.path.basename(file_path)}')  # higher is better
+                file.write(
+                    f'Weighted median cube with {frame_n} neighbors and {kernel} kernel size and distance weight type ended for {file_path}\n'
+                    f'Stats:\n'
+                    f'PSNR: {psnr_for_noisy_and_filtered} db\n'
+                    f'SSIM: {ssim}\n\n')
+                file.flush()
 
         # Directional weighted median cube
         output_folder_path = 'measures/directional_cube'
-        for frame_n in range(1, 6):
+        for frame_n in range(1, 4):
             threshold = 510
             while threshold > 100:
                 psnr_for_noisy_and_filtered = cpp_caller.call_dir_w_median_cube('', threshold, frame_n, file_path,
@@ -165,5 +165,6 @@ with open("measure_result.txt", "w", buffering=1024) as file:
                     f'Stats:\n'
                     f'PSNR: {psnr_for_noisy_and_filtered} db\n'
                     f'SSIM: {ssim}\n\n')
-                
-                threshold = threshold * 0.8
+                file.flush()
+
+                threshold = int(threshold * 0.8)
